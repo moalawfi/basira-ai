@@ -1,6 +1,6 @@
-from face_detector import detect_faces
-from shape_color_detector import analyze_shapes_colors
-from ocr_extractor import extract_text
+from cv_module.face_detector import detect_faces
+from cv_module.shape_color_detector import analyze_shapes_colors
+from cv_module.ocr_extractor import extract_text
 
 def show_menu():
     print("\n=== Smart Content Analyzer ===")

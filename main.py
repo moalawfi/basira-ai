@@ -1,3 +1,7 @@
+from face_detector import detect_faces
+from shape_color_detector import analyze_shapes_colors
+from ocr_extractor import extract_text
+
 def show_menu():
     print("\n=== Smart Content Analyzer ===")
     print("1. Text Analysis (intent + sentiment)")
@@ -19,7 +23,9 @@ while True:
         print("Mock: Extended Text Analysis")
 
     elif choice == "3":
-        print("Mock: Image Analysis")
+        print(detect_faces("test.jpg"))
+        print(analyze_shapes_colors("test.jpg"))
+        print(extract_text("test.jpg"))
 
     elif choice == "4":
         print("Mock: Display Results")

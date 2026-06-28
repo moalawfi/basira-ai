@@ -64,9 +64,6 @@ else:
 print("\nBest Model:", best_model_name)
 
 
-# =========================
-# 7. classify_intent Function
-# =========================
 
 def classify_intent(text):
     text_tfidf = vectorizer.transform([text])
@@ -79,9 +76,6 @@ def classify_intent(text):
     }
 
 
-# =========================
-# 8. Test Examples
-# =========================
 
 print("\nTest Predictions:")
 print("السلام عليكم =>", classify_intent("السلام عليكم"))

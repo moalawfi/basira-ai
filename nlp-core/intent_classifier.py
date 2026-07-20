@@ -816,9 +816,20 @@ def validate_text(text):
 # 12. Classify one intent
 # ============================================================
 
-def classify_intent(text):
+def classify_intent(text, save_to_db=False):
     """
     Classify one text and return a JSON-compatible dictionary.
+
+    Args:
+        text:
+            Text to classify.
+
+        save_to_db:
+            When True, save the classification result
+            in the database.
+
+    Returns:
+        Dictionary containing the predicted intent label.
     """
 
     cleaned_text = validate_text(text)
@@ -829,13 +840,22 @@ def classify_intent(text):
         [cleaned_text]
     )[0]
 
-    return {
+    result = {
         "type": "intent",
         "result": {
             "label": str(prediction),
         },
     }
 
+    if save_to_db:
+        from storage.results_store import save_nlp_result
+
+        save_nlp_result(
+            cleaned_text,
+            result,
+        )
+
+    return result
 
 # ============================================================
 # 13. Main

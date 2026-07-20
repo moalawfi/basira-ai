@@ -836,9 +836,17 @@ def validate_text(text):
 # 12. Analyze one text
 # ============================================================
 
-def analyze_sentiment(text):
+def analyze_sentiment(text, save_to_db=False):
     """
     Analyze the sentiment of one text.
+
+    Args:
+        text:
+            Text to analyze.
+
+        save_to_db:
+            When True, save the sentiment result
+            in the database.
 
     Returns:
         The predicted sentiment label as a string.
@@ -848,11 +856,28 @@ def analyze_sentiment(text):
 
     model = load_model()
 
-    prediction = model.predict(
-        [cleaned_text]
-    )[0]
+    prediction = str(
+        model.predict(
+            [cleaned_text]
+        )[0]
+    )
 
-    return str(prediction)
+    if save_to_db:
+        from storage.results_store import save_nlp_result
+
+        result = {
+            "type": "sentiment",
+            "result": {
+                "label": prediction,
+            },
+        }
+
+        save_nlp_result(
+            cleaned_text,
+            result,
+        )
+
+    return prediction
 
 
 # ============================================================

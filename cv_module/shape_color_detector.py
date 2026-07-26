@@ -3,6 +3,7 @@ import cv2
 import numpy as np
 from collections import Counter
 from sklearn.cluster import KMeans
+from storage.results_store import save_cv_result
 
 try:
     from face_detector import detect_faces
@@ -107,7 +108,7 @@ def detect_dominant_colors(image_path, n_colors=3):
     colors.sort(key=lambda c: c["percentage"], reverse=True)
     return colors
 
-def analyze_image(image_path):
+def analyze_image(image_path, save_to_db=False):
     result = {"image_path": image_path, "faces": [], "shapes": [], "colors": []}
 
     if _FACE_DETECTOR_AVAILABLE:
@@ -136,6 +137,25 @@ def analyze_image(image_path):
         "num_shapes": len(result["shapes"]),
         "num_colors": len(result["colors"]),
     }
+
+    # ==========================================
+    # إضافة المهمة 2: الحفظ الاختياري في قاعدة البيانات
+    # ==========================================
+    if save_to_db:
+        try:
+            # نستدعي دالة عبدالرحمن لحفظ النتيجة
+            db_id = save_cv_result(image_path, result)
+            
+            # نضيف رقم التعريف الخاص بقاعدة البيانات للنتيجة كإثبات نجاح الحفظ
+            result["db_id"] = db_id
+            print(f"Successfully saved analysis to DB with ID: {db_id}")
+            
+        except Exception as e:
+            # إذا حدث خطأ في قاعدة البيانات، لا نوقف البرنامج، بل نرسل تحذير مع النتيجة
+            result["db_error"] = f"Failed to save to DB: {str(e)}"
+            print(f"Database Error: {e}")
+    # ==========================================
+
     return result
 
 def draw_and_save_analysis(image_path, output_path, analysis):

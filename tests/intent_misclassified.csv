@@ -1,0 +1,41 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Naive Bayes,Before tuning,احذف النتيجة السابقة,أمر,شكوى,0.30166577421837626,False
+Naive Bayes,Before tuning,مرحبا عندي استفسار,تحية,أمر,0.25,False
+Naive Bayes,Before tuning,ما الفرق بين تحليل النص وتحليل الصورة؟,سؤال,شكوى,0.3437713156339219,False
+Naive Bayes,Before tuning,حياك الله,تحية,أمر,0.25,False
+Naive Bayes,Before tuning,وش المفروض أسوي الحين,سؤال,أمر,0.25,False
+Naive Bayes,Before tuning,اعرض الكلمات المفتاحية,أمر,شكوى,0.323705506790863,False
+Naive Bayes,Before tuning,الواجهة صعبة الاستخدام,شكوى,أمر,0.25,False
+Naive Bayes,Before tuning,التحليل أخذ وقت طويل,شكوى,سؤال,0.28932267426411856,False
+Naive Bayes,Before tuning,التقرير ناقص معلومات,شكوى,أمر,0.36895479044006996,False
+Naive Bayes,Before tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.3776650592497178,False
+Logistic Regression,Before tuning,احذف النتيجة السابقة,أمر,شكوى,0.2958110389672496,False
+Logistic Regression,Before tuning,مرحبا عندي استفسار,تحية,أمر,0.26159058453183537,False
+Logistic Regression,Before tuning,ما الفرق بين تحليل النص وتحليل الصورة؟,سؤال,شكوى,0.34255713831609247,False
+Logistic Regression,Before tuning,حياك الله,تحية,أمر,0.26159058453183537,False
+Logistic Regression,Before tuning,وش المفروض أسوي الحين,سؤال,أمر,0.26159058453183537,False
+Logistic Regression,Before tuning,اعرض الكلمات المفتاحية,أمر,شكوى,0.2992437812491393,False
+Logistic Regression,Before tuning,الواجهة صعبة الاستخدام,شكوى,أمر,0.26159058453183537,False
+Logistic Regression,Before tuning,التحليل أخذ وقت طويل,شكوى,أمر,0.2875637882608559,False
+Logistic Regression,Before tuning,التقرير ناقص معلومات,شكوى,أمر,0.3828641460860257,False
+Logistic Regression,Before tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.3711226017466123,False
+Naive Bayes,After tuning,احذف النتيجة السابقة,أمر,شكوى,0.32561393598877997,False
+Naive Bayes,After tuning,مرحبا عندي استفسار,تحية,أمر,0.25,False
+Naive Bayes,After tuning,ما الفرق بين تحليل النص وتحليل الصورة؟,سؤال,شكوى,0.3911027425538019,False
+Naive Bayes,After tuning,حياك الله,تحية,أمر,0.25,False
+Naive Bayes,After tuning,وش المفروض أسوي الحين,سؤال,أمر,0.25,False
+Naive Bayes,After tuning,اعرض الكلمات المفتاحية,أمر,شكوى,0.3861839533253481,False
+Naive Bayes,After tuning,الواجهة صعبة الاستخدام,شكوى,أمر,0.25,False
+Naive Bayes,After tuning,التحليل أخذ وقت طويل,شكوى,سؤال,0.3234592426384933,False
+Naive Bayes,After tuning,التقرير ناقص معلومات,شكوى,أمر,0.45473391197159607,False
+Naive Bayes,After tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.4643682408256171,False
+Logistic Regression,After tuning,احذف النتيجة السابقة,أمر,شكوى,0.2958110389672496,False
+Logistic Regression,After tuning,مرحبا عندي استفسار,تحية,أمر,0.26159058453183537,False
+Logistic Regression,After tuning,ما الفرق بين تحليل النص وتحليل الصورة؟,سؤال,شكوى,0.34255713831609247,False
+Logistic Regression,After tuning,حياك الله,تحية,أمر,0.26159058453183537,False
+Logistic Regression,After tuning,وش المفروض أسوي الحين,سؤال,أمر,0.26159058453183537,False
+Logistic Regression,After tuning,اعرض الكلمات المفتاحية,أمر,شكوى,0.2992437812491393,False
+Logistic Regression,After tuning,الواجهة صعبة الاستخدام,شكوى,أمر,0.26159058453183537,False
+Logistic Regression,After tuning,التحليل أخذ وقت طويل,شكوى,أمر,0.2875637882608559,False
+Logistic Regression,After tuning,التقرير ناقص معلومات,شكوى,أمر,0.3828641460860257,False
+Logistic Regression,After tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.3711226017466123,False

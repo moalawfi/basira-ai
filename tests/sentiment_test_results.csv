@@ -1,0 +1,35 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Logistic Regression,Before tuning,كانت المباراة ممتعة وأداء الفريق رائعًا,إيجابي,سلبي,0.4316085027504111,False
+Logistic Regression,Before tuning,تقع المكتبة بجوار المبنى الرئيسي,محايد,إيجابي,0.3356057620660121,False
+Logistic Regression,Before tuning,تستغرق الرحلة ساعتين تقريبًا,محايد,إيجابي,0.3356057620660121,False
+Logistic Regression,Before tuning,كانت المحاضرة مفيدة وتعلمت منها الكثير,إيجابي,سلبي,0.4528211854124335,False
+Logistic Regression,Before tuning,التحليل دقيق إلى حد كبير,إيجابي,محايد,0.3918439175158704,False
+Logistic Regression,Before tuning,التطبيق سهل الاستخدام ويعمل بكفاءة,إيجابي,سلبي,0.3867799896631635,False
+Logistic Regression,Before tuning,تم تسجيل البيانات في الملف,محايد,محايد,0.5858226902012693,True
+Logistic Regression,Before tuning,التقرير غير واضح,سلبي,محايد,0.34814707739311374,False
+Logistic Regression,Before tuning,الأداء تحسن بشكل واضح,إيجابي,سلبي,0.3812161404694888,False
+Logistic Regression,Before tuning,الطعام لذيذ وسأعود إلى المطعم مرة أخرى,إيجابي,سلبي,0.45269895506901037,False
+Logistic Regression,Before tuning,التحديث الجديد خرب النظام,سلبي,إيجابي,0.35357924058127804,False
+Logistic Regression,Before tuning,ظهرت النتيجة على الشاشة,محايد,محايد,0.3607778052593384,True
+Logistic Regression,Before tuning,تم تحديث النظام إلى الإصدار الجديد,محايد,محايد,0.4620924496272896,True
+Logistic Regression,Before tuning,الخدمة بطيئة والموظفون غير متعاونين,سلبي,إيجابي,0.3617252148638751,False
+Logistic Regression,Before tuning,الفندق غير نظيف والغرفة غير مريحة,سلبي,إيجابي,0.3662618871467442,False
+Logistic Regression,Before tuning,كانت التجربة سيئة ولم أستمتع بها,سلبي,إيجابي,0.3719700945373165,False
+Logistic Regression,Before tuning,النتيجة غير صحيحة,سلبي,سلبي,0.3813692437177444,True
+Logistic Regression,After tuning,كانت المباراة ممتعة وأداء الفريق رائعًا,إيجابي,سلبي,0.33467491217337697,False
+Logistic Regression,After tuning,تقع المكتبة بجوار المبنى الرئيسي,محايد,سلبي,0.3333333333333333,False
+Logistic Regression,After tuning,تستغرق الرحلة ساعتين تقريبًا,محايد,سلبي,0.3333333333333333,False
+Logistic Regression,After tuning,كانت المحاضرة مفيدة وتعلمت منها الكثير,إيجابي,سلبي,0.33490195859976996,False
+Logistic Regression,After tuning,التحليل دقيق إلى حد كبير,إيجابي,محايد,0.3341691241352339,False
+Logistic Regression,After tuning,التطبيق سهل الاستخدام ويعمل بكفاءة,إيجابي,سلبي,0.33407346314795805,False
+Logistic Regression,After tuning,تم تسجيل البيانات في الملف,محايد,محايد,0.33678363305088654,True
+Logistic Regression,After tuning,التقرير غير واضح,سلبي,محايد,0.3336598849252269,False
+Logistic Regression,After tuning,الأداء تحسن بشكل واضح,إيجابي,سلبي,0.33397755656599654,False
+Logistic Regression,After tuning,الطعام لذيذ وسأعود إلى المطعم مرة أخرى,إيجابي,سلبي,0.3348612334139939,False
+Logistic Regression,After tuning,التحديث الجديد خرب النظام,سلبي,محايد,0.3336661386348703,False
+Logistic Regression,After tuning,ظهرت النتيجة على الشاشة,محايد,محايد,0.33378283543179454,True
+Logistic Regression,After tuning,تم تحديث النظام إلى الإصدار الجديد,محايد,محايد,0.3351124194909259,True
+Logistic Regression,After tuning,الخدمة بطيئة والموظفون غير متعاونين,سلبي,إيجابي,0.33382277507921715,False
+Logistic Regression,After tuning,الفندق غير نظيف والغرفة غير مريحة,سلبي,إيجابي,0.33376042287341484,False
+Logistic Regression,After tuning,كانت التجربة سيئة ولم أستمتع بها,سلبي,سلبي,0.3339228601044975,True
+Logistic Regression,After tuning,النتيجة غير صحيحة,سلبي,سلبي,0.3339500249820377,True

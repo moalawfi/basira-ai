@@ -5,7 +5,6 @@ import joblib
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import (
@@ -27,11 +26,16 @@ from sklearn.pipeline import Pipeline
 # ============================================================
 
 BASE_DIR = Path(__file__).resolve().parent
+PROJECT_ROOT = BASE_DIR.parent
+TESTS_DIR = PROJECT_ROOT / "tests"
 
 DATA_PATH = BASE_DIR / "sentiment_dataset_ar.csv"
 MODEL_PATH = BASE_DIR / "sentiment_model.joblib"
 CM_PATH = BASE_DIR / "sentiment_cm.png"
 EVALUATION_PATH = BASE_DIR / "EVALUATION.md"
+
+TEST_RESULTS_PATH = TESTS_DIR / "sentiment_test_results.csv"
+MISCLASSIFIED_PATH = TESTS_DIR / "sentiment_misclassified.csv"
 
 RANDOM_STATE = 42
 
@@ -42,11 +46,11 @@ RANDOM_STATE = 42
 
 def load_data():
     """
-    Load and validate the Arabic sentiment dataset.
+    Load and validate the sentiment dataset.
 
-    Required CSV columns:
-    - النص
-    - الفئة
+    Supported CSV column names:
+    - Arabic: النص, الفئة
+    - English: text, label
     """
 
     if not DATA_PATH.exists():
@@ -59,13 +63,12 @@ def load_data():
         encoding="utf-8-sig",
     )
 
-    # Remove accidental spaces from column names
     data.columns = data.columns.str.strip()
 
     print("\nDataset columns:")
     print(data.columns.tolist())
 
-    # Convert Arabic column names to internal English names
+    # Support either Arabic or English column headers.
     data = data.rename(
         columns={
             "النص": "text",
@@ -74,7 +77,6 @@ def load_data():
     )
 
     required_columns = {"text", "label"}
-
     missing_columns = required_columns - set(data.columns)
 
     if missing_columns:
@@ -83,12 +85,10 @@ def load_data():
             f"Available columns: {data.columns.tolist()}"
         )
 
-    # Remove rows with missing values
     data = data.dropna(
         subset=["text", "label"]
     ).copy()
 
-    # Clean text and labels
     data["text"] = (
         data["text"]
         .astype(str)
@@ -101,11 +101,15 @@ def load_data():
         .str.strip()
     )
 
-    # Remove empty rows
     data = data[
         (data["text"] != "")
         & (data["label"] != "")
     ]
+
+    # Remove exact duplicate examples.
+    data = data.drop_duplicates(
+        subset=["text", "label"]
+    ).reset_index(drop=True)
 
     if data.empty:
         raise ValueError(
@@ -139,12 +143,9 @@ def load_data():
 def build_model(C=1.0):
     """
     Create a TF-IDF + Logistic Regression pipeline.
-
-    Word unigrams and bigrams are used so that the model's
-    top features are understandable.
     """
 
-    model = Pipeline(
+    return Pipeline(
         steps=[
             (
                 "tfidf",
@@ -166,16 +167,71 @@ def build_model(C=1.0):
         ]
     )
 
-    return model
+
+# ============================================================
+# 4. Model persistence
+# ============================================================
+
+def save_model(model, path):
+    """
+    Save a fitted model using joblib.
+
+    Args:
+        model:
+            Fitted sklearn model or pipeline.
+        path:
+            Destination path.
+
+    Returns:
+        pathlib.Path of the saved model.
+    """
+
+    destination = Path(path)
+    destination.parent.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    joblib.dump(
+        model,
+        destination,
+    )
+
+    # Prevent an old model from remaining in the cache.
+    load_model.cache_clear()
+
+    return destination
+
+
+@lru_cache(maxsize=4)
+def load_model(path=MODEL_PATH):
+    """
+    Load a saved model using joblib.
+
+    The loaded model is cached so it is not read from disk
+    repeatedly during the same program execution.
+    """
+
+    source = Path(path)
+
+    if not source.exists():
+        raise FileNotFoundError(
+            f"The trained sentiment model was not found:\n"
+            f"{source}\n\n"
+            "Run this command first:\n"
+            "python nlp-core/sentiment_analyzer.py"
+        )
+
+    return joblib.load(source)
 
 
 # ============================================================
-# 4. Evaluate model
+# 5. Evaluate model
 # ============================================================
 
 def evaluate_model(model, X_test, y_test):
     """
-    Calculate accuracy, Macro-F1, and predictions.
+    Calculate accuracy, Macro-F1, predictions, and confidence.
     """
 
     predictions = model.predict(X_test)
@@ -192,28 +248,122 @@ def evaluate_model(model, X_test, y_test):
         zero_division=0,
     )
 
-    return accuracy, macro_f1, predictions
+    if hasattr(model, "predict_proba"):
+        probabilities = model.predict_proba(X_test)
+        confidence = np.max(
+            probabilities,
+            axis=1,
+        )
+    else:
+        confidence = np.full(
+            len(predictions),
+            np.nan,
+        )
+
+    return (
+        accuracy,
+        macro_f1,
+        predictions,
+        confidence,
+    )
 
 
 # ============================================================
-# 5. Get top features
+# 6. Save held-out test predictions
+# ============================================================
+
+def create_test_results(
+    X_test,
+    y_test,
+    predictions,
+    confidence,
+    model_name,
+    stage,
+):
+    """
+    Create a DataFrame containing every held-out test prediction.
+    """
+
+    results = pd.DataFrame(
+        {
+            "model": model_name,
+            "stage": stage,
+            "text": list(X_test),
+            "actual": list(y_test),
+            "predicted": list(predictions),
+            "confidence": list(confidence),
+        }
+    )
+
+    results["correct"] = (
+        results["actual"]
+        == results["predicted"]
+    )
+
+    return results
+
+
+def save_test_results(all_test_results):
+    """
+    Save all test predictions and failed predictions under tests/.
+    """
+
+    TESTS_DIR.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
+
+    if all_test_results:
+        combined_results = pd.concat(
+            all_test_results,
+            ignore_index=True,
+        )
+    else:
+        combined_results = pd.DataFrame(
+            columns=[
+                "model",
+                "stage",
+                "text",
+                "actual",
+                "predicted",
+                "confidence",
+                "correct",
+            ]
+        )
+
+    combined_results.to_csv(
+        TEST_RESULTS_PATH,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    misclassified = combined_results[
+        combined_results["correct"] == False  # noqa: E712
+    ].copy()
+
+    misclassified.to_csv(
+        MISCLASSIFIED_PATH,
+        index=False,
+        encoding="utf-8-sig",
+    )
+
+    print("\nAll sentiment test predictions saved to:")
+    print(TEST_RESULTS_PATH)
+
+    print("\nMisclassified sentiment predictions saved to:")
+    print(MISCLASSIFIED_PATH)
+
+    print("\nTotal saved predictions:", len(combined_results))
+    print("Total failed predictions:", len(misclassified))
+
+
+# ============================================================
+# 7. Get top features
 # ============================================================
 
 def get_top_features(model, n=10):
     """
     Return the top n TF-IDF features for every sentiment class.
-
-    Args:
-        model:
-            A fitted sklearn Pipeline containing:
-            - tfidf
-            - classifier
-
-        n:
-            Number of top features for each class.
-
-    Returns:
-        Dictionary containing the top features for each class.
     """
 
     if n <= 0:
@@ -242,24 +392,25 @@ def get_top_features(model, n=10):
 
     top_features = {}
 
-    # Binary Logistic Regression contains one coefficient row
-    if len(class_names) == 2 and coefficients.shape[0] == 1:
-
+    # Binary Logistic Regression contains one coefficient row.
+    if (
+        len(class_names) == 2
+        and coefficients.shape[0] == 1
+    ):
         weights_by_class = {
             class_names[0]: -coefficients[0],
             class_names[1]: coefficients[0],
         }
-
     else:
-
         weights_by_class = {
             class_name: coefficients[index]
             for index, class_name in enumerate(class_names)
         }
 
     for class_name, weights in weights_by_class.items():
-
-        top_indices = np.argsort(weights)[-n:][::-1]
+        top_indices = np.argsort(
+            weights
+        )[-n:][::-1]
 
         top_features[class_name] = (
             feature_names[top_indices].tolist()
@@ -269,12 +420,12 @@ def get_top_features(model, n=10):
 
 
 # ============================================================
-# 6. Convert top features to Markdown
+# 8. Convert top features to Markdown
 # ============================================================
 
 def create_features_table(top_features):
     """
-    Convert the top features dictionary into a Markdown table.
+    Convert the top-features dictionary into a Markdown table.
     """
 
     rows = [
@@ -283,8 +434,10 @@ def create_features_table(top_features):
     ]
 
     for class_name, features in top_features.items():
-
-        safe_class_name = class_name.replace("|", "\\|")
+        safe_class_name = class_name.replace(
+            "|",
+            "\\|",
+        )
 
         features_text = ", ".join(
             feature.replace("|", "\\|")
@@ -299,7 +452,7 @@ def create_features_table(top_features):
 
 
 # ============================================================
-# 7. Update EVALUATION.md
+# 9. Update EVALUATION.md
 # ============================================================
 
 def update_evaluation_file(
@@ -312,10 +465,7 @@ def update_evaluation_file(
     top_features,
 ):
     """
-    Create or update EVALUATION.md automatically.
-
-    This function only replaces the generated Sentiment section.
-    The Intent section remains unchanged.
+    Create or replace the generated Sentiment section.
     """
 
     start_marker = "<!-- SENTIMENT_EVALUATION_START -->"
@@ -335,7 +485,9 @@ def update_evaluation_file(
 
 ## Sentiment Analysis Evaluation
 
-The baseline and tuned sentiment models were evaluated using the same held-out test set. `GridSearchCV` was performed only on the training set to prevent test-data leakage.
+The baseline and tuned sentiment models were evaluated using
+the same held-out test set. `GridSearchCV` was performed only
+on the training set to prevent test-data leakage.
 
 ### Results Before and After Tuning
 
@@ -354,6 +506,11 @@ The baseline and tuned sentiment models were evaluated using the same held-out t
 
 **Best hyperparameters:** {parameters_text}
 
+### Saved Test Files
+
+- All predictions: `tests/sentiment_test_results.csv`
+- Failed predictions: `tests/sentiment_misclassified.csv`
+
 ### Top 10 Features per Sentiment Class
 
 {features_table}
@@ -362,13 +519,13 @@ The baseline and tuned sentiment models were evaluated using the same held-out t
 
 - `sentiment_model.joblib`
 - `sentiment_cm.png`
+- `tests/sentiment_test_results.csv`
+- `tests/sentiment_misclassified.csv`
 
 {end_marker}
 """.strip()
 
-    # Create EVALUATION.md if it does not exist
     if not EVALUATION_PATH.exists():
-
         initial_content = f"""# NLP Model Evaluation
 
 This file is generated automatically by the training scripts.
@@ -387,12 +544,10 @@ This file is generated automatically by the training scripts.
         encoding="utf-8"
     )
 
-    # Replace an existing Sentiment section
     if (
         start_marker in current_content
         and end_marker in current_content
     ):
-
         before_section = current_content.split(
             start_marker,
             1,
@@ -412,10 +567,7 @@ This file is generated automatically by the training scripts.
             updated_content += (
                 f"\n\n{after_section}"
             )
-
-    # Add the Sentiment section if it does not exist
     else:
-
         updated_content = (
             current_content.rstrip()
             + "\n\n"
@@ -430,16 +582,16 @@ This file is generated automatically by the training scripts.
 
 
 # ============================================================
-# 8. Save confusion matrix
+# 10. Save confusion matrix
 # ============================================================
 
 def save_confusion_matrix(y_test, predictions):
     """
-    Create and save the sentiment confusion matrix.
+    Create and save the tuned sentiment confusion matrix.
     """
 
     class_names = sorted(
-        y_test.unique()
+        pd.Series(y_test).unique()
     )
 
     fig, ax = plt.subplots(
@@ -483,14 +635,14 @@ def save_confusion_matrix(y_test, predictions):
 
 
 # ============================================================
-# 9. Train and tune model
+# 11. Train and tune model
 # ============================================================
 
 def train_model():
     """
-    Train the baseline model, apply GridSearchCV,
-    compare the results, save the confusion matrix,
-    save the final model, and update EVALUATION.md.
+    Train the baseline model, tune it, save held-out results,
+    save the confusion matrix, retrain on all data, and persist
+    the final model.
     """
 
     print("=" * 60)
@@ -499,7 +651,7 @@ def train_model():
 
     texts, labels = load_data()
 
-    # Use the same test set before and after tuning
+    # Use the same held-out split before and after tuning.
     X_train, X_test, y_train, y_test = train_test_split(
         texts,
         labels,
@@ -511,7 +663,6 @@ def train_model():
     print("\nTraining samples:", len(X_train))
     print("Testing samples:", len(X_test))
 
-    # Determine a safe number of cross-validation folds
     smallest_training_class = int(
         y_train.value_counts().min()
     )
@@ -533,8 +684,10 @@ def train_model():
         random_state=RANDOM_STATE,
     )
 
+    all_test_results = []
+
     # --------------------------------------------------------
-    # Baseline model before tuning
+    # Baseline model
     # --------------------------------------------------------
 
     print("\n" + "=" * 60)
@@ -554,18 +707,32 @@ def train_model():
         baseline_accuracy,
         baseline_macro_f1,
         baseline_predictions,
+        baseline_confidence,
     ) = evaluate_model(
         baseline_model,
         X_test,
         y_test,
     )
 
-    print(
-        f"\nBaseline Accuracy: {baseline_accuracy:.4f}"
+    all_test_results.append(
+        create_test_results(
+            X_test=X_test,
+            y_test=y_test,
+            predictions=baseline_predictions,
+            confidence=baseline_confidence,
+            model_name="Logistic Regression",
+            stage="Before tuning",
+        )
     )
 
     print(
-        f"Baseline Macro-F1: {baseline_macro_f1:.4f}"
+        f"\nBaseline Accuracy: "
+        f"{baseline_accuracy:.4f}"
+    )
+
+    print(
+        f"Baseline Macro-F1: "
+        f"{baseline_macro_f1:.4f}"
     )
 
     print("\nBaseline Classification Report:")
@@ -624,17 +791,29 @@ def train_model():
     )
 
     # --------------------------------------------------------
-    # Evaluate tuned model on the same test set
+    # Evaluate tuned model
     # --------------------------------------------------------
 
     (
         tuned_accuracy,
         tuned_macro_f1,
         tuned_predictions,
+        tuned_confidence,
     ) = evaluate_model(
         tuned_model,
         X_test,
         y_test,
+    )
+
+    all_test_results.append(
+        create_test_results(
+            X_test=X_test,
+            y_test=y_test,
+            predictions=tuned_predictions,
+            confidence=tuned_confidence,
+            model_name="Logistic Regression",
+            stage="After tuning",
+        )
     )
 
     print("\n" + "=" * 60)
@@ -642,11 +821,13 @@ def train_model():
     print("=" * 60)
 
     print(
-        f"\nTuned Accuracy: {tuned_accuracy:.4f}"
+        f"\nTuned Accuracy: "
+        f"{tuned_accuracy:.4f}"
     )
 
     print(
-        f"Tuned Macro-F1: {tuned_macro_f1:.4f}"
+        f"Tuned Macro-F1: "
+        f"{tuned_macro_f1:.4f}"
     )
 
     print("\nTuned Classification Report:")
@@ -678,7 +859,8 @@ def train_model():
     )
 
     accuracy_change = (
-        tuned_accuracy - baseline_accuracy
+        tuned_accuracy
+        - baseline_accuracy
     )
 
     print(
@@ -697,7 +879,8 @@ def train_model():
     )
 
     macro_f1_change = (
-        tuned_macro_f1 - baseline_macro_f1
+        tuned_macro_f1
+        - baseline_macro_f1
     )
 
     print(
@@ -705,20 +888,24 @@ def train_model():
         f"{macro_f1_change:+.4f}"
     )
 
-    # --------------------------------------------------------
-    # Save confusion matrix using tuned predictions
-    # --------------------------------------------------------
+    # Save every held-out prediction and the failed subset.
+    save_test_results(
+        all_test_results
+    )
 
+    # Save the tuned model's confusion matrix.
     save_confusion_matrix(
         y_test,
         tuned_predictions,
     )
 
     # --------------------------------------------------------
-    # Train final tuned model on all available data
+    # Train final model on all data
     # --------------------------------------------------------
 
-    print("\nTraining final model on the full dataset...")
+    print(
+        "\nTraining final model on the full dataset..."
+    )
 
     final_model = grid_search.best_estimator_
 
@@ -727,20 +914,16 @@ def train_model():
         labels,
     )
 
-    # Save final model
-    joblib.dump(
+    save_model(
         final_model,
         MODEL_PATH,
     )
-
-    # Clear cached old model
-    load_model.cache_clear()
 
     print("\nModel saved to:")
     print(MODEL_PATH)
 
     # --------------------------------------------------------
-    # Extract top features
+    # Top features
     # --------------------------------------------------------
 
     top_features = get_top_features(
@@ -753,15 +936,11 @@ def train_model():
     print("=" * 60)
 
     for class_name, features in top_features.items():
-
         print(f"\n{class_name}:")
-
-        print(
-            ", ".join(features)
-        )
+        print(", ".join(features))
 
     # --------------------------------------------------------
-    # Update EVALUATION.md
+    # EVALUATION.md
     # --------------------------------------------------------
 
     update_evaluation_file(
@@ -785,36 +964,12 @@ def train_model():
 
 
 # ============================================================
-# 10. Load saved model
-# ============================================================
-
-@lru_cache(maxsize=1)
-def load_model():
-    """
-    Load the trained sentiment model.
-
-    The model is cached so it is loaded only once.
-    """
-
-    if not MODEL_PATH.exists():
-        raise FileNotFoundError(
-            "The trained sentiment model was not found.\n"
-            "Run this command first:\n\n"
-            "python nlp-core/sentiment_analyzer.py"
-        )
-
-    return joblib.load(
-        MODEL_PATH
-    )
-
-
-# ============================================================
-# 11. Validate input text
+# 12. Validate input text
 # ============================================================
 
 def validate_text(text):
     """
-    Validate one input text.
+    Validate and clean one input text.
     """
 
     if not isinstance(text, str):
@@ -833,28 +988,25 @@ def validate_text(text):
 
 
 # ============================================================
-# 12. Analyze one text
+# 13. Analyze one text
 # ============================================================
 
-def analyze_sentiment(text, save_to_db=False):
+def analyze_sentiment(
+    text,
+    save_to_db=False,
+):
     """
-    Analyze the sentiment of one text.
+    Analyze one text and optionally save the prediction to SQLite.
 
-    Args:
-        text:
-            Text to analyze.
-
-        save_to_db:
-            When True, save the sentiment result
-            in the database.
-
-    Returns:
-        The predicted sentiment label as a string.
+    The return value remains a string to preserve compatibility
+    with the existing tests and project interface.
     """
 
     cleaned_text = validate_text(text)
 
-    model = load_model()
+    model = load_model(
+        MODEL_PATH
+    )
 
     prediction = str(
         model.predict(
@@ -872,28 +1024,27 @@ def analyze_sentiment(text, save_to_db=False):
             },
         }
 
-        save_nlp_result(
+        saved = save_nlp_result(
             cleaned_text,
             result,
         )
+
+        if not saved:
+            raise RuntimeError(
+                "The sentiment prediction was created, "
+                "but saving it to the database failed."
+            )
 
     return prediction
 
 
 # ============================================================
-# 13. Analyze multiple texts
+# 14. Analyze multiple texts
 # ============================================================
 
 def batch_analyze(texts):
     """
-    Analyze multiple texts.
-
-    Args:
-        texts:
-            A list of input sentences.
-
-    Returns:
-        A list of predicted sentiment labels.
+    Analyze multiple input texts.
     """
 
     if not isinstance(texts, list):
@@ -909,7 +1060,9 @@ def batch_analyze(texts):
         for text in texts
     ]
 
-    model = load_model()
+    model = load_model(
+        MODEL_PATH
+    )
 
     predictions = model.predict(
         cleaned_texts
@@ -922,15 +1075,13 @@ def batch_analyze(texts):
 
 
 # ============================================================
-# 14. Main
+# 15. Main
 # ============================================================
 
 if __name__ == "__main__":
 
-    # Train, tune, and save the sentiment model
     train_model()
 
-    # Single prediction test
     print("\n" + "=" * 60)
     print("SINGLE TEXT TEST")
     print("=" * 60)
@@ -944,7 +1095,6 @@ if __name__ == "__main__":
     print(f"\nText: {test_text}")
     print(f"Prediction: {result}")
 
-    # Batch prediction test
     print("\n" + "=" * 60)
     print("BATCH TEST")
     print("=" * 60)

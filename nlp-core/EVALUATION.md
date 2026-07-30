@@ -1,76 +1,295 @@
 # NLP Model Evaluation
 
-This file is generated automatically by the training scripts.
+This file documents the evaluation of the intent-classification and
+sentiment-analysis models before and after the Week 6 dataset expansion.
 
-<!-- INTENT_EVALUATION_START -->
+# Week 4: Results Before Dataset Expansion
 
-## Intent Classification Evaluation
+## Intent Classification
 
-The baseline and tuned models were evaluated using the same held-out test set. Hyperparameter tuning was performed only on the training data using `GridSearchCV`.
-
-### Results Before and After Tuning
-
-| Model | Stage | Accuracy | Macro-F1 |
+| Model | Configuration | Accuracy | Macro-F1 |
 |---|---|---:|---:|
 | Naive Bayes | Before tuning | 0.4000 | 0.3667 |
 | Logistic Regression | Before tuning | 0.4000 | 0.2917 |
 | Naive Bayes | After tuning | 0.3000 | 0.2833 |
-| Logistic Regression | After tuning | 0.6000 | 0.5095 |
+| Logistic Regression | After tuning | **0.6000** | **0.5095** |
 
-### Selected Model
+The selected intent model was Logistic Regression with:
 
-**Best model:** Logistic Regression
+```text
+classifier__C = 0.01
+```
 
-**Best hyperparameters:** `classifier__C` = `0.01`
+## Sentiment Analysis
 
-### Top 10 Features per Intent Class
-
-| Intent class | Top 10 features |
-|---|---|
-| أمر | اعرض, اعرض الكلمات, ارفع, ارفع الصورة, الصورة للتحليل, عملية التحليل, عملية, ابدأ, ابدأ عملية, افتح صفحة |
-| تحية | هلا, الخير, أهلين, مرحب, الحال, كيف الحال, مساء الخير, هلا والله, يا, يا هلا |
-| سؤال | هل, النص, أقدر, يتم حفظها, حفظها, البيانات يتم, يتم, هل البيانات, دخول, أسجل دخول |
-| شكوى | ما, النتيجة, التطبيق, بطيء, غير, جد, بطيء جد, النتيجة غير, غير دقيقة, دقيقة |
-
-<!-- INTENT_EVALUATION_END -->
-
-<!-- SENTIMENT_EVALUATION_START -->
-
-## Sentiment Analysis Evaluation
-
-The baseline and tuned sentiment models were evaluated using the same held-out test set. `GridSearchCV` was performed only on the training set to prevent test-data leakage.
-
-### Results Before and After Tuning
-
-| Model | Stage | Accuracy | Macro-F1 |
+| Model | Configuration | Accuracy | Macro-F1 |
 |---|---|---:|---:|
 | Logistic Regression | Before tuning | 0.2500 | 0.2857 |
 | Logistic Regression | After tuning | 0.2500 | 0.2857 |
 
-### Hyperparameter Tuning
+The selected sentiment-model parameter was:
 
-**Method:** GridSearchCV
+```text
+classifier__C = 0.01
+```
 
-**Scoring metric:** Accuracy
+The best cross-validation accuracy was `0.4619`.
 
-**Best cross-validation accuracy:** 0.4619
+---
 
-**Best hyperparameters:** `classifier__C` = `0.01`
+# Week 6: Results After Dataset Expansion
 
-### Top 10 Features per Sentiment Class
+Twenty additional examples were added to each dataset. The new examples
+focused on short, ambiguous, and difficult sentences that were likely to
+be confused by the previous models.
 
-| Sentiment class | Top 10 features |
+The models were retrained and evaluated using a stratified train-test
+split with `random_state=42`.
+
+## Intent Classification
+
+| Model | Configuration | Accuracy | Macro-F1 |
+|---|---|---:|---:|
+| Naive Bayes | Before tuning | 0.3333 | 0.3548 |
+| Logistic Regression | Before tuning | 0.3333 | **0.3639** |
+| Naive Bayes | After tuning | 0.3333 | 0.3548 |
+| Logistic Regression | After tuning | 0.3333 | **0.3639** |
+
+The selected intent model was Logistic Regression with:
+
+```text
+classifier__C = 1.0
+```
+
+### Saved Intent Test Files
+
+- All test predictions: `tests/intent_test_results.csv`
+- Incorrect predictions: `tests/intent_misclassified.csv`
+
+### Top Intent Features
+
+| Intent class | Top features |
 |---|---|
-| إيجابي | جد, رائع, حصلت, الفريق, متفائل بشأن, أنا متفائل, متفائل, متعاونون, والموظفون متعاونون, ممتازة |
-| سلبي | غير, ولا, مملة, ولم, سيئ, كثير, أنا قلق, قلق بشأن, قلق, بطيئة والموظفون |
-| محايد | في, تم, يوم, يحتوي, الفصل, صباح, على, ساعتين, الرحلة, تستغرق الرحلة |
+| أمر | اعرض, احذف, في, احفظ, اعرض لي, النتائج, التقرير, ارفع الصورة, ارفع, الصورة للتحليل |
+| تحية | الخير, هلا, مرحب, أهلين, صباح, مساء الخير, مساء, كيف الحال, الحال, السلام |
+| سؤال | هل, وين ألقى, ألقى, وين, النص, أقدر, ممكن, ممكن تساعدني, تساعدني, البيانات |
+| شكوى | ما, معي, ما قدرت, قدرت, قدرت أرفع, النتيجة, كل مرة, يعلق, كل, التطبيق |
 
-### Generated Files
+## Sentiment Analysis
 
-- `sentiment_model.joblib`
-- `sentiment_cm.png`
+| Model | Configuration | Accuracy | Macro-F1 |
+|---|---|---:|---:|
+| Logistic Regression | Before tuning | 0.2353 | 0.2556 |
+| Logistic Regression | After tuning | **0.2941** | **0.2707** |
 
-<!-- SENTIMENT_EVALUATION_END -->
-### Interpretation
+The selected sentiment-model parameter was:
 
-Hyperparameter tuning did not improve the held-out test performance. This is likely due to the limited dataset size, where each sentiment class contains only a small number of examples. As a result, the train-test split is sensitive to individual samples, and the selected hyperparameter may not generalize reliably. Expanding the dataset and using repeated stratified cross-validation may provide a more stable evaluation.
+```text
+classifier__C = 0.01
+```
+
+The best cross-validation accuracy was `0.3933`.
+
+### Saved Sentiment Test Files
+
+- All test predictions: `tests/sentiment_test_results.csv`
+- Incorrect predictions: `tests/sentiment_misclassified.csv`
+
+### Top Sentiment Features
+
+| Sentiment class | Top features |
+|---|---|
+| إيجابي | ممتازة, الخدمة ممتازة, أعجبني, جد, رائع, ممتازة وسريعة, وسريعة, ترتيب التقرير, أعجبني ترتيب, ترتيب |
+| سلبي | غير, ولا, سيئة, مملة, ولم, سيئ, التقرير غير, غير واضح, النتيجة غير, صحيحة |
+| محايد | في, تم, على, الملف, يحتوي, خمس, بدأ, يوم, صباح, الفصل |
+
+---
+
+# Before-and-After Dataset Expansion Comparison
+
+## Intent Model Comparison
+
+The best tuned Logistic Regression result from each week was used for
+the comparison.
+
+| Metric | Before expansion | After expansion | Change |
+|---|---:|---:|---:|
+| Accuracy | 0.6000 | 0.3333 | -0.2667 |
+| Macro-F1 | 0.5095 | 0.3639 | -0.1456 |
+| Selected `C` | 0.01 | 1.0 | Changed |
+
+The measured intent accuracy decreased after dataset expansion. However,
+this does not necessarily mean that the additional examples made the
+model worse.
+
+Although the same `random_state` was used, adding new examples changed
+the complete dataset. Therefore, `train_test_split()` selected a
+different group of sentences for the Week 6 test set.
+
+The Week 6 test set may also contain more difficult and ambiguous
+examples than the previous test set. This makes the two scores useful
+for documentation, but they are not a perfectly controlled comparison.
+
+The Week 6 model learned useful new features such as:
+
+- `ممكن تساعدني`
+- `وين ألقى`
+- `ما قدرت`
+- `كل مرة يعلق`
+
+These features indicate that the additional examples expanded the
+model's vocabulary and improved its coverage of short and difficult
+inputs.
+
+## Sentiment Model Comparison
+
+| Metric | Before expansion | After expansion | Change |
+|---|---:|---:|---:|
+| Accuracy | 0.2500 | 0.2941 | +0.0441 |
+| Macro-F1 | 0.2857 | 0.2707 | -0.0150 |
+| Best CV accuracy | 0.4619 | 0.3933 | -0.0686 |
+| Selected `C` | 0.01 | 0.01 | No change |
+
+The sentiment model achieved a small improvement in test accuracy,
+increasing from `0.2500` to `0.2941`.
+
+However, Macro-F1 decreased slightly from `0.2857` to `0.2707`. This
+suggests that the accuracy improvement was not distributed equally
+across the positive, negative, and neutral classes.
+
+The newly added examples introduced clearer sentiment features such as:
+
+- `الخدمة ممتازة`
+- `ممتازة وسريعة`
+- `التقرير غير واضح`
+- `النتيجة غير صحيحة`
+- `تم حفظ التقرير`
+- `يحتوي الملف`
+
+These expressions expanded the model's coverage of positive, negative,
+and neutral sentences.
+
+---
+
+# Summary of Changes
+
+| Model | Accuracy before expansion | Accuracy after expansion | Result |
+|---|---:|---:|---|
+| Intent classification | 0.6000 | 0.3333 | Decreased on the new test split |
+| Sentiment analysis | 0.2500 | 0.2941 | Improved by 0.0441 |
+
+The sentiment model showed a small improvement in accuracy after adding
+the new examples.
+
+The intent model produced a lower score after expansion. However, the
+test set changed when the dataset size changed, so the reduction cannot
+be attributed only to the added examples.
+
+---
+
+# Overall Interpretation
+
+Dataset expansion improved the linguistic coverage of both NLP models
+by introducing more difficult, short, and ambiguous sentences.
+
+The sentiment model showed a small increase in test accuracy, while the
+intent model achieved lower accuracy on the new held-out split.
+
+The results should be interpreted carefully because the Week 4 and Week
+6 models were not evaluated using exactly the same test sentences. A
+fixed `random_state` reproduces a split only when the dataset itself
+remains unchanged.
+
+Because twenty new examples were added to each dataset, the total number
+and ordering of samples changed. This caused a new test set to be
+selected during Week 6.
+
+For a strictly controlled before-and-after comparison, a fixed test
+dataset should be created and saved before expanding the training data.
+Both the old and new models should then be evaluated using that same
+unchanged test dataset.
+
+Despite the unstable scores caused by the small dataset, the new
+examples expanded the models' vocabulary and provided better coverage
+of difficult cases. The saved test-result files can now be used to
+inspect errors and guide future dataset improvements.
+
+---
+
+# Model Persistence
+
+The trained models are saved using `joblib` so that the system does not
+need to retrain them every time it starts.
+
+The model-persistence functions are:
+
+```python
+save_model(model, path)
+load_model(path)
+```
+
+The generated model files are:
+
+- `nlp-core/intent_model.joblib`
+- `nlp-core/sentiment_model.joblib`
+
+The prediction functions load these saved models during execution.
+
+---
+
+# Generated Files
+
+## Saved Models
+
+- `nlp-core/intent_model.joblib`
+- `nlp-core/sentiment_model.joblib`
+
+## Evaluation Files
+
+- `nlp-core/EVALUATION.md`
+- `nlp-core/sentiment_cm.png`
+
+## Intent Test Results
+
+- `tests/intent_test_results.csv`
+- `tests/intent_misclassified.csv`
+
+## Sentiment Test Results
+
+- `tests/sentiment_test_results.csv`
+- `tests/sentiment_misclassified.csv`
+
+The complete test-result CSV files contain:
+
+- model name
+- evaluation stage
+- input sentence
+- actual label
+- predicted label
+- prediction confidence
+- whether the prediction was correct
+
+The misclassified CSV files contain only the incorrectly classified
+sentences, making them useful for future error analysis and dataset
+expansion.
+
+---
+
+# Conclusion
+
+In Week 6, twenty new examples were added to each NLP dataset, and both
+models were retrained.
+
+The sentiment model's accuracy increased from `0.2500` to `0.2941`,
+while its Macro-F1 decreased slightly.
+
+The intent model's measured accuracy decreased from `0.6000` to
+`0.3333`, but this comparison was affected by the change in the held-out
+test set after dataset expansion.
+
+Both models now support persistent saving and loading through `joblib`.
+Their complete test predictions and classification errors are also
+saved as CSV files for future analysis.
+
+Future evaluation should use a fixed test dataset to provide a more
+reliable comparison between model versions.

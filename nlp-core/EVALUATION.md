@@ -346,15 +346,8 @@ on the training set to prevent test-data leakage.
 
 | Model | Stage | Accuracy | Macro-F1 |
 |---|---|---:|---:|
-| Logistic Regression | Before tuning | 0.9800 | 0.9800 |
-| Logistic Regression | After tuning | 0.9800 | 0.9801 |
-
-### Held-Out Test Summary
-
-| Model | Stage | Tested | Correct | Incorrect | Accuracy |
-|---|---|---:|---:|---:|---:|
-| Logistic Regression | Before tuning | 250 | 245 | 5 | 0.9800 |
-| Logistic Regression | After tuning | 250 | 245 | 5 | 0.9800 |
+| Logistic Regression | Before tuning | 0.9693 | 0.9694 |
+| Logistic Regression | After tuning | 0.9693 | 0.9695 |
 
 ### Hyperparameter Tuning
 
@@ -362,30 +355,62 @@ on the training set to prevent test-data leakage.
 
 **Scoring metric:** Accuracy
 
-**Best cross-validation accuracy:** 0.9760
+**Best cross-validation accuracy:** 0.9514
 
 **Best hyperparameters:** `classifier__C` = `100.0`
 
 ### Saved Test Files
 
-- All predictions: `tests/sentiment_test_results_after_expansion.csv`
-- Failed predictions: `tests/sentiment_misclassified_after_expansion.csv`
-- Test summary: `tests/sentiment_test_summary_after_expansion.csv`
+- All predictions: `tests/sentiment_test_results.csv`
+- Failed predictions: `tests/sentiment_misclassified.csv`
 
 ### Top 10 Features per Sentiment Class
 
 | Sentiment class | Top 10 features |
 |---|---|
-| إيجابي | وأعجبتني, جد, وتستحق, وتستحق التجربة, بسرعة, كانت, ممتازة, فعالة, التجربة, مقنعة |
-| سلبي | غير, ولم, مخيبة, سيئة, متعبة, مملة, تعجبني, ولم تعجبني, إلى تحسين, وتحتاج إلى |
-| محايد | في, تم, على, يحتوي, داخل, تم تسجيل, تسجيل, يبدأ, موعد, يوم |
+| إيجابي | وأعجبتني, جد, وتستحق التجربة, وتستحق, كانت, بسرعة, ممتازة, فعالة, مقنعة, التجربة |
+| سلبي | غير, ولم, مخيبة, سيئة, متعبة, مملة, ولم تعجبني, تعجبني, فشل, لم |
+| محايد | تم, في, يحتوي, على, يبدأ, موعد, داخل, يوم, الساعة, في الساعة |
 
 ### Generated Files
 
 - `sentiment_model.joblib`
 - `sentiment_cm.png`
-- `tests/sentiment_test_results_after_expansion.csv`
-- `tests/sentiment_misclassified_after_expansion.csv`
-- `tests/sentiment_test_summary_after_expansion.csv`
+- `tests/sentiment_test_results.csv`
+- `tests/sentiment_misclassified.csv`
 
 <!-- SENTIMENT_EVALUATION_END -->
+
+<!-- WEEK7_ARABIC_EVALUATION_START -->
+
+# Week 7: Arabic Language Support and E2E Testing
+
+Ten fixed Arabic sentences were processed using `language_detector`, the intent classifier, and the sentiment analyzer.
+
+## Accuracy Summary
+
+| Metric | Accuracy | Correct | Total |
+|---|---:|---:|---:|
+| Language detection | 1.0000 | 10 | 10 |
+| Intent classification | 0.9000 | 9 | 10 |
+| Sentiment analysis | 0.8000 | 8 | 10 |
+| Complete E2E result | 0.7000 | 7 | 10 |
+
+## Detailed Results
+
+| Text | Language | Expected Intent | Predicted Intent | Expected Sentiment | Predicted Sentiment |
+|---|---|---|---|---|---|
+| هلا والله، حياكم الله | ar | تحية | تحية | محايد | محايد |
+| أهلين، كيف الحال؟ | ar | تحية | تحية | محايد | محايد |
+| هل أقدر أطلع نتائج التحليل السابقة؟ | ar | سؤال | سؤال | محايد | محايد |
+| متى يكتمل رفع المستند؟ | ar | سؤال | سؤال | محايد | سلبي |
+| ورني التقارير الموجودة | ar | أمر | سؤال | محايد | محايد |
+| سجل النتيجة في قاعدة البيانات | ar | أمر | أمر | محايد | محايد |
+| نفذ تحليل المحتوى لهذا الملف | ar | أمر | أمر | محايد | سلبي |
+| النظام يتأخر كثير في إظهار النتيجة | ar | شكوى | شكوى | سلبي | سلبي |
+| كل ما أحاول أرسل الملف يفشل | ar | شكوى | شكوى | سلبي | سلبي |
+| التصنيف الذي ظهر لي خاطئ تمامًا | ar | شكوى | شكوى | سلبي | سلبي |
+
+A model score below `0.80` should be reviewed before deciding whether more Arabic training examples and retraining are required.
+
+<!-- WEEK7_ARABIC_EVALUATION_END -->

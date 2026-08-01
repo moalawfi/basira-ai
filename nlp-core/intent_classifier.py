@@ -1,8 +1,6 @@
-
-
-
 from functools import lru_cache
 from pathlib import Path
+import sys
 
 import joblib
 import numpy as np
@@ -24,13 +22,22 @@ BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 TESTS_DIR = PROJECT_ROOT / "tests"
 
+# Allow importing shared project modules when this file is
+# executed directly from the nlp-core directory.
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+# Use Abdulrahman's language detector without modifying his file.
+from nlp_extensions.language_detector import (
+    detect_language_with_confidence,
+)
+
 DATA_PATH = BASE_DIR / "intent_data.csv"
 MODEL_PATH = BASE_DIR / "intent_model.joblib"
 EVALUATION_PATH = BASE_DIR / "EVALUATION.md"
 
-TEST_RESULTS_PATH = TESTS_DIR / "intent_test_results_after_expansion.csv"
-MISCLASSIFIED_PATH = TESTS_DIR / "intent_misclassified_after_expansion.csv"
-TEST_SUMMARY_PATH = TESTS_DIR / "intent_test_summary_after_expansion.csv"
+TEST_RESULTS_PATH = TESTS_DIR / "intent_test_results.csv"
+MISCLASSIFIED_PATH = TESTS_DIR / "intent_misclassified.csv"
 
 RANDOM_STATE = 42
 
@@ -214,8 +221,7 @@ def create_test_results(
 
 def save_test_results(all_test_results):
     """
-    Save detailed predictions, misclassified samples, and a compact
-    model/stage summary in tests/ without overwriting the older CSV files.
+    Save all predictions and failed predictions in tests/.
     """
     TESTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -237,14 +243,12 @@ def save_test_results(all_test_results):
             ]
         )
 
-    # Full held-out predictions after dataset expansion.
     combined_results.to_csv(
         TEST_RESULTS_PATH,
         index=False,
         encoding="utf-8-sig",
     )
 
-    # Incorrect predictions only, for future error analysis.
     misclassified = combined_results[
         combined_results["correct"] == False  # noqa: E712
     ].copy()
@@ -255,66 +259,14 @@ def save_test_results(all_test_results):
         encoding="utf-8-sig",
     )
 
-    # One summary row per model and evaluation stage.
-    if combined_results.empty:
-        summary = pd.DataFrame(
-            columns=[
-                "model",
-                "stage",
-                "tested",
-                "correct",
-                "incorrect",
-                "accuracy",
-            ]
-        )
-    else:
-        summary = (
-            combined_results
-            .groupby(["model", "stage"], as_index=False)
-            .agg(
-                tested=("correct", "size"),
-                correct=("correct", "sum"),
-            )
-        )
-        summary["correct"] = summary["correct"].astype(int)
-        summary["incorrect"] = (
-            summary["tested"] - summary["correct"]
-        )
-        summary["accuracy"] = (
-            summary["correct"] / summary["tested"]
-        )
-        summary = summary[
-            [
-                "model",
-                "stage",
-                "tested",
-                "correct",
-                "incorrect",
-                "accuracy",
-            ]
-        ]
-
-    summary.to_csv(
-        TEST_SUMMARY_PATH,
-        index=False,
-        encoding="utf-8-sig",
-    )
-
-    print("\nExpanded-data test predictions saved to:")
+    print("\nAll test predictions saved to:")
     print(TEST_RESULTS_PATH)
 
-    print("\nExpanded-data misclassified predictions saved to:")
+    print("\nMisclassified test predictions saved to:")
     print(MISCLASSIFIED_PATH)
-
-    print("\nExpanded-data test summary saved to:")
-    print(TEST_SUMMARY_PATH)
 
     print("\nTotal saved predictions:", len(combined_results))
     print("Total failed predictions:", len(misclassified))
-
-    if not summary.empty:
-        print("\nTest summary after dataset expansion:")
-        print(summary.to_string(index=False))
 
 
 # ============================================================
@@ -452,9 +404,8 @@ using `GridSearchCV`.
 
 ### Saved Test Files
 
-- All predictions: `tests/intent_test_results_after_expansion.csv`
-- Failed predictions: `tests/intent_misclassified_after_expansion.csv`
-- Test summary: `tests/intent_test_summary_after_expansion.csv`
+- All predictions: `tests/intent_test_results.csv`
+- Failed predictions: `tests/intent_misclassified.csv`
 
 ### Top 10 Features per Intent Class
 
@@ -794,11 +745,30 @@ def validate_text(text):
     return cleaned_text
 
 
-def classify_intent(text, save_to_db=True):
+def validate_supported_language(text):
     """
-    Classify one text and optionally save the result to SQLite.
+    Detect the input language before intent classification.
+
+    The current intent model is trained on Arabic text only.
+    """
+    language_result = detect_language_with_confidence(text)
+    language = language_result.get("language", "unknown")
+
+    if language != "ar":
+        raise ValueError(
+            "intent classification currently supports Arabic text only"
+        )
+
+    return language_result
+
+
+def classify_intent(text, save_to_db=False):
+    """
+    Classify one Arabic text and optionally save the result
+    to SQLite.
     """
     cleaned_text = validate_text(text)
+    language_result = validate_supported_language(cleaned_text)
     model = load_model(MODEL_PATH)
 
     prediction = model.predict([cleaned_text])[0]
@@ -812,6 +782,7 @@ def classify_intent(text, save_to_db=True):
 
     result = {
         "type": "intent",
+        "language": language_result,
         "result": {
             "label": str(prediction),
             "confidence": confidence,

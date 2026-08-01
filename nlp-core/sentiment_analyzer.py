@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+import sys
 
 import joblib
 import matplotlib.pyplot as plt
@@ -29,22 +30,23 @@ BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 TESTS_DIR = PROJECT_ROOT / "tests"
 
+# Allow importing shared project modules when this file is
+# executed directly from the nlp-core directory.
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+# Use Abdulrahman's language detector without modifying his file.
+from nlp_extensions.language_detector import (
+    detect_language_with_confidence,
+)
+
 DATA_PATH = BASE_DIR / "sentiment_dataset_ar.csv"
 MODEL_PATH = BASE_DIR / "sentiment_model.joblib"
 CM_PATH = BASE_DIR / "sentiment_cm.png"
 EVALUATION_PATH = BASE_DIR / "EVALUATION.md"
 
-# Base names for evaluation files created after dataset expansion.
-# Existing files are never overwritten; later runs receive _run_2, _run_3, etc.
-TEST_RESULTS_PATH = (
-    TESTS_DIR / "sentiment_test_results_after_expansion.csv"
-)
-MISCLASSIFIED_PATH = (
-    TESTS_DIR / "sentiment_misclassified_after_expansion.csv"
-)
-TEST_SUMMARY_PATH = (
-    TESTS_DIR / "sentiment_test_summary_after_expansion.csv"
-)
+TEST_RESULTS_PATH = TESTS_DIR / "sentiment_test_results.csv"
+MISCLASSIFIED_PATH = TESTS_DIR / "sentiment_misclassified.csv"
 
 RANDOM_STATE = 42
 
@@ -77,7 +79,7 @@ def load_data():
     print("\nDataset columns:")
     print(data.columns.tolist())
 
-    # Support Arabic or English column headers.
+    # Support either Arabic or English column headers.
     data = data.rename(
         columns={
             "النص": "text",
@@ -110,45 +112,10 @@ def load_data():
         .str.strip()
     )
 
-    # Remove empty rows.
     data = data[
         (data["text"] != "")
         & (data["label"] != "")
-    ].copy()
-
-    # Remove repeated CSV header rows that appear inside the dataset.
-    repeated_header = (
-        data["text"].isin(["النص", "text"])
-        & data["label"].isin(["الفئة", "label"])
-    )
-
-    if repeated_header.any():
-        print(
-            "\nRemoved repeated header rows:",
-            int(repeated_header.sum()),
-        )
-
-        data = data[
-            ~repeated_header
-        ].copy()
-
-    # Accept only the expected sentiment labels.
-    allowed_labels = {
-        "إيجابي",
-        "سلبي",
-        "محايد",
-    }
-
-    invalid_labels = sorted(
-        set(data["label"]) - allowed_labels
-    )
-
-    if invalid_labels:
-        raise ValueError(
-            "Unexpected sentiment labels were found:\n"
-            f"{invalid_labels}\n"
-            f"Allowed labels: {sorted(allowed_labels)}"
-        )
+    ]
 
     # Remove exact duplicate examples.
     data = data.drop_duplicates(
@@ -167,10 +134,9 @@ def load_data():
     print("\nClass distribution:")
     print(class_counts)
 
-    if len(class_counts) != 3:
+    if len(class_counts) < 2:
         raise ValueError(
-            "The dataset must contain exactly three sentiment classes: "
-            "إيجابي, سلبي, and محايد."
+            "The dataset must contain at least two sentiment classes."
         )
 
     if class_counts.min() < 2:
@@ -179,6 +145,7 @@ def load_data():
         )
 
     return data["text"], data["label"]
+
 
 # ============================================================
 # 3. Build sentiment model
@@ -347,56 +314,15 @@ def create_test_results(
     return results
 
 
-def get_available_test_paths():
-    """
-    Return a matching set of unused expanded-data CSV paths.
-
-    The first run uses the base ``after_expansion`` names. If any file
-    from that set already exists, the next complete set uses ``_run_2``,
-    then ``_run_3``, and so on. This protects all previous test files.
-    """
-
-    run_number = 1
-
-    while True:
-        suffix = "" if run_number == 1 else f"_run_{run_number}"
-
-        paths = {
-            "all_predictions": TEST_RESULTS_PATH.with_name(
-                f"{TEST_RESULTS_PATH.stem}{suffix}"
-                f"{TEST_RESULTS_PATH.suffix}"
-            ),
-            "misclassified": MISCLASSIFIED_PATH.with_name(
-                f"{MISCLASSIFIED_PATH.stem}{suffix}"
-                f"{MISCLASSIFIED_PATH.suffix}"
-            ),
-            "summary": TEST_SUMMARY_PATH.with_name(
-                f"{TEST_SUMMARY_PATH.stem}{suffix}"
-                f"{TEST_SUMMARY_PATH.suffix}"
-            ),
-        }
-
-        if not any(path.exists() for path in paths.values()):
-            return paths
-
-        run_number += 1
-
-
 def save_test_results(all_test_results):
     """
-    Save expanded-data predictions, failed predictions, and a summary.
-
-    New run-specific paths are selected automatically, so neither the
-    original Week 4/Week 6 CSV files nor previous expanded-data runs are
-    deleted or overwritten.
+    Save all test predictions and failed predictions under tests/.
     """
 
     TESTS_DIR.mkdir(
         parents=True,
         exist_ok=True,
     )
-
-    output_paths = get_available_test_paths()
 
     if all_test_results:
         combined_results = pd.concat(
@@ -417,7 +343,7 @@ def save_test_results(all_test_results):
         )
 
     combined_results.to_csv(
-        output_paths["all_predictions"],
+        TEST_RESULTS_PATH,
         index=False,
         encoding="utf-8-sig",
     )
@@ -427,94 +353,20 @@ def save_test_results(all_test_results):
     ].copy()
 
     misclassified.to_csv(
-        output_paths["misclassified"],
+        MISCLASSIFIED_PATH,
         index=False,
         encoding="utf-8-sig",
     )
 
-    if combined_results.empty:
-        summary = pd.DataFrame(
-            columns=[
-                "model",
-                "stage",
-                "tested",
-                "correct",
-                "incorrect",
-                "accuracy",
-            ]
-        )
-    else:
-        summary = (
-            combined_results
-            .groupby(
-                ["model", "stage"],
-                as_index=False,
-                sort=False,
-            )
-            .agg(
-                tested=("correct", "size"),
-                correct=("correct", "sum"),
-            )
-        )
+    print("\nAll sentiment test predictions saved to:")
+    print(TEST_RESULTS_PATH)
 
-        summary["correct"] = summary["correct"].astype(int)
-        summary["incorrect"] = (
-            summary["tested"] - summary["correct"]
-        )
-        summary["accuracy"] = (
-            summary["correct"] / summary["tested"]
-        )
-
-        stage_order = {
-            "Before tuning": 0,
-            "After tuning": 1,
-        }
-        summary["_stage_order"] = (
-            summary["stage"]
-            .map(stage_order)
-            .fillna(99)
-        )
-        summary = (
-            summary
-            .sort_values(["model", "_stage_order"])
-            .drop(columns="_stage_order")
-            .reset_index(drop=True)
-        )
-
-        summary = summary[
-            [
-                "model",
-                "stage",
-                "tested",
-                "correct",
-                "incorrect",
-                "accuracy",
-            ]
-        ]
-
-    summary.to_csv(
-        output_paths["summary"],
-        index=False,
-        encoding="utf-8-sig",
-    )
-
-    print("\nExpanded-data sentiment predictions saved to:")
-    print(output_paths["all_predictions"])
-
-    print("\nExpanded-data misclassified predictions saved to:")
-    print(output_paths["misclassified"])
-
-    print("\nExpanded-data test summary saved to:")
-    print(output_paths["summary"])
+    print("\nMisclassified sentiment predictions saved to:")
+    print(MISCLASSIFIED_PATH)
 
     print("\nTotal saved predictions:", len(combined_results))
     print("Total failed predictions:", len(misclassified))
 
-    if not summary.empty:
-        print("\nSentiment test summary after dataset expansion:")
-        print(summary.to_string(index=False))
-
-    return output_paths, summary
 
 # ============================================================
 # 7. Get top features
@@ -622,8 +474,6 @@ def update_evaluation_file(
     best_parameters,
     best_cv_accuracy,
     top_features,
-    saved_test_paths,
-    test_summary,
 ):
     """
     Create or replace the generated Sentiment section.
@@ -641,25 +491,6 @@ def update_evaluation_file(
         top_features
     )
 
-    relative_test_paths = {
-        name: path.relative_to(PROJECT_ROOT).as_posix()
-        for name, path in saved_test_paths.items()
-    }
-
-    summary_rows = [
-        "| Model | Stage | Tested | Correct | Incorrect | Accuracy |",
-        "|---|---|---:|---:|---:|---:|",
-    ]
-
-    for _, row in test_summary.iterrows():
-        summary_rows.append(
-            f"| {row['model']} | {row['stage']} "
-            f"| {int(row['tested'])} | {int(row['correct'])} "
-            f"| {int(row['incorrect'])} | {row['accuracy']:.4f} |"
-        )
-
-    test_summary_table = "\n".join(summary_rows)
-
     sentiment_section = f"""
 {start_marker}
 
@@ -676,10 +507,6 @@ on the training set to prevent test-data leakage.
 | Logistic Regression | Before tuning | {baseline_accuracy:.4f} | {baseline_macro_f1:.4f} |
 | Logistic Regression | After tuning | {tuned_accuracy:.4f} | {tuned_macro_f1:.4f} |
 
-### Held-Out Test Summary
-
-{test_summary_table}
-
 ### Hyperparameter Tuning
 
 **Method:** GridSearchCV
@@ -692,9 +519,8 @@ on the training set to prevent test-data leakage.
 
 ### Saved Test Files
 
-- All predictions: `{relative_test_paths["all_predictions"]}`
-- Failed predictions: `{relative_test_paths["misclassified"]}`
-- Test summary: `{relative_test_paths["summary"]}`
+- All predictions: `tests/sentiment_test_results.csv`
+- Failed predictions: `tests/sentiment_misclassified.csv`
 
 ### Top 10 Features per Sentiment Class
 
@@ -704,9 +530,8 @@ on the training set to prevent test-data leakage.
 
 - `sentiment_model.joblib`
 - `sentiment_cm.png`
-- `{relative_test_paths["all_predictions"]}`
-- `{relative_test_paths["misclassified"]}`
-- `{relative_test_paths["summary"]}`
+- `tests/sentiment_test_results.csv`
+- `tests/sentiment_misclassified.csv`
 
 {end_marker}
 """.strip()
@@ -1074,8 +899,8 @@ def train_model():
         f"{macro_f1_change:+.4f}"
     )
 
-    # Save expanded-data results without overwriting any older CSVs.
-    saved_test_paths, test_summary = save_test_results(
+    # Save every held-out prediction and the failed subset.
+    save_test_results(
         all_test_results
     )
 
@@ -1137,8 +962,6 @@ def train_model():
         best_parameters=grid_search.best_params_,
         best_cv_accuracy=grid_search.best_score_,
         top_features=top_features,
-        saved_test_paths=saved_test_paths,
-        test_summary=test_summary,
     )
 
     print("\nEvaluation saved to:")
@@ -1175,6 +998,27 @@ def validate_text(text):
     return cleaned_text
 
 
+def validate_supported_language(text):
+    """
+    Detect the input language before sentiment analysis.
+
+    The current sentiment model is trained on Arabic text only.
+    """
+
+    language_result = detect_language_with_confidence(text)
+    language = language_result.get(
+        "language",
+        "unknown",
+    )
+
+    if language != "ar":
+        raise ValueError(
+            "sentiment analysis currently supports Arabic text only"
+        )
+
+    return language_result
+
+
 # ============================================================
 # 13. Analyze one text
 # ============================================================
@@ -1191,6 +1035,10 @@ def analyze_sentiment(
     """
 
     cleaned_text = validate_text(text)
+
+    validate_supported_language(
+        cleaned_text
+    )
 
     model = load_model(
         MODEL_PATH
@@ -1247,6 +1095,11 @@ def batch_analyze(texts):
         validate_text(text)
         for text in texts
     ]
+
+    for cleaned_text in cleaned_texts:
+        validate_supported_language(
+            cleaned_text
+        )
 
     model = load_model(
         MODEL_PATH

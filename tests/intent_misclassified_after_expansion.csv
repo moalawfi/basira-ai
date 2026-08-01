@@ -1,0 +1,24 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Naive Bayes,Before tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,شكوى,0.4295991916860686,False
+Naive Bayes,Before tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.6615067007903789,False
+Naive Bayes,Before tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,سؤال,0.4039220009548267,False
+Naive Bayes,Before tuning,كم حجم قاعدة البيانات الحالي؟,سؤال,أمر,0.4357354387173332,False
+Naive Bayes,Before tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,شكوى,0.5458308317615114,False
+Naive Bayes,Before tuning,كيف الحال؟,تحية,سؤال,0.7113790533142552,False
+Naive Bayes,Before tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,شكوى,0.4120277992867397,False
+Naive Bayes,Before tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.5254480499136501,False
+Naive Bayes,Before tuning,ممكن تساعدني,سؤال,تحية,0.25066666666666665,False
+Naive Bayes,Before tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.36169475879229757,False
+Logistic Regression,Before tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.4648219229336635,False
+Logistic Regression,Before tuning,كيف الحال؟,تحية,سؤال,0.8116054450026162,False
+Logistic Regression,Before tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.4271555851009644,False
+Naive Bayes,After tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,شكوى,0.5790631289768817,False
+Naive Bayes,After tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.9693401732846204,False
+Naive Bayes,After tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,سؤال,0.8569521658817872,False
+Naive Bayes,After tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,شكوى,0.7781427214318589,False
+Naive Bayes,After tuning,كيف الحال؟,تحية,سؤال,0.9552021182533387,False
+Naive Bayes,After tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,شكوى,0.5205903465985021,False
+Naive Bayes,After tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.8009945951692778,False
+Naive Bayes,After tuning,ممكن تساعدني,سؤال,تحية,0.25066666666666665,False
+Naive Bayes,After tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.6595167641071698,False
+Logistic Regression,After tuning,كيف الحال؟,تحية,سؤال,0.979974099989793,False

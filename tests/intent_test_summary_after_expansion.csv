@@ -1,0 +1,5 @@
+﻿model,stage,tested,correct,incorrect,accuracy
+Logistic Regression,After tuning,250,249,1,0.996
+Logistic Regression,Before tuning,250,247,3,0.988
+Naive Bayes,After tuning,250,241,9,0.964
+Naive Bayes,Before tuning,250,240,10,0.96

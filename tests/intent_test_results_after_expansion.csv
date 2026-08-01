@@ -1,0 +1,1001 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Naive Bayes,Before tuning,هل يمكن تصدير سجل الأخطاء؟,سؤال,سؤال,0.6661411805101725,True
+Naive Bayes,Before tuning,هلا والله يا جماعة,تحية,تحية,0.9471238382832584,True
+Naive Bayes,Before tuning,كيف أقدر أحفظ الصورة بعد المعالجة؟,سؤال,سؤال,0.5860880297877954,True
+Naive Bayes,Before tuning,السلام عليكم ورحمة الله، شكرًا لجهودكم,تحية,تحية,0.990073415654116,True
+Naive Bayes,Before tuning,اعرض قائمة الملفات مع جميع التفاصيل,أمر,أمر,0.8699216598582235,True
+Naive Bayes,Before tuning,أهلًا وسهلًا يا شباب,تحية,تحية,0.9628447378946572,True
+Naive Bayes,Before tuning,كم يستغرق تحليل مئة جملة؟,سؤال,سؤال,0.5368677568748306,True
+Naive Bayes,Before tuning,احذف السجلات الفارغة,أمر,أمر,0.5630539998783898,True
+Naive Bayes,Before tuning,الصورة لا تظهر بعد الرفع من أول محاولة,شكوى,شكوى,0.8295664280086402,True
+Naive Bayes,Before tuning,انقل الملف من المجلد الحالي,أمر,أمر,0.6664503249797765,True
+Naive Bayes,Before tuning,كيف أقدر أقارن بين نتيجتين؟,سؤال,سؤال,0.8445922513150071,True
+Naive Bayes,Before tuning,أسعد الله صباحكم,تحية,تحية,0.9138524733236296,True
+Naive Bayes,Before tuning,زر التحليل لا يستجيب عند استخدام اللغة العربية,شكوى,شكوى,0.9191012958833841,True
+Naive Bayes,Before tuning,هلا والله، عندي استفسار بسيط,تحية,تحية,0.9756474928852272,True
+Naive Bayes,Before tuning,مساكم الله بالخير، سعيد بالتواصل معكم,تحية,تحية,0.984499738064921,True
+Naive Bayes,Before tuning,صدّر التقرير بصيغة CSV,أمر,أمر,0.7463767646592295,True
+Naive Bayes,Before tuning,أنشئ ملفًا للنتائج إلى مجلد التنزيلات,أمر,أمر,0.5639530756724818,True
+Naive Bayes,Before tuning,كيف أقدر أحلل صورة من جهازي؟,سؤال,سؤال,0.7623226512463115,True
+Naive Bayes,Before tuning,حمّل النموذج المحفوظ ثم اعرض الحالة,أمر,أمر,0.79921030080706,True
+Naive Bayes,Before tuning,رسالة الخطأ غير واضحة عند استخدام اللغة العربية,شكوى,شكوى,0.9021588736157563,True
+Naive Bayes,Before tuning,كيف أقدر أراجع الأخطاء السابقة؟,سؤال,سؤال,0.6260992784163075,True
+Naive Bayes,Before tuning,هل يمكنني ترتيب النتائج حسب الدقة؟,سؤال,سؤال,0.8268766860157656,True
+Naive Bayes,Before tuning,حدد مجلد الحفظ بعد التأكد,أمر,أمر,0.6908202334290361,True
+Naive Bayes,Before tuning,هل النتائج تُحفظ تلقائيًا؟,سؤال,سؤال,0.697083172025176,True
+Naive Bayes,Before tuning,وين ألقى التقرير النهائي؟,سؤال,سؤال,0.7277771885481791,True
+Naive Bayes,Before tuning,كم عدد النماذج المحفوظة؟,سؤال,سؤال,0.5901355564138469,True
+Naive Bayes,Before tuning,وين ألقى الكلمات المفتاحية المستخرجة؟,سؤال,سؤال,0.7586754341776875,True
+Naive Bayes,Before tuning,الملف الكبير لا يتم تحميله من أول محاولة,شكوى,شكوى,0.8429703409236411,True
+Naive Bayes,Before tuning,التقرير لا يتم تصديره بعد إعادة التشغيل,شكوى,شكوى,0.8569212789710755,True
+Naive Bayes,Before tuning,الله يصبحكم بالخير، أتمنى أن تكونوا بخير,تحية,تحية,0.9880905300927236,True
+Naive Bayes,Before tuning,زر الرفع لا يعمل,شكوى,شكوى,0.6597572959364563,True
+Naive Bayes,Before tuning,حلل هذا النص مع إظهار التفاصيل,أمر,أمر,0.9220448767531276,True
+Naive Bayes,Before tuning,اسم الملف المحفوظ غير صحيح بدون أي تنبيه,شكوى,شكوى,0.9153617590834386,True
+Naive Bayes,Before tuning,اعرض درجة الثقة في جدول,أمر,أمر,0.8278494727561725,True
+Naive Bayes,Before tuning,وش الفرق بين النية والمشاعر؟,سؤال,سؤال,0.5058083598891694,True
+Naive Bayes,Before tuning,صباح النور جميعًا,تحية,تحية,0.9004221988722783,True
+Naive Bayes,Before tuning,ارفع الصورة ثم حدّث القائمة,أمر,أمر,0.9309143301315369,True
+Naive Bayes,Before tuning,التطبيق بطيء كل مرة أستخدمه,شكوى,شكوى,0.9003228793250596,True
+Naive Bayes,Before tuning,واجهة API ترجع خطأ في المتصفح,شكوى,شكوى,0.6744887098506736,True
+Naive Bayes,Before tuning,حدد مجلد الحفظ الآن,أمر,أمر,0.6738878414169158,True
+Naive Bayes,Before tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,شكوى,0.4295991916860686,False
+Naive Bayes,Before tuning,الملف يختفي بعد اختياره بدون رسالة واضحة,شكوى,شكوى,0.8667101089177248,True
+Naive Bayes,Before tuning,وش الفئات التي يدعمها نموذج النية؟,سؤال,سؤال,0.6003491370618357,True
+Naive Bayes,Before tuning,حدّث السجل الحالي,أمر,أمر,0.5557781818098558,True
+Naive Bayes,Before tuning,عطّل تسجيل العمليات,أمر,أمر,0.40988559749019404,True
+Naive Bayes,Before tuning,أهلًا بكم يا شباب,تحية,تحية,0.9780145139417841,True
+Naive Bayes,Before tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.6615067007903789,False
+Naive Bayes,Before tuning,ما قدرت أرفع الصورة,شكوى,شكوى,0.852882157126523,True
+Naive Bayes,Before tuning,الأزرار غير مرتبة في المتصفح,شكوى,شكوى,0.768757957968265,True
+Naive Bayes,Before tuning,وقت العملية غير محفوظ رغم ظهور رسالة نجاح,شكوى,شكوى,0.8704080082006259,True
+Naive Bayes,Before tuning,الكلمات المفتاحية غير مناسبة رغم أن الجملة واضحة,شكوى,شكوى,0.8719764582322994,True
+Naive Bayes,Before tuning,صبحكم الله بالخير يا فريق الدعم,تحية,تحية,0.9947217872902311,True
+Naive Bayes,Before tuning,استرجع النتائج المحفوظة,أمر,أمر,0.4202726010594069,True
+Naive Bayes,Before tuning,صباح الخير يا شباب,تحية,تحية,0.9763677724860099,True
+Naive Bayes,Before tuning,الصورة لا تظهر بعد الرفع كل مرة,شكوى,شكوى,0.8788342496003652,True
+Naive Bayes,Before tuning,كيف أقدر أشغل التطبيق من الطرفية؟,سؤال,سؤال,0.7732083286644256,True
+Naive Bayes,Before tuning,كيف أقدر أرفع أكثر من صورة دفعة واحدة؟,سؤال,سؤال,0.6861634123600606,True
+Naive Bayes,Before tuning,التطبيق لا يقرأ اسم الملف كل مرة,شكوى,شكوى,0.9272567581590971,True
+Naive Bayes,Before tuning,حياكم الله يا جماعة,تحية,تحية,0.966192881983873,True
+Naive Bayes,Before tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,سؤال,0.4039220009548267,False
+Naive Bayes,Before tuning,كم عدد المحاولات المسموحة؟,سؤال,سؤال,0.7442131828881362,True
+Naive Bayes,Before tuning,حياكم الله يا فريق الدعم,تحية,تحية,0.9846153127146416,True
+Naive Bayes,Before tuning,كيف أقدر أعيد تشغيل التحليل؟,سؤال,سؤال,0.7790021475289274,True
+Naive Bayes,Before tuning,وين ألقى ملف requirements.txt؟,سؤال,سؤال,0.9013949259120617,True
+Naive Bayes,Before tuning,كيف أقدر أختار مجلد الحفظ؟,سؤال,سؤال,0.7396497372355716,True
+Naive Bayes,Before tuning,افتح الملف من المجلد الحالي,أمر,أمر,0.7453497503168356,True
+Naive Bayes,Before tuning,أسعد الله صباحكم، عندي استفسار بسيط,تحية,تحية,0.9888533434450532,True
+Naive Bayes,Before tuning,زر الرفع لا يعمل بدون رسالة واضحة,شكوى,شكوى,0.876595582139312,True
+Naive Bayes,Before tuning,كم نسبة الثقة المقبولة؟,سؤال,سؤال,0.5482022172979185,True
+Naive Bayes,Before tuning,ليش لا يتم تسجيل العملية؟,سؤال,سؤال,0.4636741617830689,True
+Naive Bayes,Before tuning,أهلًا وسهلًا جميعًا,تحية,تحية,0.8622576749571977,True
+Naive Bayes,Before tuning,الاستجابة من API متأخرة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.8772750368647293,True
+Naive Bayes,Before tuning,أعد تسمية الملف الآن,أمر,أمر,0.8107682057869144,True
+Naive Bayes,Before tuning,الصفحة تتجمد جدًا,شكوى,شكوى,0.630177794478146,True
+Naive Bayes,Before tuning,التقرير لا يتم تصديره اليوم,شكوى,شكوى,0.7467606092535439,True
+Naive Bayes,Before tuning,صدّر النتائج إلى مجلد التنزيلات,أمر,أمر,0.6820874985764096,True
+Naive Bayes,Before tuning,التطبيق يستهلك ذاكرة كبيرة منذ التحديث الأخير,شكوى,شكوى,0.9117576178739573,True
+Naive Bayes,Before tuning,صباح النور يا شباب,تحية,تحية,0.9765682398028676,True
+Naive Bayes,Before tuning,الواجهة صعبة الاستخدام,شكوى,شكوى,0.5506257680560782,True
+Naive Bayes,Before tuning,صبحكم الله بالخير يا مهندسين,تحية,تحية,0.9891643222636918,True
+Naive Bayes,Before tuning,اعرض قائمة الملفات في جدول,أمر,أمر,0.807248039746857,True
+Naive Bayes,Before tuning,احفظ التقرير النهائي الآن,أمر,أمر,0.8932555325428859,True
+Naive Bayes,Before tuning,وش المعلومات الموجودة في JSON؟,سؤال,سؤال,0.43867328172597764,True
+Naive Bayes,Before tuning,واجهة النتائج تتأخر كل مرة أستخدمه,شكوى,شكوى,0.8853102956069041,True
+Naive Bayes,Before tuning,أغلق الملف الآن,أمر,أمر,0.7585813343308179,True
+Naive Bayes,Before tuning,حياك الله,تحية,تحية,0.8430024871724338,True
+Naive Bayes,Before tuning,مرحبًا يا شباب,تحية,تحية,0.9172392870403832,True
+Naive Bayes,Before tuning,أنشئ ملفًا للنتائج بصيغة PDF,أمر,أمر,0.583175805238971,True
+Naive Bayes,Before tuning,النتيجة طلعت غلط,شكوى,شكوى,0.41775598643695294,True
+Naive Bayes,Before tuning,حيا الله من جانا جميعًا,تحية,تحية,0.8625095478166837,True
+Naive Bayes,Before tuning,اعرض إحصائيات الاستخدام حسب التاريخ,أمر,أمر,0.7740654710367793,True
+Naive Bayes,Before tuning,أهلًا يا جماعة يا مهندسين,تحية,تحية,0.9833258806632973,True
+Naive Bayes,Before tuning,اعرض إحصائيات الاستخدام,أمر,أمر,0.6249280516771517,True
+Naive Bayes,Before tuning,مرحبًا، سعيد بالتواصل معكم,تحية,تحية,0.9624617331463575,True
+Naive Bayes,Before tuning,هل يمكنني إضافة فئة مشاعر جديدة؟,سؤال,سؤال,0.862220029500474,True
+Naive Bayes,Before tuning,أنشئ ملفًا للنتائج بصيغة CSV,أمر,أمر,0.5553524388196256,True
+Naive Bayes,Before tuning,ليش الواجهة لا تعرض آخر نتيجة؟,سؤال,سؤال,0.3599996787218039,True
+Naive Bayes,Before tuning,احفظ الصورة المعالجة الآن,أمر,أمر,0.8276069144591351,True
+Naive Bayes,Before tuning,اعرض ملخص النص,أمر,أمر,0.7408496146376569,True
+Naive Bayes,Before tuning,يا صباح الورد، سعيد بالتواصل معكم,تحية,تحية,0.9841261841031274,True
+Naive Bayes,Before tuning,ليش لا يتم تحديث سجل النتائج؟,سؤال,سؤال,0.550948206923929,True
+Naive Bayes,Before tuning,أعد تشغيل التطبيق من جديد,أمر,أمر,0.7893155142807555,True
+Naive Bayes,Before tuning,يا مراحب جميعًا,تحية,تحية,0.885670686781818,True
+Naive Bayes,Before tuning,الله يصبحكم بالخير يا جماعة,تحية,تحية,0.984325448543019,True
+Naive Bayes,Before tuning,كيف أقدر أغير لغة الواجهة؟,سؤال,سؤال,0.7168293918546056,True
+Naive Bayes,Before tuning,تحليل المشاعر غير منطقي في أكثر من مثال,شكوى,شكوى,0.8754223641855822,True
+Naive Bayes,Before tuning,النتيجة تختلف عند إعادة التحليل بعد آخر تحديث,شكوى,شكوى,0.8521963904931622,True
+Naive Bayes,Before tuning,السجل السابق اختفى,شكوى,شكوى,0.5894096756527234,True
+Naive Bayes,Before tuning,السلام عليكم ورحمة الله جميعًا,تحية,تحية,0.9751067488624984,True
+Naive Bayes,Before tuning,الأزرار غير مرتبة على جهازي,شكوى,شكوى,0.7897985705795779,True
+Naive Bayes,Before tuning,معالجة النص تستغرق وقتًا طويلًا جدًا,شكوى,شكوى,0.662013159207504,True
+Naive Bayes,Before tuning,الله يمسيكم بالخير، شكرًا لجهودكم,تحية,تحية,0.9764777839963291,True
+Naive Bayes,Before tuning,كيف أقدر أستخدم واجهة الأوامر؟,سؤال,سؤال,0.694181919143458,True
+Naive Bayes,Before tuning,احفظ الصورة المعالجة في قاعدة البيانات,أمر,أمر,0.8326984048890997,True
+Naive Bayes,Before tuning,أسعد الله مساءكم، سعيد بالتواصل معكم,تحية,تحية,0.9841537842953751,True
+Naive Bayes,Before tuning,أهلين، شكرًا لجهودكم,تحية,تحية,0.9359680042375681,True
+Naive Bayes,Before tuning,احفظ النص الأصلي مع الوقت والتاريخ,أمر,أمر,0.8018163188237529,True
+Naive Bayes,Before tuning,وين ألقى الصور التي رفعتها؟,سؤال,سؤال,0.8995082105326296,True
+Naive Bayes,Before tuning,افتح صفحة النتائج ثم حدّث القائمة,أمر,أمر,0.8632466516607527,True
+Naive Bayes,Before tuning,حي الله الجميع يا فريق الدعم,تحية,تحية,0.9872931273608792,True
+Naive Bayes,Before tuning,أنشئ ملفًا للنتائج,أمر,أمر,0.42371735387981513,True
+Naive Bayes,Before tuning,مساء الخير، عندي استفسار بسيط,تحية,تحية,0.9798580432789881,True
+Naive Bayes,Before tuning,أضف النص والنتيجة إلى قاعدة البيانات,أمر,أمر,0.6529804081597994,True
+Naive Bayes,Before tuning,درجة الثقة منخفضة في أكثر من مثال,شكوى,شكوى,0.727161585511464,True
+Naive Bayes,Before tuning,مرحبًا بكم، سعيد بالتواصل معكم,تحية,تحية,0.9690176075489686,True
+Naive Bayes,Before tuning,التصنيف طلع غلط بعد آخر تحديث,شكوى,شكوى,0.7784596687733523,True
+Naive Bayes,Before tuning,حياكم الله,تحية,تحية,0.8127688833196818,True
+Naive Bayes,Before tuning,الصورة لا تظهر بعد الرفع,شكوى,شكوى,0.7253440850864217,True
+Naive Bayes,Before tuning,اعرض سجل العمليات,أمر,أمر,0.5970507161330051,True
+Naive Bayes,Before tuning,سجل العملية في جدول السجلات,أمر,أمر,0.6685925368909332,True
+Naive Bayes,Before tuning,السجل السابق اختفى رغم ظهور رسالة نجاح,شكوى,شكوى,0.896180693513235,True
+Naive Bayes,Before tuning,احذف الملف السابق,أمر,أمر,0.5528532688908459,True
+Naive Bayes,Before tuning,كم حجم قاعدة البيانات الحالي؟,سؤال,أمر,0.4357354387173332,False
+Naive Bayes,Before tuning,مساء النور يا شباب,تحية,تحية,0.9769658785050627,True
+Naive Bayes,Before tuning,ارفع الملف من المجلد الحالي,أمر,أمر,0.7303226661480141,True
+Naive Bayes,Before tuning,كم يستغرق تحليل صورة واحدة؟,سؤال,سؤال,0.5177649949007693,True
+Naive Bayes,Before tuning,الكلمات المفتاحية غير مناسبة,شكوى,شكوى,0.5047745376290397,True
+Naive Bayes,Before tuning,حدّث السجل الحالي ثم اعرضه,أمر,أمر,0.6654761098283533,True
+Naive Bayes,Before tuning,وين ألقى إعدادات النموذج؟,سؤال,سؤال,0.8838224055426841,True
+Naive Bayes,Before tuning,أهلين يا شباب,تحية,تحية,0.9324270905499895,True
+Naive Bayes,Before tuning,حلل هذه الصورة,أمر,أمر,0.8008922140784173,True
+Naive Bayes,Before tuning,فعّل الحفظ التلقائي ثم اعرض الحالة,أمر,أمر,0.8871399062236395,True
+Naive Bayes,Before tuning,الصفحة تتجمد رغم أن الجهاز سريع,شكوى,شكوى,0.900637794454443,True
+Naive Bayes,Before tuning,هل يمكنني إضافة فئة نية جديدة؟,سؤال,سؤال,0.8675396424601292,True
+Naive Bayes,Before tuning,هل يتم حفظ وقت التنبؤ؟,سؤال,سؤال,0.6425668642742034,True
+Naive Bayes,Before tuning,اعرض لي ملخص المحتوى,أمر,أمر,0.6759291858482643,True
+Naive Bayes,Before tuning,هل أقدر أحلل أكثر من ملف؟,سؤال,سؤال,0.5948269119133046,True
+Naive Bayes,Before tuning,حدد مجلد الحفظ,أمر,أمر,0.528838861559828,True
+Naive Bayes,Before tuning,افتح صفحة النتائج بعد التأكد,أمر,أمر,0.6897322705576346,True
+Naive Bayes,Before tuning,صفحة الإعدادات لا تحفظ التغييرات على جهازي,شكوى,شكوى,0.7804158860767854,True
+Naive Bayes,Before tuning,هل يمكن تشغيل النظام على لينكس؟,سؤال,سؤال,0.7647048838390962,True
+Naive Bayes,Before tuning,هل يمكنني استخدام أكثر من مستخدم للنظام؟,سؤال,سؤال,0.7544431065319611,True
+Naive Bayes,Before tuning,انقل الملف الآن,أمر,أمر,0.7211150646482403,True
+Naive Bayes,Before tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,شكوى,0.5458308317615114,False
+Naive Bayes,Before tuning,يعطيكم العافية، شكرًا لجهودكم,تحية,تحية,0.9617603065577968,True
+Naive Bayes,Before tuning,التحليل يتوقف فجأة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.8810982722256183,True
+Naive Bayes,Before tuning,الواجهة صعبة الاستخدام في المتصفح,شكوى,شكوى,0.6156064728773575,True
+Naive Bayes,Before tuning,أضف النتيجة إلى قاعدة البيانات مع درجة الثقة,أمر,أمر,0.760063031395835,True
+Naive Bayes,Before tuning,الملف يختفي بعد اختياره رغم أن الصيغة مدعومة,شكوى,شكوى,0.909447497874466,True
+Naive Bayes,Before tuning,الملخص ناقص,شكوى,شكوى,0.5000071698255527,True
+Naive Bayes,Before tuning,احفظ الصورة المعالجة مع الوقت والتاريخ,أمر,أمر,0.8271082073356413,True
+Naive Bayes,Before tuning,مساكم الله بالخير يا مهندسين,تحية,تحية,0.9842340972903959,True
+Naive Bayes,Before tuning,النظام يصنف التحية كسؤال مع النصوص القصيرة,شكوى,شكوى,0.9210537534416465,True
+Naive Bayes,Before tuning,التصنيف طلع غلط رغم أن الجملة واضحة,شكوى,شكوى,0.8978438999292533,True
+Naive Bayes,Before tuning,كيف أقدر أربط التطبيق بقاعدة البيانات؟,سؤال,سؤال,0.8483227953669633,True
+Naive Bayes,Before tuning,مرحبتين يا مهندسين,تحية,تحية,0.9325133055915786,True
+Naive Bayes,Before tuning,استرجع آخر سجل,أمر,أمر,0.533369377674345,True
+Naive Bayes,Before tuning,النتائج القديمة لا تظهر بعد إعادة التشغيل,شكوى,شكوى,0.8595156641384554,True
+Naive Bayes,Before tuning,هل يمكن تغيير اسم قاعدة البيانات؟,سؤال,سؤال,0.7690733439953447,True
+Naive Bayes,Before tuning,حي الله الجميع يا مهندسين,تحية,تحية,0.9728163421213982,True
+Naive Bayes,Before tuning,احذف السجل المحدد,أمر,أمر,0.5614889736042493,True
+Naive Bayes,Before tuning,كيف الحال؟,تحية,سؤال,0.7113790533142552,False
+Naive Bayes,Before tuning,احذف النتيجة,أمر,أمر,0.7102886339588133,True
+Naive Bayes,Before tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,شكوى,0.4120277992867397,False
+Naive Bayes,Before tuning,يا مرحبا يا جماعة,تحية,تحية,0.9619528293680684,True
+Naive Bayes,Before tuning,مرحبًا,تحية,تحية,0.6220302744727377,True
+Naive Bayes,Before tuning,كيف أقدر أحلل نصًا طويلًا؟,سؤال,سؤال,0.7992565687526514,True
+Naive Bayes,Before tuning,يا مساء الورد يا فريق الدعم,تحية,تحية,0.9911269835294608,True
+Naive Bayes,Before tuning,متى تظهر نتيجة التحليل؟,سؤال,سؤال,0.486517850412764,True
+Naive Bayes,Before tuning,السلام عليكم ورحمة الله، أتمنى أن تكونوا بخير,تحية,تحية,0.9950764557121876,True
+Naive Bayes,Before tuning,كم الوقت المطلوب لإعادة تدريب النموذج؟,سؤال,سؤال,0.5119758647718443,True
+Naive Bayes,Before tuning,رفع أكثر من ملف لا يكتمل,شكوى,شكوى,0.6962235784388553,True
+Naive Bayes,Before tuning,مساء الخير جميعا,تحية,تحية,0.8757855657147806,True
+Naive Bayes,Before tuning,هل التطبيق يدعم صور WEBP؟,سؤال,سؤال,0.7144838065515798,True
+Naive Bayes,Before tuning,كيف أقدر أختار نوع التحليل؟,سؤال,سؤال,0.752677364420698,True
+Naive Bayes,Before tuning,حيا الله من جانا يا جماعة,تحية,تحية,0.9563696670400752,True
+Naive Bayes,Before tuning,مرحبًا يا جماعة,تحية,تحية,0.9224557373261909,True
+Naive Bayes,Before tuning,معالجة النص تستغرق وقتًا طويلًا عند تحليل الملفات الكبيرة,شكوى,شكوى,0.8415972814172802,True
+Naive Bayes,Before tuning,هل يمكنني رفع ملف يحتوي على نص عربي؟,سؤال,سؤال,0.8297289600237784,True
+Naive Bayes,Before tuning,التحليل أخذ وقت طويل,شكوى,شكوى,0.5217323892001696,True
+Naive Bayes,Before tuning,اعرض سجل العمليات مع جميع التفاصيل,أمر,أمر,0.8139786219628596,True
+Naive Bayes,Before tuning,حي الله الجميع، سعيد بالتواصل معكم,تحية,تحية,0.9832586786147776,True
+Naive Bayes,Before tuning,النظام يصنف النص المحايد بشكل خاطئ بعد آخر تحديث,شكوى,شكوى,0.9056025749432607,True
+Naive Bayes,Before tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.5254480499136501,False
+Naive Bayes,Before tuning,ممكن تساعدني,سؤال,تحية,0.25066666666666665,False
+Naive Bayes,Before tuning,الخدمة ما تستجيب معي,شكوى,شكوى,0.5688319521780472,True
+Naive Bayes,Before tuning,أسعد الله مساءكم يا جماعة,تحية,تحية,0.971206627451164,True
+Naive Bayes,Before tuning,يا هلا، سعيد بالتواصل معكم,تحية,تحية,0.9801569979132233,True
+Naive Bayes,Before tuning,اعرض سجل العمليات الآن,أمر,أمر,0.7340779014548675,True
+Naive Bayes,Before tuning,الله يمسيكم بالخير يا جماعة,تحية,تحية,0.9866786605532654,True
+Naive Bayes,Before tuning,وين ألقى سجل الاختبارات؟,سؤال,سؤال,0.837162921847049,True
+Naive Bayes,Before tuning,النتيجة غير دقيقة رغم أن الجملة واضحة,شكوى,شكوى,0.9256520041639438,True
+Naive Bayes,Before tuning,حياكم الله، سعيد بالتواصل معكم,تحية,تحية,0.9648199302741705,True
+Naive Bayes,Before tuning,مساء الخير، سعيد بالتواصل معكم,تحية,تحية,0.9734945687034317,True
+Naive Bayes,Before tuning,وش المقصود بالتحليل الدفعي؟,سؤال,سؤال,0.5042075690001528,True
+Naive Bayes,Before tuning,اعرض النماذج المتاحة حسب التاريخ,أمر,أمر,0.8842721825354224,True
+Naive Bayes,Before tuning,قاعدة البيانات لا تستجيب بدون أي تنبيه,شكوى,شكوى,0.7997682027038452,True
+Naive Bayes,Before tuning,وين ألقى ملف الأخطاء المصنفة؟,سؤال,سؤال,0.9043764247882674,True
+Naive Bayes,Before tuning,وقت العملية غير محفوظ,شكوى,شكوى,0.5377373141321921,True
+Naive Bayes,Before tuning,هل يمكن استخدام التطبيق من الهاتف؟,سؤال,سؤال,0.7097154531705195,True
+Naive Bayes,Before tuning,كيف أقدر أرسل النتيجة إلى مستخدم آخر؟,سؤال,سؤال,0.5591312352430289,True
+Naive Bayes,Before tuning,مرحبًا بكم، أتمنى أن تكونوا بخير,تحية,تحية,0.9851211420907211,True
+Naive Bayes,Before tuning,عطّل تسجيل العمليات من جديد,أمر,أمر,0.6665748587315835,True
+Naive Bayes,Before tuning,افحص درجة الثقة الآن,أمر,أمر,0.7507945354359788,True
+Naive Bayes,Before tuning,أغلق الملف من المجلد الحالي,أمر,أمر,0.6938270791937289,True
+Naive Bayes,Before tuning,اعرض ملخص النص في جدول,أمر,أمر,0.8209584758248041,True
+Naive Bayes,Before tuning,قاعدة البيانات لا تستجيب,شكوى,شكوى,0.47611862293162943,True
+Naive Bayes,Before tuning,مساء النور يا فريق الدعم,تحية,تحية,0.9898467796171291,True
+Naive Bayes,Before tuning,يا هلا,تحية,تحية,0.8617717036438262,True
+Naive Bayes,Before tuning,أسعد الله مساءكم يا شباب,تحية,تحية,0.9697190191376848,True
+Naive Bayes,Before tuning,الملخص ناقص بعد آخر تحديث,شكوى,شكوى,0.7451994654882942,True
+Naive Bayes,Before tuning,حدّث السجل الحالي بالقيم الجديدة,أمر,أمر,0.5557781818098558,True
+Naive Bayes,Before tuning,اعرض نتائج التحليل الآن,أمر,أمر,0.8517369075023985,True
+Naive Bayes,Before tuning,رفع أكثر من ملف لا يكتمل كل مرة,شكوى,شكوى,0.858104183289578,True
+Naive Bayes,Before tuning,النتيجة غير دقيقة في أكثر من مثال,شكوى,شكوى,0.8541446535722708,True
+Naive Bayes,Before tuning,فتح التقرير يستغرق وقتًا رغم أن الجهاز سريع,شكوى,شكوى,0.9141964436598181,True
+Naive Bayes,Before tuning,أهلًا يا جماعة يا شباب,تحية,تحية,0.9830339876197356,True
+Naive Bayes,Before tuning,هل يمكن استعادة الإعدادات الافتراضية؟,سؤال,سؤال,0.5284278617100222,True
+Naive Bayes,Before tuning,مرحبًا، أتمنى أن تكونوا بخير,تحية,تحية,0.975973899347189,True
+Naive Bayes,Before tuning,أسعد الله مساءكم، عندي استفسار بسيط,تحية,تحية,0.9880069994064418,True
+Naive Bayes,Before tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.36169475879229757,False
+Naive Bayes,Before tuning,الله يمسيكم بالخير يا مهندسين,تحية,تحية,0.9861092121887587,True
+Naive Bayes,Before tuning,رسالة الخطأ غير واضحة بعد التحديث,شكوى,شكوى,0.8737787590112552,True
+Naive Bayes,Before tuning,قارن بين النتيجتين مع إظهار التفاصيل,أمر,أمر,0.8901204649208807,True
+Naive Bayes,Before tuning,كيف أقدر أضيف أمثلة تدريب جديدة؟,سؤال,سؤال,0.7685430082181262,True
+Naive Bayes,Before tuning,كيف أقدر أستخدم التطبيق بدون تسجيل؟,سؤال,سؤال,0.6835256011206605,True
+Naive Bayes,Before tuning,هل يمكن عرض النتائج باللغة العربية؟,سؤال,سؤال,0.7809145389269452,True
+Naive Bayes,Before tuning,حدد مجلد الحفظ من المجلد الحالي,أمر,أمر,0.6718968559435913,True
+Naive Bayes,Before tuning,الملف الكبير لا يتم تحميله,شكوى,شكوى,0.7474774884723889,True
+Naive Bayes,Before tuning,حيا الله من جانا، أتمنى أن تكونوا بخير,تحية,تحية,0.9801357482682309,True
+Naive Bayes,Before tuning,النظام يرفض صيغة الملف من أول محاولة,شكوى,شكوى,0.8476090706077879,True
+Naive Bayes,Before tuning,ليش بعض الجمل تُصنف خطأ؟,سؤال,سؤال,0.5459849006055512,True
+Naive Bayes,Before tuning,عطّل تسجيل العمليات ثم اعرض الحالة,أمر,أمر,0.7697555709894164,True
+Naive Bayes,Before tuning,زر الرفع لا يعمل من أول محاولة,شكوى,شكوى,0.7944506846497177,True
+Naive Bayes,Before tuning,النسخة الاحتياطية لا تكتمل بعد إعادة التشغيل,شكوى,شكوى,0.892220642312793,True
+Naive Bayes,Before tuning,النص العربي يظهر متقطعًا في المتصفح,شكوى,شكوى,0.7533412759079469,True
+Naive Bayes,Before tuning,وش وظيفة ملف EVALUATION.md؟,سؤال,سؤال,0.5626761615695987,True
+Naive Bayes,Before tuning,اعرض نتائج التحليل حسب التاريخ,أمر,أمر,0.849873630915977,True
+Naive Bayes,Before tuning,احفظ سجل الأخطاء في قاعدة البيانات,أمر,أمر,0.8719986596769056,True
+Naive Bayes,Before tuning,كيف أقدر أفعل حفظ النتائج تلقائيًا؟,سؤال,سؤال,0.8798837333388393,True
+Logistic Regression,Before tuning,هل يمكن تصدير سجل الأخطاء؟,سؤال,سؤال,0.7266625941916961,True
+Logistic Regression,Before tuning,هلا والله يا جماعة,تحية,تحية,0.7919777182333331,True
+Logistic Regression,Before tuning,كيف أقدر أحفظ الصورة بعد المعالجة؟,سؤال,سؤال,0.6752261546604306,True
+Logistic Regression,Before tuning,السلام عليكم ورحمة الله، شكرًا لجهودكم,تحية,تحية,0.8946036728389949,True
+Logistic Regression,Before tuning,اعرض قائمة الملفات مع جميع التفاصيل,أمر,أمر,0.7701355119223805,True
+Logistic Regression,Before tuning,أهلًا وسهلًا يا شباب,تحية,تحية,0.8263433376439955,True
+Logistic Regression,Before tuning,كم يستغرق تحليل مئة جملة؟,سؤال,سؤال,0.5352943595450327,True
+Logistic Regression,Before tuning,احذف السجلات الفارغة,أمر,أمر,0.5739837040216136,True
+Logistic Regression,Before tuning,الصورة لا تظهر بعد الرفع من أول محاولة,شكوى,شكوى,0.6900107275679273,True
+Logistic Regression,Before tuning,انقل الملف من المجلد الحالي,أمر,أمر,0.5947236791066125,True
+Logistic Regression,Before tuning,كيف أقدر أقارن بين نتيجتين؟,سؤال,سؤال,0.9136790430167806,True
+Logistic Regression,Before tuning,أسعد الله صباحكم,تحية,تحية,0.6707609652540649,True
+Logistic Regression,Before tuning,زر التحليل لا يستجيب عند استخدام اللغة العربية,شكوى,شكوى,0.8221189247174316,True
+Logistic Regression,Before tuning,هلا والله، عندي استفسار بسيط,تحية,تحية,0.8312746701068903,True
+Logistic Regression,Before tuning,مساكم الله بالخير، سعيد بالتواصل معكم,تحية,تحية,0.8549939342563827,True
+Logistic Regression,Before tuning,صدّر التقرير بصيغة CSV,أمر,أمر,0.6771142591042407,True
+Logistic Regression,Before tuning,أنشئ ملفًا للنتائج إلى مجلد التنزيلات,أمر,أمر,0.4982644758026431,True
+Logistic Regression,Before tuning,كيف أقدر أحلل صورة من جهازي؟,سؤال,سؤال,0.8074195403746447,True
+Logistic Regression,Before tuning,حمّل النموذج المحفوظ ثم اعرض الحالة,أمر,أمر,0.7350706318781037,True
+Logistic Regression,Before tuning,رسالة الخطأ غير واضحة عند استخدام اللغة العربية,شكوى,شكوى,0.8022727523368969,True
+Logistic Regression,Before tuning,كيف أقدر أراجع الأخطاء السابقة؟,سؤال,سؤال,0.7715537458384357,True
+Logistic Regression,Before tuning,هل يمكنني ترتيب النتائج حسب الدقة؟,سؤال,سؤال,0.8899534367557898,True
+Logistic Regression,Before tuning,حدد مجلد الحفظ بعد التأكد,أمر,أمر,0.5679575403775492,True
+Logistic Regression,Before tuning,هل النتائج تُحفظ تلقائيًا؟,سؤال,سؤال,0.8457039039469115,True
+Logistic Regression,Before tuning,وين ألقى التقرير النهائي؟,سؤال,سؤال,0.7821674029910216,True
+Logistic Regression,Before tuning,كم عدد النماذج المحفوظة؟,سؤال,سؤال,0.6248273061011698,True
+Logistic Regression,Before tuning,وين ألقى الكلمات المفتاحية المستخرجة؟,سؤال,سؤال,0.8266168705268537,True
+Logistic Regression,Before tuning,الملف الكبير لا يتم تحميله من أول محاولة,شكوى,شكوى,0.6835916573465034,True
+Logistic Regression,Before tuning,التقرير لا يتم تصديره بعد إعادة التشغيل,شكوى,شكوى,0.7619202422205494,True
+Logistic Regression,Before tuning,الله يصبحكم بالخير، أتمنى أن تكونوا بخير,تحية,تحية,0.8529101347882557,True
+Logistic Regression,Before tuning,زر الرفع لا يعمل,شكوى,شكوى,0.5492407391795073,True
+Logistic Regression,Before tuning,حلل هذا النص مع إظهار التفاصيل,أمر,أمر,0.7838669612618353,True
+Logistic Regression,Before tuning,اسم الملف المحفوظ غير صحيح بدون أي تنبيه,شكوى,شكوى,0.8002506723110214,True
+Logistic Regression,Before tuning,اعرض درجة الثقة في جدول,أمر,أمر,0.7593939933690335,True
+Logistic Regression,Before tuning,وش الفرق بين النية والمشاعر؟,سؤال,سؤال,0.5726233858945714,True
+Logistic Regression,Before tuning,صباح النور جميعًا,تحية,تحية,0.739232783607443,True
+Logistic Regression,Before tuning,ارفع الصورة ثم حدّث القائمة,أمر,أمر,0.8386117209668861,True
+Logistic Regression,Before tuning,التطبيق بطيء كل مرة أستخدمه,شكوى,شكوى,0.7998816498641445,True
+Logistic Regression,Before tuning,واجهة API ترجع خطأ في المتصفح,شكوى,شكوى,0.579480149909533,True
+Logistic Regression,Before tuning,حدد مجلد الحفظ الآن,أمر,أمر,0.6326159186005661,True
+Logistic Regression,Before tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,سؤال,0.5332157839753737,True
+Logistic Regression,Before tuning,الملف يختفي بعد اختياره بدون رسالة واضحة,شكوى,شكوى,0.7485376361582973,True
+Logistic Regression,Before tuning,وش الفئات التي يدعمها نموذج النية؟,سؤال,سؤال,0.5890732092247074,True
+Logistic Regression,Before tuning,حدّث السجل الحالي,أمر,أمر,0.5118006809340505,True
+Logistic Regression,Before tuning,عطّل تسجيل العمليات,أمر,أمر,0.37409344873937345,True
+Logistic Regression,Before tuning,أهلًا بكم يا شباب,تحية,تحية,0.8783544029983199,True
+Logistic Regression,Before tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.4648219229336635,False
+Logistic Regression,Before tuning,ما قدرت أرفع الصورة,شكوى,شكوى,0.6695006926021553,True
+Logistic Regression,Before tuning,الأزرار غير مرتبة في المتصفح,شكوى,شكوى,0.6747985995263782,True
+Logistic Regression,Before tuning,وقت العملية غير محفوظ رغم ظهور رسالة نجاح,شكوى,شكوى,0.7330341532538718,True
+Logistic Regression,Before tuning,الكلمات المفتاحية غير مناسبة رغم أن الجملة واضحة,شكوى,شكوى,0.7717694844821051,True
+Logistic Regression,Before tuning,صبحكم الله بالخير يا فريق الدعم,تحية,تحية,0.9253297945756624,True
+Logistic Regression,Before tuning,استرجع النتائج المحفوظة,أمر,أمر,0.4496347956791453,True
+Logistic Regression,Before tuning,صباح الخير يا شباب,تحية,تحية,0.8656242215441816,True
+Logistic Regression,Before tuning,الصورة لا تظهر بعد الرفع كل مرة,شكوى,شكوى,0.781164049255381,True
+Logistic Regression,Before tuning,كيف أقدر أشغل التطبيق من الطرفية؟,سؤال,سؤال,0.8205671123862018,True
+Logistic Regression,Before tuning,كيف أقدر أرفع أكثر من صورة دفعة واحدة؟,سؤال,سؤال,0.6980787295888414,True
+Logistic Regression,Before tuning,التطبيق لا يقرأ اسم الملف كل مرة,شكوى,شكوى,0.8344400719250351,True
+Logistic Regression,Before tuning,حياكم الله يا جماعة,تحية,تحية,0.8518117572526075,True
+Logistic Regression,Before tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,أمر,0.4135510798662906,True
+Logistic Regression,Before tuning,كم عدد المحاولات المسموحة؟,سؤال,سؤال,0.7682667919507594,True
+Logistic Regression,Before tuning,حياكم الله يا فريق الدعم,تحية,تحية,0.8774063487163837,True
+Logistic Regression,Before tuning,كيف أقدر أعيد تشغيل التحليل؟,سؤال,سؤال,0.8036207028563872,True
+Logistic Regression,Before tuning,وين ألقى ملف requirements.txt؟,سؤال,سؤال,0.8878181030730008,True
+Logistic Regression,Before tuning,كيف أقدر أختار مجلد الحفظ؟,سؤال,سؤال,0.8077656081646291,True
+Logistic Regression,Before tuning,افتح الملف من المجلد الحالي,أمر,أمر,0.6701912381649999,True
+Logistic Regression,Before tuning,أسعد الله صباحكم، عندي استفسار بسيط,تحية,تحية,0.8924802815689459,True
+Logistic Regression,Before tuning,زر الرفع لا يعمل بدون رسالة واضحة,شكوى,شكوى,0.7437685683631294,True
+Logistic Regression,Before tuning,كم نسبة الثقة المقبولة؟,سؤال,سؤال,0.5821464871703255,True
+Logistic Regression,Before tuning,ليش لا يتم تسجيل العملية؟,سؤال,سؤال,0.5587853867252439,True
+Logistic Regression,Before tuning,أهلًا وسهلًا جميعًا,تحية,تحية,0.6790119305755418,True
+Logistic Regression,Before tuning,الاستجابة من API متأخرة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.7454435949095438,True
+Logistic Regression,Before tuning,أعد تسمية الملف الآن,أمر,أمر,0.7552554254549002,True
+Logistic Regression,Before tuning,الصفحة تتجمد جدًا,شكوى,شكوى,0.5526629265608322,True
+Logistic Regression,Before tuning,التقرير لا يتم تصديره اليوم,شكوى,شكوى,0.6630533828848789,True
+Logistic Regression,Before tuning,صدّر النتائج إلى مجلد التنزيلات,أمر,أمر,0.6120721494342344,True
+Logistic Regression,Before tuning,التطبيق يستهلك ذاكرة كبيرة منذ التحديث الأخير,شكوى,شكوى,0.7858271873160467,True
+Logistic Regression,Before tuning,صباح النور يا شباب,تحية,تحية,0.865523458105715,True
+Logistic Regression,Before tuning,الواجهة صعبة الاستخدام,شكوى,شكوى,0.47148986840553875,True
+Logistic Regression,Before tuning,صبحكم الله بالخير يا مهندسين,تحية,تحية,0.9112902590637262,True
+Logistic Regression,Before tuning,اعرض قائمة الملفات في جدول,أمر,أمر,0.7307926249731677,True
+Logistic Regression,Before tuning,احفظ التقرير النهائي الآن,أمر,أمر,0.8762278404269417,True
+Logistic Regression,Before tuning,وش المعلومات الموجودة في JSON؟,سؤال,سؤال,0.4992192235763534,True
+Logistic Regression,Before tuning,واجهة النتائج تتأخر كل مرة أستخدمه,شكوى,شكوى,0.7740667017495227,True
+Logistic Regression,Before tuning,أغلق الملف الآن,أمر,أمر,0.7343298945716661,True
+Logistic Regression,Before tuning,حياك الله,تحية,تحية,0.8485827851319513,True
+Logistic Regression,Before tuning,مرحبًا يا شباب,تحية,تحية,0.7493989750251234,True
+Logistic Regression,Before tuning,أنشئ ملفًا للنتائج بصيغة PDF,أمر,أمر,0.5232747307923227,True
+Logistic Regression,Before tuning,النتيجة طلعت غلط,شكوى,شكوى,0.35416412486724974,True
+Logistic Regression,Before tuning,حيا الله من جانا جميعًا,تحية,تحية,0.661329870694163,True
+Logistic Regression,Before tuning,اعرض إحصائيات الاستخدام حسب التاريخ,أمر,أمر,0.7155824354097853,True
+Logistic Regression,Before tuning,أهلًا يا جماعة يا مهندسين,تحية,تحية,0.8978305216629118,True
+Logistic Regression,Before tuning,اعرض إحصائيات الاستخدام,أمر,أمر,0.6278519757224782,True
+Logistic Regression,Before tuning,مرحبًا، سعيد بالتواصل معكم,تحية,تحية,0.7692647447335792,True
+Logistic Regression,Before tuning,هل يمكنني إضافة فئة مشاعر جديدة؟,سؤال,سؤال,0.9550855580392785,True
+Logistic Regression,Before tuning,أنشئ ملفًا للنتائج بصيغة CSV,أمر,أمر,0.5041077062517084,True
+Logistic Regression,Before tuning,ليش الواجهة لا تعرض آخر نتيجة؟,سؤال,سؤال,0.46018595460834616,True
+Logistic Regression,Before tuning,احفظ الصورة المعالجة الآن,أمر,أمر,0.8086477604423367,True
+Logistic Regression,Before tuning,اعرض ملخص النص,أمر,أمر,0.6865144255222008,True
+Logistic Regression,Before tuning,يا صباح الورد، سعيد بالتواصل معكم,تحية,تحية,0.8673950553597921,True
+Logistic Regression,Before tuning,ليش لا يتم تحديث سجل النتائج؟,سؤال,سؤال,0.6058219606195406,True
+Logistic Regression,Before tuning,أعد تشغيل التطبيق من جديد,أمر,أمر,0.7209772555788824,True
+Logistic Regression,Before tuning,يا مراحب جميعًا,تحية,تحية,0.7898919089523749,True
+Logistic Regression,Before tuning,الله يصبحكم بالخير يا جماعة,تحية,تحية,0.8815053069904436,True
+Logistic Regression,Before tuning,كيف أقدر أغير لغة الواجهة؟,سؤال,سؤال,0.7669751660584715,True
+Logistic Regression,Before tuning,تحليل المشاعر غير منطقي في أكثر من مثال,شكوى,شكوى,0.7655091336560333,True
+Logistic Regression,Before tuning,النتيجة تختلف عند إعادة التحليل بعد آخر تحديث,شكوى,شكوى,0.7350286122140703,True
+Logistic Regression,Before tuning,السجل السابق اختفى,شكوى,شكوى,0.5001332254293063,True
+Logistic Regression,Before tuning,السلام عليكم ورحمة الله جميعًا,تحية,تحية,0.8315170315538589,True
+Logistic Regression,Before tuning,الأزرار غير مرتبة على جهازي,شكوى,شكوى,0.6987846768620797,True
+Logistic Regression,Before tuning,معالجة النص تستغرق وقتًا طويلًا جدًا,شكوى,شكوى,0.5231939453360844,True
+Logistic Regression,Before tuning,الله يمسيكم بالخير، شكرًا لجهودكم,تحية,تحية,0.8483140253416696,True
+Logistic Regression,Before tuning,كيف أقدر أستخدم واجهة الأوامر؟,سؤال,سؤال,0.7796146909976808,True
+Logistic Regression,Before tuning,احفظ الصورة المعالجة في قاعدة البيانات,أمر,أمر,0.7530223643577034,True
+Logistic Regression,Before tuning,أسعد الله مساءكم، سعيد بالتواصل معكم,تحية,تحية,0.8701997538382507,True
+Logistic Regression,Before tuning,أهلين، شكرًا لجهودكم,تحية,تحية,0.8167322449114985,True
+Logistic Regression,Before tuning,احفظ النص الأصلي مع الوقت والتاريخ,أمر,أمر,0.6751714471141648,True
+Logistic Regression,Before tuning,وين ألقى الصور التي رفعتها؟,سؤال,سؤال,0.909787306945919,True
+Logistic Regression,Before tuning,افتح صفحة النتائج ثم حدّث القائمة,أمر,أمر,0.7567869904782748,True
+Logistic Regression,Before tuning,حي الله الجميع يا فريق الدعم,تحية,تحية,0.8858175296399164,True
+Logistic Regression,Before tuning,أنشئ ملفًا للنتائج,أمر,أمر,0.4058242444034914,True
+Logistic Regression,Before tuning,مساء الخير، عندي استفسار بسيط,تحية,تحية,0.8376178988646916,True
+Logistic Regression,Before tuning,أضف النص والنتيجة إلى قاعدة البيانات,أمر,أمر,0.570004559234761,True
+Logistic Regression,Before tuning,درجة الثقة منخفضة في أكثر من مثال,شكوى,شكوى,0.6542906119199524,True
+Logistic Regression,Before tuning,مرحبًا بكم، سعيد بالتواصل معكم,تحية,تحية,0.7955846524686497,True
+Logistic Regression,Before tuning,التصنيف طلع غلط بعد آخر تحديث,شكوى,شكوى,0.6875886828517495,True
+Logistic Regression,Before tuning,حياكم الله,تحية,تحية,0.5985671349480625,True
+Logistic Regression,Before tuning,الصورة لا تظهر بعد الرفع,شكوى,شكوى,0.6015175493460029,True
+Logistic Regression,Before tuning,اعرض سجل العمليات,أمر,أمر,0.6225273636900123,True
+Logistic Regression,Before tuning,سجل العملية في جدول السجلات,أمر,أمر,0.5613506190040656,True
+Logistic Regression,Before tuning,السجل السابق اختفى رغم ظهور رسالة نجاح,شكوى,شكوى,0.7484173942880127,True
+Logistic Regression,Before tuning,احذف الملف السابق,أمر,أمر,0.5629656317850301,True
+Logistic Regression,Before tuning,كم حجم قاعدة البيانات الحالي؟,سؤال,سؤال,0.4070044606767672,True
+Logistic Regression,Before tuning,مساء النور يا شباب,تحية,تحية,0.8677988560952284,True
+Logistic Regression,Before tuning,ارفع الملف من المجلد الحالي,أمر,أمر,0.6529246083350619,True
+Logistic Regression,Before tuning,كم يستغرق تحليل صورة واحدة؟,سؤال,سؤال,0.5126186612631258,True
+Logistic Regression,Before tuning,الكلمات المفتاحية غير مناسبة,شكوى,شكوى,0.5007913350358381,True
+Logistic Regression,Before tuning,حدّث السجل الحالي ثم اعرضه,أمر,أمر,0.5876836079606867,True
+Logistic Regression,Before tuning,وين ألقى إعدادات النموذج؟,سؤال,سؤال,0.8779497838121095,True
+Logistic Regression,Before tuning,أهلين يا شباب,تحية,تحية,0.8020542606759463,True
+Logistic Regression,Before tuning,حلل هذه الصورة,أمر,أمر,0.6573587234120387,True
+Logistic Regression,Before tuning,فعّل الحفظ التلقائي ثم اعرض الحالة,أمر,أمر,0.7958493078956929,True
+Logistic Regression,Before tuning,الصفحة تتجمد رغم أن الجهاز سريع,شكوى,شكوى,0.7627869748919591,True
+Logistic Regression,Before tuning,هل يمكنني إضافة فئة نية جديدة؟,سؤال,سؤال,0.9531759048068386,True
+Logistic Regression,Before tuning,هل يتم حفظ وقت التنبؤ؟,سؤال,سؤال,0.7476419207327907,True
+Logistic Regression,Before tuning,اعرض لي ملخص المحتوى,أمر,أمر,0.658410332934954,True
+Logistic Regression,Before tuning,هل أقدر أحلل أكثر من ملف؟,سؤال,سؤال,0.7380361144622483,True
+Logistic Regression,Before tuning,حدد مجلد الحفظ,أمر,أمر,0.45693805401831483,True
+Logistic Regression,Before tuning,افتح صفحة النتائج بعد التأكد,أمر,أمر,0.6346752893143263,True
+Logistic Regression,Before tuning,صفحة الإعدادات لا تحفظ التغييرات على جهازي,شكوى,شكوى,0.6737960537827715,True
+Logistic Regression,Before tuning,هل يمكن تشغيل النظام على لينكس؟,سؤال,سؤال,0.770580783531262,True
+Logistic Regression,Before tuning,هل يمكنني استخدام أكثر من مستخدم للنظام؟,سؤال,سؤال,0.817357941678718,True
+Logistic Regression,Before tuning,انقل الملف الآن,أمر,أمر,0.7049169599852929,True
+Logistic Regression,Before tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,سؤال,0.4304086424899472,True
+Logistic Regression,Before tuning,يعطيكم العافية، شكرًا لجهودكم,تحية,تحية,0.8298823328400777,True
+Logistic Regression,Before tuning,التحليل يتوقف فجأة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.7498027645914099,True
+Logistic Regression,Before tuning,الواجهة صعبة الاستخدام في المتصفح,شكوى,شكوى,0.5301047170078701,True
+Logistic Regression,Before tuning,أضف النتيجة إلى قاعدة البيانات مع درجة الثقة,أمر,أمر,0.6615956733688941,True
+Logistic Regression,Before tuning,الملف يختفي بعد اختياره رغم أن الصيغة مدعومة,شكوى,شكوى,0.7861208064157404,True
+Logistic Regression,Before tuning,الملخص ناقص,شكوى,شكوى,0.4369255547102576,True
+Logistic Regression,Before tuning,احفظ الصورة المعالجة مع الوقت والتاريخ,أمر,أمر,0.7213211954723034,True
+Logistic Regression,Before tuning,مساكم الله بالخير يا مهندسين,تحية,تحية,0.8940442954580126,True
+Logistic Regression,Before tuning,النظام يصنف التحية كسؤال مع النصوص القصيرة,شكوى,شكوى,0.8079303044334475,True
+Logistic Regression,Before tuning,التصنيف طلع غلط رغم أن الجملة واضحة,شكوى,شكوى,0.7851838010995366,True
+Logistic Regression,Before tuning,كيف أقدر أربط التطبيق بقاعدة البيانات؟,سؤال,سؤال,0.8979654926576907,True
+Logistic Regression,Before tuning,مرحبتين يا مهندسين,تحية,تحية,0.7655931609053409,True
+Logistic Regression,Before tuning,استرجع آخر سجل,أمر,أمر,0.5035280691209578,True
+Logistic Regression,Before tuning,النتائج القديمة لا تظهر بعد إعادة التشغيل,شكوى,شكوى,0.7583907266464208,True
+Logistic Regression,Before tuning,هل يمكن تغيير اسم قاعدة البيانات؟,سؤال,سؤال,0.7853454556591489,True
+Logistic Regression,Before tuning,حي الله الجميع يا مهندسين,تحية,تحية,0.8599987909133795,True
+Logistic Regression,Before tuning,احذف السجل المحدد,أمر,أمر,0.5356922649278859,True
+Logistic Regression,Before tuning,كيف الحال؟,تحية,سؤال,0.8116054450026162,False
+Logistic Regression,Before tuning,احذف النتيجة,أمر,أمر,0.683238708784181,True
+Logistic Regression,Before tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,سؤال,0.49586148690946374,True
+Logistic Regression,Before tuning,يا مرحبا يا جماعة,تحية,تحية,0.8447692503112079,True
+Logistic Regression,Before tuning,مرحبًا,تحية,تحية,0.38514134642887027,True
+Logistic Regression,Before tuning,كيف أقدر أحلل نصًا طويلًا؟,سؤال,سؤال,0.853725317074389,True
+Logistic Regression,Before tuning,يا مساء الورد يا فريق الدعم,تحية,تحية,0.89788146580797,True
+Logistic Regression,Before tuning,متى تظهر نتيجة التحليل؟,سؤال,سؤال,0.5146796825580153,True
+Logistic Regression,Before tuning,السلام عليكم ورحمة الله، أتمنى أن تكونوا بخير,تحية,تحية,0.9060209006453802,True
+Logistic Regression,Before tuning,كم الوقت المطلوب لإعادة تدريب النموذج؟,سؤال,سؤال,0.49980595373733633,True
+Logistic Regression,Before tuning,رفع أكثر من ملف لا يكتمل,شكوى,شكوى,0.6101205892964677,True
+Logistic Regression,Before tuning,مساء الخير جميعا,تحية,تحية,0.6154702555730928,True
+Logistic Regression,Before tuning,هل التطبيق يدعم صور WEBP؟,سؤال,سؤال,0.7458276415043376,True
+Logistic Regression,Before tuning,كيف أقدر أختار نوع التحليل؟,سؤال,سؤال,0.8116233280376207,True
+Logistic Regression,Before tuning,حيا الله من جانا يا جماعة,تحية,تحية,0.8100598744344611,True
+Logistic Regression,Before tuning,مرحبًا يا جماعة,تحية,تحية,0.7582142701028326,True
+Logistic Regression,Before tuning,معالجة النص تستغرق وقتًا طويلًا عند تحليل الملفات الكبيرة,شكوى,شكوى,0.6792925216437936,True
+Logistic Regression,Before tuning,هل يمكنني رفع ملف يحتوي على نص عربي؟,سؤال,سؤال,0.84757542887464,True
+Logistic Regression,Before tuning,التحليل أخذ وقت طويل,شكوى,شكوى,0.42149766602651323,True
+Logistic Regression,Before tuning,اعرض سجل العمليات مع جميع التفاصيل,أمر,أمر,0.7272733478984174,True
+Logistic Regression,Before tuning,حي الله الجميع، سعيد بالتواصل معكم,تحية,تحية,0.8616244124230852,True
+Logistic Regression,Before tuning,النظام يصنف النص المحايد بشكل خاطئ بعد آخر تحديث,شكوى,شكوى,0.7688966448454667,True
+Logistic Regression,Before tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.4271555851009644,False
+Logistic Regression,Before tuning,ممكن تساعدني,سؤال,سؤال,0.3030082262171695,True
+Logistic Regression,Before tuning,الخدمة ما تستجيب معي,شكوى,شكوى,0.5427156562091056,True
+Logistic Regression,Before tuning,أسعد الله مساءكم يا جماعة,تحية,تحية,0.8612439331853129,True
+Logistic Regression,Before tuning,يا هلا، سعيد بالتواصل معكم,تحية,تحية,0.8767683359308363,True
+Logistic Regression,Before tuning,اعرض سجل العمليات الآن,أمر,أمر,0.7708246326080147,True
+Logistic Regression,Before tuning,الله يمسيكم بالخير يا جماعة,تحية,تحية,0.8976553166790341,True
+Logistic Regression,Before tuning,وين ألقى سجل الاختبارات؟,سؤال,سؤال,0.850425422696331,True
+Logistic Regression,Before tuning,النتيجة غير دقيقة رغم أن الجملة واضحة,شكوى,شكوى,0.8293949785174768,True
+Logistic Regression,Before tuning,حياكم الله، سعيد بالتواصل معكم,تحية,تحية,0.791547049834069,True
+Logistic Regression,Before tuning,مساء الخير، سعيد بالتواصل معكم,تحية,تحية,0.8018933977107217,True
+Logistic Regression,Before tuning,وش المقصود بالتحليل الدفعي؟,سؤال,سؤال,0.5806091874925884,True
+Logistic Regression,Before tuning,اعرض النماذج المتاحة حسب التاريخ,أمر,أمر,0.7939421347176224,True
+Logistic Regression,Before tuning,قاعدة البيانات لا تستجيب بدون أي تنبيه,شكوى,شكوى,0.7004464085179245,True
+Logistic Regression,Before tuning,وين ألقى ملف الأخطاء المصنفة؟,سؤال,سؤال,0.8907163371034966,True
+Logistic Regression,Before tuning,وقت العملية غير محفوظ,شكوى,شكوى,0.4894188909074229,True
+Logistic Regression,Before tuning,هل يمكن استخدام التطبيق من الهاتف؟,سؤال,سؤال,0.7442952625212251,True
+Logistic Regression,Before tuning,كيف أقدر أرسل النتيجة إلى مستخدم آخر؟,سؤال,سؤال,0.6500353013813046,True
+Logistic Regression,Before tuning,مرحبًا بكم، أتمنى أن تكونوا بخير,تحية,تحية,0.8576285330234085,True
+Logistic Regression,Before tuning,عطّل تسجيل العمليات من جديد,أمر,أمر,0.6059456436780173,True
+Logistic Regression,Before tuning,افحص درجة الثقة الآن,أمر,أمر,0.6829877410812562,True
+Logistic Regression,Before tuning,أغلق الملف من المجلد الحالي,أمر,أمر,0.6162222925288086,True
+Logistic Regression,Before tuning,اعرض ملخص النص في جدول,أمر,أمر,0.7257237181987823,True
+Logistic Regression,Before tuning,قاعدة البيانات لا تستجيب,شكوى,شكوى,0.4789190682235744,True
+Logistic Regression,Before tuning,مساء النور يا فريق الدعم,تحية,تحية,0.893301226333589,True
+Logistic Regression,Before tuning,يا هلا,تحية,تحية,0.7058689081659941,True
+Logistic Regression,Before tuning,أسعد الله مساءكم يا شباب,تحية,تحية,0.8571121904634534,True
+Logistic Regression,Before tuning,الملخص ناقص بعد آخر تحديث,شكوى,شكوى,0.6470670291985195,True
+Logistic Regression,Before tuning,حدّث السجل الحالي بالقيم الجديدة,أمر,أمر,0.5118006809340505,True
+Logistic Regression,Before tuning,اعرض نتائج التحليل الآن,أمر,أمر,0.8362229263679833,True
+Logistic Regression,Before tuning,رفع أكثر من ملف لا يكتمل كل مرة,شكوى,شكوى,0.7773796485417497,True
+Logistic Regression,Before tuning,النتيجة غير دقيقة في أكثر من مثال,شكوى,شكوى,0.7537116827672558,True
+Logistic Regression,Before tuning,فتح التقرير يستغرق وقتًا رغم أن الجهاز سريع,شكوى,شكوى,0.7744212425477249,True
+Logistic Regression,Before tuning,أهلًا يا جماعة يا شباب,تحية,تحية,0.8951250563989155,True
+Logistic Regression,Before tuning,هل يمكن استعادة الإعدادات الافتراضية؟,سؤال,سؤال,0.7215780209853359,True
+Logistic Regression,Before tuning,مرحبًا، أتمنى أن تكونوا بخير,تحية,تحية,0.7957573636701911,True
+Logistic Regression,Before tuning,أسعد الله مساءكم، عندي استفسار بسيط,تحية,تحية,0.8965375220549332,True
+Logistic Regression,Before tuning,ليش ما ظهرت البيانات,سؤال,سؤال,0.471809041010774,True
+Logistic Regression,Before tuning,الله يمسيكم بالخير يا مهندسين,تحية,تحية,0.896767545567366,True
+Logistic Regression,Before tuning,رسالة الخطأ غير واضحة بعد التحديث,شكوى,شكوى,0.8082942521146159,True
+Logistic Regression,Before tuning,قارن بين النتيجتين مع إظهار التفاصيل,أمر,أمر,0.7547096318062065,True
+Logistic Regression,Before tuning,كيف أقدر أضيف أمثلة تدريب جديدة؟,سؤال,سؤال,0.8092462353433042,True
+Logistic Regression,Before tuning,كيف أقدر أستخدم التطبيق بدون تسجيل؟,سؤال,سؤال,0.7393866802430403,True
+Logistic Regression,Before tuning,هل يمكن عرض النتائج باللغة العربية؟,سؤال,سؤال,0.8113787188263235,True
+Logistic Regression,Before tuning,حدد مجلد الحفظ من المجلد الحالي,أمر,أمر,0.560150279509227,True
+Logistic Regression,Before tuning,الملف الكبير لا يتم تحميله,شكوى,شكوى,0.5918812535296573,True
+Logistic Regression,Before tuning,حيا الله من جانا، أتمنى أن تكونوا بخير,تحية,تحية,0.8312712981452467,True
+Logistic Regression,Before tuning,النظام يرفض صيغة الملف من أول محاولة,شكوى,شكوى,0.682153579914513,True
+Logistic Regression,Before tuning,ليش بعض الجمل تُصنف خطأ؟,سؤال,سؤال,0.6199195459641175,True
+Logistic Regression,Before tuning,عطّل تسجيل العمليات ثم اعرض الحالة,أمر,أمر,0.6710890429217925,True
+Logistic Regression,Before tuning,زر الرفع لا يعمل من أول محاولة,شكوى,شكوى,0.6538739510482672,True
+Logistic Regression,Before tuning,النسخة الاحتياطية لا تكتمل بعد إعادة التشغيل,شكوى,شكوى,0.792608193895231,True
+Logistic Regression,Before tuning,النص العربي يظهر متقطعًا في المتصفح,شكوى,شكوى,0.6313944205219841,True
+Logistic Regression,Before tuning,وش وظيفة ملف EVALUATION.md؟,سؤال,سؤال,0.5936621475247479,True
+Logistic Regression,Before tuning,اعرض نتائج التحليل حسب التاريخ,أمر,أمر,0.7932740686373296,True
+Logistic Regression,Before tuning,احفظ سجل الأخطاء في قاعدة البيانات,أمر,أمر,0.779260746819715,True
+Logistic Regression,Before tuning,كيف أقدر أفعل حفظ النتائج تلقائيًا؟,سؤال,سؤال,0.8955139325046703,True
+Naive Bayes,After tuning,هل يمكن تصدير سجل الأخطاء؟,سؤال,سؤال,0.9550039877137071,True
+Naive Bayes,After tuning,هلا والله يا جماعة,تحية,تحية,0.9997201908484135,True
+Naive Bayes,After tuning,كيف أقدر أحفظ الصورة بعد المعالجة؟,سؤال,سؤال,0.9096456038082814,True
+Naive Bayes,After tuning,السلام عليكم ورحمة الله، شكرًا لجهودكم,تحية,تحية,0.999989132182842,True
+Naive Bayes,After tuning,اعرض قائمة الملفات مع جميع التفاصيل,أمر,أمر,0.9988478938428408,True
+Naive Bayes,After tuning,أهلًا وسهلًا يا شباب,تحية,تحية,0.9998351773087301,True
+Naive Bayes,After tuning,كم يستغرق تحليل مئة جملة؟,سؤال,سؤال,0.9388275021150018,True
+Naive Bayes,After tuning,احذف السجلات الفارغة,أمر,أمر,0.9431216978984651,True
+Naive Bayes,After tuning,الصورة لا تظهر بعد الرفع من أول محاولة,شكوى,شكوى,0.9984464438605176,True
+Naive Bayes,After tuning,انقل الملف من المجلد الحالي,أمر,أمر,0.9914523621379191,True
+Naive Bayes,After tuning,كيف أقدر أقارن بين نتيجتين؟,سؤال,سؤال,0.9916797901078762,True
+Naive Bayes,After tuning,أسعد الله صباحكم,تحية,تحية,0.9990791613369041,True
+Naive Bayes,After tuning,زر التحليل لا يستجيب عند استخدام اللغة العربية,شكوى,شكوى,0.9991668441567716,True
+Naive Bayes,After tuning,هلا والله، عندي استفسار بسيط,تحية,تحية,0.9999380939632414,True
+Naive Bayes,After tuning,مساكم الله بالخير، سعيد بالتواصل معكم,تحية,تحية,0.999983239786194,True
+Naive Bayes,After tuning,صدّر التقرير بصيغة CSV,أمر,أمر,0.9832584556469908,True
+Naive Bayes,After tuning,أنشئ ملفًا للنتائج إلى مجلد التنزيلات,أمر,أمر,0.9845214372546426,True
+Naive Bayes,After tuning,كيف أقدر أحلل صورة من جهازي؟,سؤال,سؤال,0.9876988847615643,True
+Naive Bayes,After tuning,حمّل النموذج المحفوظ ثم اعرض الحالة,أمر,أمر,0.9975286906367495,True
+Naive Bayes,After tuning,رسالة الخطأ غير واضحة عند استخدام اللغة العربية,شكوى,شكوى,0.997601486445515,True
+Naive Bayes,After tuning,كيف أقدر أراجع الأخطاء السابقة؟,سؤال,سؤال,0.8138864722463337,True
+Naive Bayes,After tuning,هل يمكنني ترتيب النتائج حسب الدقة؟,سؤال,سؤال,0.9934413900347696,True
+Naive Bayes,After tuning,حدد مجلد الحفظ بعد التأكد,أمر,أمر,0.9914999989910159,True
+Naive Bayes,After tuning,هل النتائج تُحفظ تلقائيًا؟,سؤال,سؤال,0.909395277054981,True
+Naive Bayes,After tuning,وين ألقى التقرير النهائي؟,سؤال,سؤال,0.9378535577973448,True
+Naive Bayes,After tuning,كم عدد النماذج المحفوظة؟,سؤال,سؤال,0.8774254100605112,True
+Naive Bayes,After tuning,وين ألقى الكلمات المفتاحية المستخرجة؟,سؤال,سؤال,0.963603296995901,True
+Naive Bayes,After tuning,الملف الكبير لا يتم تحميله من أول محاولة,شكوى,شكوى,0.9991616499844705,True
+Naive Bayes,After tuning,التقرير لا يتم تصديره بعد إعادة التشغيل,شكوى,شكوى,0.9969584889117864,True
+Naive Bayes,After tuning,الله يصبحكم بالخير، أتمنى أن تكونوا بخير,تحية,تحية,0.9999914418927206,True
+Naive Bayes,After tuning,زر الرفع لا يعمل,شكوى,شكوى,0.9837430868006405,True
+Naive Bayes,After tuning,حلل هذا النص مع إظهار التفاصيل,أمر,أمر,0.9997193261440905,True
+Naive Bayes,After tuning,اسم الملف المحفوظ غير صحيح بدون أي تنبيه,شكوى,شكوى,0.9993389042898291,True
+Naive Bayes,After tuning,اعرض درجة الثقة في جدول,أمر,أمر,0.9939807917259839,True
+Naive Bayes,After tuning,وش الفرق بين النية والمشاعر؟,سؤال,سؤال,0.9385164428254699,True
+Naive Bayes,After tuning,صباح النور جميعًا,تحية,تحية,0.9971034716153921,True
+Naive Bayes,After tuning,ارفع الصورة ثم حدّث القائمة,أمر,أمر,0.999572771547883,True
+Naive Bayes,After tuning,التطبيق بطيء كل مرة أستخدمه,شكوى,شكوى,0.9991903031889262,True
+Naive Bayes,After tuning,واجهة API ترجع خطأ في المتصفح,شكوى,شكوى,0.943035001781094,True
+Naive Bayes,After tuning,حدد مجلد الحفظ الآن,أمر,أمر,0.9838252603342252,True
+Naive Bayes,After tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,شكوى,0.5790631289768817,False
+Naive Bayes,After tuning,الملف يختفي بعد اختياره بدون رسالة واضحة,شكوى,شكوى,0.9985584076539784,True
+Naive Bayes,After tuning,وش الفئات التي يدعمها نموذج النية؟,سؤال,سؤال,0.9760026834793242,True
+Naive Bayes,After tuning,حدّث السجل الحالي,أمر,أمر,0.9600391178730188,True
+Naive Bayes,After tuning,عطّل تسجيل العمليات,أمر,أمر,0.8895649829306603,True
+Naive Bayes,After tuning,أهلًا بكم يا شباب,تحية,تحية,0.9999203867773203,True
+Naive Bayes,After tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,شكوى,0.9693401732846204,False
+Naive Bayes,After tuning,ما قدرت أرفع الصورة,شكوى,شكوى,0.9975094817643483,True
+Naive Bayes,After tuning,الأزرار غير مرتبة في المتصفح,شكوى,شكوى,0.9953824104768181,True
+Naive Bayes,After tuning,وقت العملية غير محفوظ رغم ظهور رسالة نجاح,شكوى,شكوى,0.9981340624055485,True
+Naive Bayes,After tuning,الكلمات المفتاحية غير مناسبة رغم أن الجملة واضحة,شكوى,شكوى,0.9987260207941276,True
+Naive Bayes,After tuning,صبحكم الله بالخير يا فريق الدعم,تحية,تحية,0.99999571531347,True
+Naive Bayes,After tuning,استرجع النتائج المحفوظة,أمر,أمر,0.7854784021047982,True
+Naive Bayes,After tuning,صباح الخير يا شباب,تحية,تحية,0.9999131212246033,True
+Naive Bayes,After tuning,الصورة لا تظهر بعد الرفع كل مرة,شكوى,شكوى,0.9986671948750364,True
+Naive Bayes,After tuning,كيف أقدر أشغل التطبيق من الطرفية؟,سؤال,سؤال,0.9881747607471725,True
+Naive Bayes,After tuning,كيف أقدر أرفع أكثر من صورة دفعة واحدة؟,سؤال,سؤال,0.9843221359219229,True
+Naive Bayes,After tuning,التطبيق لا يقرأ اسم الملف كل مرة,شكوى,شكوى,0.9994471163509797,True
+Naive Bayes,After tuning,حياكم الله يا جماعة,تحية,تحية,0.9998432640568846,True
+Naive Bayes,After tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,سؤال,0.8569521658817872,False
+Naive Bayes,After tuning,كم عدد المحاولات المسموحة؟,سؤال,سؤال,0.9853199023740657,True
+Naive Bayes,After tuning,حياكم الله يا فريق الدعم,تحية,تحية,0.9999691548567164,True
+Naive Bayes,After tuning,كيف أقدر أعيد تشغيل التحليل؟,سؤال,سؤال,0.9915133878307182,True
+Naive Bayes,After tuning,وين ألقى ملف requirements.txt؟,سؤال,سؤال,0.9981696785797027,True
+Naive Bayes,After tuning,كيف أقدر أختار مجلد الحفظ؟,سؤال,سؤال,0.9386700364247049,True
+Naive Bayes,After tuning,افتح الملف من المجلد الحالي,أمر,أمر,0.9949128465488919,True
+Naive Bayes,After tuning,أسعد الله صباحكم، عندي استفسار بسيط,تحية,تحية,0.9999866115904948,True
+Naive Bayes,After tuning,زر الرفع لا يعمل بدون رسالة واضحة,شكوى,شكوى,0.9981839104819991,True
+Naive Bayes,After tuning,كم نسبة الثقة المقبولة؟,سؤال,سؤال,0.8710554962946002,True
+Naive Bayes,After tuning,ليش لا يتم تسجيل العملية؟,سؤال,سؤال,0.806323278284585,True
+Naive Bayes,After tuning,أهلًا وسهلًا جميعًا,تحية,تحية,0.9955060068824844,True
+Naive Bayes,After tuning,الاستجابة من API متأخرة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9987296049009895,True
+Naive Bayes,After tuning,أعد تسمية الملف الآن,أمر,أمر,0.9975307300716488,True
+Naive Bayes,After tuning,الصفحة تتجمد جدًا,شكوى,شكوى,0.9706205855842502,True
+Naive Bayes,After tuning,التقرير لا يتم تصديره اليوم,شكوى,شكوى,0.9921203251681967,True
+Naive Bayes,After tuning,صدّر النتائج إلى مجلد التنزيلات,أمر,أمر,0.9922376079809792,True
+Naive Bayes,After tuning,التطبيق يستهلك ذاكرة كبيرة منذ التحديث الأخير,شكوى,شكوى,0.9997537346615214,True
+Naive Bayes,After tuning,صباح النور يا شباب,تحية,تحية,0.9999136518630046,True
+Naive Bayes,After tuning,الواجهة صعبة الاستخدام,شكوى,شكوى,0.9602301852035847,True
+Naive Bayes,After tuning,صبحكم الله بالخير يا مهندسين,تحية,تحية,0.9999818065517264,True
+Naive Bayes,After tuning,اعرض قائمة الملفات في جدول,أمر,أمر,0.9966346298463635,True
+Naive Bayes,After tuning,احفظ التقرير النهائي الآن,أمر,أمر,0.9975641226451266,True
+Naive Bayes,After tuning,وش المعلومات الموجودة في JSON؟,سؤال,سؤال,0.8107439112599327,True
+Naive Bayes,After tuning,واجهة النتائج تتأخر كل مرة أستخدمه,شكوى,شكوى,0.9989817837914723,True
+Naive Bayes,After tuning,أغلق الملف الآن,أمر,أمر,0.9923163296468201,True
+Naive Bayes,After tuning,حياك الله,تحية,تحية,0.9813587045778382,True
+Naive Bayes,After tuning,مرحبًا يا شباب,تحية,تحية,0.9987978462606533,True
+Naive Bayes,After tuning,أنشئ ملفًا للنتائج بصيغة PDF,أمر,أمر,0.9747475794360423,True
+Naive Bayes,After tuning,النتيجة طلعت غلط,شكوى,شكوى,0.7614507261314096,True
+Naive Bayes,After tuning,حيا الله من جانا جميعًا,تحية,تحية,0.9983006715069872,True
+Naive Bayes,After tuning,اعرض إحصائيات الاستخدام حسب التاريخ,أمر,أمر,0.9872440827835485,True
+Naive Bayes,After tuning,أهلًا يا جماعة يا مهندسين,تحية,تحية,0.9999540198273368,True
+Naive Bayes,After tuning,اعرض إحصائيات الاستخدام,أمر,أمر,0.9610767362849724,True
+Naive Bayes,After tuning,مرحبًا، سعيد بالتواصل معكم,تحية,تحية,0.9998068912011607,True
+Naive Bayes,After tuning,هل يمكنني إضافة فئة مشاعر جديدة؟,سؤال,سؤال,0.9897702226580535,True
+Naive Bayes,After tuning,أنشئ ملفًا للنتائج بصيغة CSV,أمر,أمر,0.970334213318516,True
+Naive Bayes,After tuning,ليش الواجهة لا تعرض آخر نتيجة؟,سؤال,سؤال,0.6534516557122108,True
+Naive Bayes,After tuning,احفظ الصورة المعالجة الآن,أمر,أمر,0.9964168892878076,True
+Naive Bayes,After tuning,اعرض ملخص النص,أمر,أمر,0.9884216921216308,True
+Naive Bayes,After tuning,يا صباح الورد، سعيد بالتواصل معكم,تحية,تحية,0.9999797351640841,True
+Naive Bayes,After tuning,ليش لا يتم تحديث سجل النتائج؟,سؤال,سؤال,0.9176866985234996,True
+Naive Bayes,After tuning,أعد تشغيل التطبيق من جديد,أمر,أمر,0.9901188229288708,True
+Naive Bayes,After tuning,يا مراحب جميعًا,تحية,تحية,0.9959528492802718,True
+Naive Bayes,After tuning,الله يصبحكم بالخير يا جماعة,تحية,تحية,0.9999697327566219,True
+Naive Bayes,After tuning,كيف أقدر أغير لغة الواجهة؟,سؤال,سؤال,0.9866329695962839,True
+Naive Bayes,After tuning,تحليل المشاعر غير منطقي في أكثر من مثال,شكوى,شكوى,0.9979911635285339,True
+Naive Bayes,After tuning,النتيجة تختلف عند إعادة التحليل بعد آخر تحديث,شكوى,شكوى,0.9945348183094359,True
+Naive Bayes,After tuning,السجل السابق اختفى,شكوى,شكوى,0.9682180069571955,True
+Naive Bayes,After tuning,السلام عليكم ورحمة الله جميعًا,تحية,تحية,0.9999112927454965,True
+Naive Bayes,After tuning,الأزرار غير مرتبة على جهازي,شكوى,شكوى,0.9947382890194927,True
+Naive Bayes,After tuning,معالجة النص تستغرق وقتًا طويلًا جدًا,شكوى,شكوى,0.9755598197233484,True
+Naive Bayes,After tuning,الله يمسيكم بالخير، شكرًا لجهودكم,تحية,تحية,0.9999488762433603,True
+Naive Bayes,After tuning,كيف أقدر أستخدم واجهة الأوامر؟,سؤال,سؤال,0.9456957641566438,True
+Naive Bayes,After tuning,احفظ الصورة المعالجة في قاعدة البيانات,أمر,أمر,0.9937767008965448,True
+Naive Bayes,After tuning,أسعد الله مساءكم، سعيد بالتواصل معكم,تحية,تحية,0.9999795578083863,True
+Naive Bayes,After tuning,أهلين، شكرًا لجهودكم,تحية,تحية,0.9991247521554212,True
+Naive Bayes,After tuning,احفظ النص الأصلي مع الوقت والتاريخ,أمر,أمر,0.9980156542409265,True
+Naive Bayes,After tuning,وين ألقى الصور التي رفعتها؟,سؤال,سؤال,0.9984628999582413,True
+Naive Bayes,After tuning,افتح صفحة النتائج ثم حدّث القائمة,أمر,أمر,0.9980390636841829,True
+Naive Bayes,After tuning,حي الله الجميع يا فريق الدعم,تحية,تحية,0.9999854878199665,True
+Naive Bayes,After tuning,أنشئ ملفًا للنتائج,أمر,أمر,0.9173506461899621,True
+Naive Bayes,After tuning,مساء الخير، عندي استفسار بسيط,تحية,تحية,0.999954456124445,True
+Naive Bayes,After tuning,أضف النص والنتيجة إلى قاعدة البيانات,أمر,أمر,0.9475826090734051,True
+Naive Bayes,After tuning,درجة الثقة منخفضة في أكثر من مثال,شكوى,شكوى,0.9851975642612871,True
+Naive Bayes,After tuning,مرحبًا بكم، سعيد بالتواصل معكم,تحية,تحية,0.999925484333096,True
+Naive Bayes,After tuning,التصنيف طلع غلط بعد آخر تحديث,شكوى,شكوى,0.9962018320510135,True
+Naive Bayes,After tuning,حياكم الله,تحية,تحية,0.9929738390548577,True
+Naive Bayes,After tuning,الصورة لا تظهر بعد الرفع,شكوى,شكوى,0.9885839122188429,True
+Naive Bayes,After tuning,اعرض سجل العمليات,أمر,أمر,0.9282038439732883,True
+Naive Bayes,After tuning,سجل العملية في جدول السجلات,أمر,أمر,0.9614072412821728,True
+Naive Bayes,After tuning,السجل السابق اختفى رغم ظهور رسالة نجاح,شكوى,شكوى,0.9993997177280302,True
+Naive Bayes,After tuning,احذف الملف السابق,أمر,أمر,0.8575412807413451,True
+Naive Bayes,After tuning,كم حجم قاعدة البيانات الحالي؟,سؤال,سؤال,0.5611039619013191,True
+Naive Bayes,After tuning,مساء النور يا شباب,تحية,تحية,0.9999152131259106,True
+Naive Bayes,After tuning,ارفع الملف من المجلد الحالي,أمر,أمر,0.9943965783693142,True
+Naive Bayes,After tuning,كم يستغرق تحليل صورة واحدة؟,سؤال,سؤال,0.9473104442715383,True
+Naive Bayes,After tuning,الكلمات المفتاحية غير مناسبة,شكوى,شكوى,0.9175734470826831,True
+Naive Bayes,After tuning,حدّث السجل الحالي ثم اعرضه,أمر,أمر,0.9853697756455613,True
+Naive Bayes,After tuning,وين ألقى إعدادات النموذج؟,سؤال,سؤال,0.9977129955390287,True
+Naive Bayes,After tuning,أهلين يا شباب,تحية,تحية,0.9992259825309638,True
+Naive Bayes,After tuning,حلل هذه الصورة,أمر,أمر,0.9948488875969784,True
+Naive Bayes,After tuning,فعّل الحفظ التلقائي ثم اعرض الحالة,أمر,أمر,0.9996291496006687,True
+Naive Bayes,After tuning,الصفحة تتجمد رغم أن الجهاز سريع,شكوى,شكوى,0.9995184177316246,True
+Naive Bayes,After tuning,هل يمكنني إضافة فئة نية جديدة؟,سؤال,سؤال,0.991910480945723,True
+Naive Bayes,After tuning,هل يتم حفظ وقت التنبؤ؟,سؤال,سؤال,0.9562433215067973,True
+Naive Bayes,After tuning,اعرض لي ملخص المحتوى,أمر,أمر,0.9833960105474276,True
+Naive Bayes,After tuning,هل أقدر أحلل أكثر من ملف؟,سؤال,سؤال,0.8343457859084279,True
+Naive Bayes,After tuning,حدد مجلد الحفظ,أمر,أمر,0.9501789207092142,True
+Naive Bayes,After tuning,افتح صفحة النتائج بعد التأكد,أمر,أمر,0.9828236963430177,True
+Naive Bayes,After tuning,صفحة الإعدادات لا تحفظ التغييرات على جهازي,شكوى,شكوى,0.9959170791823735,True
+Naive Bayes,After tuning,هل يمكن تشغيل النظام على لينكس؟,سؤال,سؤال,0.9953278086029282,True
+Naive Bayes,After tuning,هل يمكنني استخدام أكثر من مستخدم للنظام؟,سؤال,سؤال,0.9853478674870733,True
+Naive Bayes,After tuning,انقل الملف الآن,أمر,أمر,0.9894906844271125,True
+Naive Bayes,After tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,شكوى,0.7781427214318589,False
+Naive Bayes,After tuning,يعطيكم العافية، شكرًا لجهودكم,تحية,تحية,0.9997980994139269,True
+Naive Bayes,After tuning,التحليل يتوقف فجأة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9990309311767945,True
+Naive Bayes,After tuning,الواجهة صعبة الاستخدام في المتصفح,شكوى,شكوى,0.9707402518372255,True
+Naive Bayes,After tuning,أضف النتيجة إلى قاعدة البيانات مع درجة الثقة,أمر,أمر,0.9886980157296243,True
+Naive Bayes,After tuning,الملف يختفي بعد اختياره رغم أن الصيغة مدعومة,شكوى,شكوى,0.9997082264739185,True
+Naive Bayes,After tuning,الملخص ناقص,شكوى,شكوى,0.9161549827006411,True
+Naive Bayes,After tuning,احفظ الصورة المعالجة مع الوقت والتاريخ,أمر,أمر,0.9983106223003638,True
+Naive Bayes,After tuning,مساكم الله بالخير يا مهندسين,تحية,تحية,0.9999689347045009,True
+Naive Bayes,After tuning,النظام يصنف التحية كسؤال مع النصوص القصيرة,شكوى,شكوى,0.999717132295039,True
+Naive Bayes,After tuning,التصنيف طلع غلط رغم أن الجملة واضحة,شكوى,شكوى,0.9995385482451079,True
+Naive Bayes,After tuning,كيف أقدر أربط التطبيق بقاعدة البيانات؟,سؤال,سؤال,0.9916355710513133,True
+Naive Bayes,After tuning,مرحبتين يا مهندسين,تحية,تحية,0.9992619301720107,True
+Naive Bayes,After tuning,استرجع آخر سجل,أمر,أمر,0.9399459314842543,True
+Naive Bayes,After tuning,النتائج القديمة لا تظهر بعد إعادة التشغيل,شكوى,شكوى,0.9935137115171477,True
+Naive Bayes,After tuning,هل يمكن تغيير اسم قاعدة البيانات؟,سؤال,سؤال,0.9887947411481561,True
+Naive Bayes,After tuning,حي الله الجميع يا مهندسين,تحية,تحية,0.9999343768054805,True
+Naive Bayes,After tuning,احذف السجل المحدد,أمر,أمر,0.9675711625763143,True
+Naive Bayes,After tuning,كيف الحال؟,تحية,سؤال,0.9552021182533387,False
+Naive Bayes,After tuning,احذف النتيجة,أمر,أمر,0.9771523972285013,True
+Naive Bayes,After tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,شكوى,0.5205903465985021,False
+Naive Bayes,After tuning,يا مرحبا يا جماعة,تحية,تحية,0.99976822377993,True
+Naive Bayes,After tuning,مرحبًا,تحية,تحية,0.9329933920213217,True
+Naive Bayes,After tuning,كيف أقدر أحلل نصًا طويلًا؟,سؤال,سؤال,0.9866814770579225,True
+Naive Bayes,After tuning,يا مساء الورد يا فريق الدعم,تحية,تحية,0.999989474613118,True
+Naive Bayes,After tuning,متى تظهر نتيجة التحليل؟,سؤال,سؤال,0.8882570667436258,True
+Naive Bayes,After tuning,السلام عليكم ورحمة الله، أتمنى أن تكونوا بخير,تحية,تحية,0.9999981097287569,True
+Naive Bayes,After tuning,كم الوقت المطلوب لإعادة تدريب النموذج؟,سؤال,سؤال,0.9136049251875212,True
+Naive Bayes,After tuning,رفع أكثر من ملف لا يكتمل,شكوى,شكوى,0.9794066502240899,True
+Naive Bayes,After tuning,مساء الخير جميعا,تحية,تحية,0.9966081316885289,True
+Naive Bayes,After tuning,هل التطبيق يدعم صور WEBP؟,سؤال,سؤال,0.9912695720279255,True
+Naive Bayes,After tuning,كيف أقدر أختار نوع التحليل؟,سؤال,سؤال,0.9748421180607061,True
+Naive Bayes,After tuning,حيا الله من جانا يا جماعة,تحية,تحية,0.999889465307397,True
+Naive Bayes,After tuning,مرحبًا يا جماعة,تحية,تحية,0.9988835517142541,True
+Naive Bayes,After tuning,معالجة النص تستغرق وقتًا طويلًا عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9970530175690911,True
+Naive Bayes,After tuning,هل يمكنني رفع ملف يحتوي على نص عربي؟,سؤال,سؤال,0.996716234675042,True
+Naive Bayes,After tuning,التحليل أخذ وقت طويل,شكوى,شكوى,0.913562677778309,True
+Naive Bayes,After tuning,اعرض سجل العمليات مع جميع التفاصيل,أمر,أمر,0.9956165437859879,True
+Naive Bayes,After tuning,حي الله الجميع، سعيد بالتواصل معكم,تحية,تحية,0.9999783961520585,True
+Naive Bayes,After tuning,النظام يصنف النص المحايد بشكل خاطئ بعد آخر تحديث,شكوى,شكوى,0.9996412181856078,True
+Naive Bayes,After tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,شكوى,0.8009945951692778,False
+Naive Bayes,After tuning,ممكن تساعدني,سؤال,تحية,0.25066666666666665,False
+Naive Bayes,After tuning,الخدمة ما تستجيب معي,شكوى,شكوى,0.9440205432870831,True
+Naive Bayes,After tuning,أسعد الله مساءكم يا جماعة,تحية,تحية,0.9999177350225882,True
+Naive Bayes,After tuning,يا هلا، سعيد بالتواصل معكم,تحية,تحية,0.9999504360184979,True
+Naive Bayes,After tuning,اعرض سجل العمليات الآن,أمر,أمر,0.9780178271811517,True
+Naive Bayes,After tuning,الله يمسيكم بالخير يا جماعة,تحية,تحية,0.9999758908442888,True
+Naive Bayes,After tuning,وين ألقى سجل الاختبارات؟,سؤال,سؤال,0.9916560649628271,True
+Naive Bayes,After tuning,النتيجة غير دقيقة رغم أن الجملة واضحة,شكوى,شكوى,0.9996445743286023,True
+Naive Bayes,After tuning,حياكم الله، سعيد بالتواصل معكم,تحية,تحية,0.9999016140434612,True
+Naive Bayes,After tuning,مساء الخير، سعيد بالتواصل معكم,تحية,تحية,0.9999379356178631,True
+Naive Bayes,After tuning,وش المقصود بالتحليل الدفعي؟,سؤال,سؤال,0.9443570978908946,True
+Naive Bayes,After tuning,اعرض النماذج المتاحة حسب التاريخ,أمر,أمر,0.9989381841710555,True
+Naive Bayes,After tuning,قاعدة البيانات لا تستجيب بدون أي تنبيه,شكوى,شكوى,0.9967409072848977,True
+Naive Bayes,After tuning,وين ألقى ملف الأخطاء المصنفة؟,سؤال,سؤال,0.9973342753312037,True
+Naive Bayes,After tuning,وقت العملية غير محفوظ,شكوى,شكوى,0.9017611032536511,True
+Naive Bayes,After tuning,هل يمكن استخدام التطبيق من الهاتف؟,سؤال,سؤال,0.9863720115154232,True
+Naive Bayes,After tuning,كيف أقدر أرسل النتيجة إلى مستخدم آخر؟,سؤال,سؤال,0.7614192871240294,True
+Naive Bayes,After tuning,مرحبًا بكم، أتمنى أن تكونوا بخير,تحية,تحية,0.9999792517989641,True
+Naive Bayes,After tuning,عطّل تسجيل العمليات من جديد,أمر,أمر,0.9826303938379118,True
+Naive Bayes,After tuning,افحص درجة الثقة الآن,أمر,أمر,0.9891450307936703,True
+Naive Bayes,After tuning,أغلق الملف من المجلد الحالي,أمر,أمر,0.9929873677964486,True
+Naive Bayes,After tuning,اعرض ملخص النص في جدول,أمر,أمر,0.9970651498717225,True
+Naive Bayes,After tuning,قاعدة البيانات لا تستجيب,شكوى,شكوى,0.8930500505006762,True
+Naive Bayes,After tuning,مساء النور يا فريق الدعم,تحية,تحية,0.9999835448171955,True
+Naive Bayes,After tuning,يا هلا,تحية,تحية,0.9953770558967729,True
+Naive Bayes,After tuning,أسعد الله مساءكم يا شباب,تحية,تحية,0.9999131145479415,True
+Naive Bayes,After tuning,الملخص ناقص بعد آخر تحديث,شكوى,شكوى,0.9904815633078666,True
+Naive Bayes,After tuning,حدّث السجل الحالي بالقيم الجديدة,أمر,أمر,0.9600391178730188,True
+Naive Bayes,After tuning,اعرض نتائج التحليل الآن,أمر,أمر,0.9977099509184929,True
+Naive Bayes,After tuning,رفع أكثر من ملف لا يكتمل كل مرة,شكوى,شكوى,0.9976921710411304,True
+Naive Bayes,After tuning,النتيجة غير دقيقة في أكثر من مثال,شكوى,شكوى,0.9981922403126643,True
+Naive Bayes,After tuning,فتح التقرير يستغرق وقتًا رغم أن الجهاز سريع,شكوى,شكوى,0.9996468411230385,True
+Naive Bayes,After tuning,أهلًا يا جماعة يا شباب,تحية,تحية,0.9999530823805124,True
+Naive Bayes,After tuning,هل يمكن استعادة الإعدادات الافتراضية؟,سؤال,سؤال,0.6489967200523832,True
+Naive Bayes,After tuning,مرحبًا، أتمنى أن تكونوا بخير,تحية,تحية,0.9999295811914913,True
+Naive Bayes,After tuning,أسعد الله مساءكم، عندي استفسار بسيط,تحية,تحية,0.9999850936587152,True
+Naive Bayes,After tuning,ليش ما ظهرت البيانات,سؤال,شكوى,0.6595167641071698,False
+Naive Bayes,After tuning,الله يمسيكم بالخير يا مهندسين,تحية,تحية,0.9999747443798516,True
+Naive Bayes,After tuning,رسالة الخطأ غير واضحة بعد التحديث,شكوى,شكوى,0.9970988824148641,True
+Naive Bayes,After tuning,قارن بين النتيجتين مع إظهار التفاصيل,أمر,أمر,0.9994882350739959,True
+Naive Bayes,After tuning,كيف أقدر أضيف أمثلة تدريب جديدة؟,سؤال,سؤال,0.9931814057686957,True
+Naive Bayes,After tuning,كيف أقدر أستخدم التطبيق بدون تسجيل؟,سؤال,سؤال,0.9767729029809961,True
+Naive Bayes,After tuning,هل يمكن عرض النتائج باللغة العربية؟,سؤال,سؤال,0.9928009393463733,True
+Naive Bayes,After tuning,حدد مجلد الحفظ من المجلد الحالي,أمر,أمر,0.9938236514302708,True
+Naive Bayes,After tuning,الملف الكبير لا يتم تحميله,شكوى,شكوى,0.9946908135052116,True
+Naive Bayes,After tuning,حيا الله من جانا، أتمنى أن تكونوا بخير,تحية,تحية,0.9999821979261341,True
+Naive Bayes,After tuning,النظام يرفض صيغة الملف من أول محاولة,شكوى,شكوى,0.9989943180348799,True
+Naive Bayes,After tuning,ليش بعض الجمل تُصنف خطأ؟,سؤال,سؤال,0.9714470391147335,True
+Naive Bayes,After tuning,عطّل تسجيل العمليات ثم اعرض الحالة,أمر,أمر,0.9973181427138231,True
+Naive Bayes,After tuning,زر الرفع لا يعمل من أول محاولة,شكوى,شكوى,0.9980268669492064,True
+Naive Bayes,After tuning,النسخة الاحتياطية لا تكتمل بعد إعادة التشغيل,شكوى,شكوى,0.9989562695268963,True
+Naive Bayes,After tuning,النص العربي يظهر متقطعًا في المتصفح,شكوى,شكوى,0.9910921397618391,True
+Naive Bayes,After tuning,وش وظيفة ملف EVALUATION.md؟,سؤال,سؤال,0.9584707101285251,True
+Naive Bayes,After tuning,اعرض نتائج التحليل حسب التاريخ,أمر,أمر,0.9956403073045628,True
+Naive Bayes,After tuning,احفظ سجل الأخطاء في قاعدة البيانات,أمر,أمر,0.994734596985296,True
+Naive Bayes,After tuning,كيف أقدر أفعل حفظ النتائج تلقائيًا؟,سؤال,سؤال,0.9966551768390428,True
+Logistic Regression,After tuning,هل يمكن تصدير سجل الأخطاء؟,سؤال,سؤال,0.9480972387252152,True
+Logistic Regression,After tuning,هلا والله يا جماعة,تحية,تحية,0.9699221833591882,True
+Logistic Regression,After tuning,كيف أقدر أحفظ الصورة بعد المعالجة؟,سؤال,سؤال,0.927550473751698,True
+Logistic Regression,After tuning,السلام عليكم ورحمة الله، شكرًا لجهودكم,تحية,تحية,0.9891307264340214,True
+Logistic Regression,After tuning,اعرض قائمة الملفات مع جميع التفاصيل,أمر,أمر,0.95943173497398,True
+Logistic Regression,After tuning,أهلًا وسهلًا يا شباب,تحية,تحية,0.9756751464077714,True
+Logistic Regression,After tuning,كم يستغرق تحليل مئة جملة؟,سؤال,سؤال,0.8461965072338973,True
+Logistic Regression,After tuning,احذف السجلات الفارغة,أمر,أمر,0.894255711666015,True
+Logistic Regression,After tuning,الصورة لا تظهر بعد الرفع من أول محاولة,شكوى,شكوى,0.9245808334128671,True
+Logistic Regression,After tuning,انقل الملف من المجلد الحالي,أمر,أمر,0.8953024590789658,True
+Logistic Regression,After tuning,كيف أقدر أقارن بين نتيجتين؟,سؤال,سؤال,0.9967629385894149,True
+Logistic Regression,After tuning,أسعد الله صباحكم,تحية,تحية,0.9043644121710666,True
+Logistic Regression,After tuning,زر التحليل لا يستجيب عند استخدام اللغة العربية,شكوى,شكوى,0.9771716884498778,True
+Logistic Regression,After tuning,هلا والله، عندي استفسار بسيط,تحية,تحية,0.9822023055246498,True
+Logistic Regression,After tuning,مساكم الله بالخير، سعيد بالتواصل معكم,تحية,تحية,0.9795253347735056,True
+Logistic Regression,After tuning,صدّر التقرير بصيغة CSV,أمر,أمر,0.9204175169063396,True
+Logistic Regression,After tuning,أنشئ ملفًا للنتائج إلى مجلد التنزيلات,أمر,أمر,0.8221500640106967,True
+Logistic Regression,After tuning,كيف أقدر أحلل صورة من جهازي؟,سؤال,سؤال,0.9751876171211477,True
+Logistic Regression,After tuning,حمّل النموذج المحفوظ ثم اعرض الحالة,أمر,أمر,0.9670014232811005,True
+Logistic Regression,After tuning,رسالة الخطأ غير واضحة عند استخدام اللغة العربية,شكوى,شكوى,0.9724781904355861,True
+Logistic Regression,After tuning,كيف أقدر أراجع الأخطاء السابقة؟,سؤال,سؤال,0.9652491121769582,True
+Logistic Regression,After tuning,هل يمكنني ترتيب النتائج حسب الدقة؟,سؤال,سؤال,0.9923571705916444,True
+Logistic Regression,After tuning,حدد مجلد الحفظ بعد التأكد,أمر,أمر,0.8508127932979235,True
+Logistic Regression,After tuning,هل النتائج تُحفظ تلقائيًا؟,سؤال,سؤال,0.9871302723328441,True
+Logistic Regression,After tuning,وين ألقى التقرير النهائي؟,سؤال,سؤال,0.9469276264777201,True
+Logistic Regression,After tuning,كم عدد النماذج المحفوظة؟,سؤال,سؤال,0.8945156146948465,True
+Logistic Regression,After tuning,وين ألقى الكلمات المفتاحية المستخرجة؟,سؤال,سؤال,0.9748132463191121,True
+Logistic Regression,After tuning,الملف الكبير لا يتم تحميله من أول محاولة,شكوى,شكوى,0.9257750235031756,True
+Logistic Regression,After tuning,التقرير لا يتم تصديره بعد إعادة التشغيل,شكوى,شكوى,0.9656453477200089,True
+Logistic Regression,After tuning,الله يصبحكم بالخير، أتمنى أن تكونوا بخير,تحية,تحية,0.9770871898496087,True
+Logistic Regression,After tuning,زر الرفع لا يعمل,شكوى,شكوى,0.7893075855886843,True
+Logistic Regression,After tuning,حلل هذا النص مع إظهار التفاصيل,أمر,أمر,0.9617032716601654,True
+Logistic Regression,After tuning,اسم الملف المحفوظ غير صحيح بدون أي تنبيه,شكوى,شكوى,0.9722802487274214,True
+Logistic Regression,After tuning,اعرض درجة الثقة في جدول,أمر,أمر,0.9541428034012868,True
+Logistic Regression,After tuning,وش الفرق بين النية والمشاعر؟,سؤال,سؤال,0.899580592847216,True
+Logistic Regression,After tuning,صباح النور جميعًا,تحية,تحية,0.9636012519770577,True
+Logistic Regression,After tuning,ارفع الصورة ثم حدّث القائمة,أمر,أمر,0.9807801984826597,True
+Logistic Regression,After tuning,التطبيق بطيء كل مرة أستخدمه,شكوى,شكوى,0.967443089365544,True
+Logistic Regression,After tuning,واجهة API ترجع خطأ في المتصفح,شكوى,شكوى,0.8762664418708533,True
+Logistic Regression,After tuning,حدد مجلد الحفظ الآن,أمر,أمر,0.8913900532877669,True
+Logistic Regression,After tuning,ليش النظام يرفض بعض الصيغ؟,سؤال,سؤال,0.862810009452624,True
+Logistic Regression,After tuning,الملف يختفي بعد اختياره بدون رسالة واضحة,شكوى,شكوى,0.9622139341286765,True
+Logistic Regression,After tuning,وش الفئات التي يدعمها نموذج النية؟,سؤال,سؤال,0.8793946944391255,True
+Logistic Regression,After tuning,حدّث السجل الحالي,أمر,أمر,0.8030997526845629,True
+Logistic Regression,After tuning,عطّل تسجيل العمليات,أمر,أمر,0.5626516115483114,True
+Logistic Regression,After tuning,أهلًا بكم يا شباب,تحية,تحية,0.9849843724981387,True
+Logistic Regression,After tuning,ليش الصورة لا تظهر بعد الرفع؟,سؤال,سؤال,0.49490854450252175,True
+Logistic Regression,After tuning,ما قدرت أرفع الصورة,شكوى,شكوى,0.8953060527341028,True
+Logistic Regression,After tuning,الأزرار غير مرتبة في المتصفح,شكوى,شكوى,0.9379509236576291,True
+Logistic Regression,After tuning,وقت العملية غير محفوظ رغم ظهور رسالة نجاح,شكوى,شكوى,0.9391736156688502,True
+Logistic Regression,After tuning,الكلمات المفتاحية غير مناسبة رغم أن الجملة واضحة,شكوى,شكوى,0.96234907737594,True
+Logistic Regression,After tuning,صبحكم الله بالخير يا فريق الدعم,تحية,تحية,0.9913257535788045,True
+Logistic Regression,After tuning,استرجع النتائج المحفوظة,أمر,أمر,0.7725306404066198,True
+Logistic Regression,After tuning,صباح الخير يا شباب,تحية,تحية,0.9837662302465663,True
+Logistic Regression,After tuning,الصورة لا تظهر بعد الرفع كل مرة,شكوى,شكوى,0.960553955218112,True
+Logistic Regression,After tuning,كيف أقدر أشغل التطبيق من الطرفية؟,سؤال,سؤال,0.9814882375025927,True
+Logistic Regression,After tuning,كيف أقدر أرفع أكثر من صورة دفعة واحدة؟,سؤال,سؤال,0.923889866276498,True
+Logistic Regression,After tuning,التطبيق لا يقرأ اسم الملف كل مرة,شكوى,شكوى,0.978968573728247,True
+Logistic Regression,After tuning,حياكم الله يا جماعة,تحية,تحية,0.9765804019238968,True
+Logistic Regression,After tuning,اعرض السجلات التي تحتوي على أخطاء,أمر,أمر,0.5626473438041528,True
+Logistic Regression,After tuning,كم عدد المحاولات المسموحة؟,سؤال,سؤال,0.9772014918059413,True
+Logistic Regression,After tuning,حياكم الله يا فريق الدعم,تحية,تحية,0.9805880317866246,True
+Logistic Regression,After tuning,كيف أقدر أعيد تشغيل التحليل؟,سؤال,سؤال,0.9748328430179971,True
+Logistic Regression,After tuning,وين ألقى ملف requirements.txt؟,سؤال,سؤال,0.9901780436851564,True
+Logistic Regression,After tuning,كيف أقدر أختار مجلد الحفظ؟,سؤال,سؤال,0.9731777543814296,True
+Logistic Regression,After tuning,افتح الملف من المجلد الحالي,أمر,أمر,0.9260650921581469,True
+Logistic Regression,After tuning,أسعد الله صباحكم، عندي استفسار بسيط,تحية,تحية,0.9880007021517906,True
+Logistic Regression,After tuning,زر الرفع لا يعمل بدون رسالة واضحة,شكوى,شكوى,0.9422289652051654,True
+Logistic Regression,After tuning,كم نسبة الثقة المقبولة؟,سؤال,سؤال,0.8751160042464542,True
+Logistic Regression,After tuning,ليش لا يتم تسجيل العملية؟,سؤال,سؤال,0.8813255517133454,True
+Logistic Regression,After tuning,أهلًا وسهلًا جميعًا,تحية,تحية,0.9495594280885258,True
+Logistic Regression,After tuning,الاستجابة من API متأخرة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9570786679938094,True
+Logistic Regression,After tuning,أعد تسمية الملف الآن,أمر,أمر,0.9618013893578037,True
+Logistic Regression,After tuning,الصفحة تتجمد جدًا,شكوى,شكوى,0.8592753567672327,True
+Logistic Regression,After tuning,التقرير لا يتم تصديره اليوم,شكوى,شكوى,0.934475491341363,True
+Logistic Regression,After tuning,صدّر النتائج إلى مجلد التنزيلات,أمر,أمر,0.9105506377480048,True
+Logistic Regression,After tuning,التطبيق يستهلك ذاكرة كبيرة منذ التحديث الأخير,شكوى,شكوى,0.967945695220448,True
+Logistic Regression,After tuning,صباح النور يا شباب,تحية,تحية,0.9831324968426874,True
+Logistic Regression,After tuning,الواجهة صعبة الاستخدام,شكوى,شكوى,0.7539396224965799,True
+Logistic Regression,After tuning,صبحكم الله بالخير يا مهندسين,تحية,تحية,0.9892434306667466,True
+Logistic Regression,After tuning,اعرض قائمة الملفات في جدول,أمر,أمر,0.9503610872593239,True
+Logistic Regression,After tuning,احفظ التقرير النهائي الآن,أمر,أمر,0.9909592216667829,True
+Logistic Regression,After tuning,وش المعلومات الموجودة في JSON؟,سؤال,سؤال,0.7970785451189071,True
+Logistic Regression,After tuning,واجهة النتائج تتأخر كل مرة أستخدمه,شكوى,شكوى,0.9647225005871606,True
+Logistic Regression,After tuning,أغلق الملف الآن,أمر,أمر,0.9535714498673277,True
+Logistic Regression,After tuning,حياك الله,تحية,تحية,0.9831744100979916,True
+Logistic Regression,After tuning,مرحبًا يا شباب,تحية,تحية,0.9326167558740217,True
+Logistic Regression,After tuning,أنشئ ملفًا للنتائج بصيغة PDF,أمر,أمر,0.8357548577905493,True
+Logistic Regression,After tuning,النتيجة طلعت غلط,شكوى,شكوى,0.48169012460693517,True
+Logistic Regression,After tuning,حيا الله من جانا جميعًا,تحية,تحية,0.9388699554562916,True
+Logistic Regression,After tuning,اعرض إحصائيات الاستخدام حسب التاريخ,أمر,أمر,0.9442507611252843,True
+Logistic Regression,After tuning,أهلًا يا جماعة يا مهندسين,تحية,تحية,0.9839729527415153,True
+Logistic Regression,After tuning,اعرض إحصائيات الاستخدام,أمر,أمر,0.8894767990302828,True
+Logistic Regression,After tuning,مرحبًا، سعيد بالتواصل معكم,تحية,تحية,0.9487569806164396,True
+Logistic Regression,After tuning,هل يمكنني إضافة فئة مشاعر جديدة؟,سؤال,سؤال,0.9987722452242777,True
+Logistic Regression,After tuning,أنشئ ملفًا للنتائج بصيغة CSV,أمر,أمر,0.8135324394246082,True
+Logistic Regression,After tuning,ليش الواجهة لا تعرض آخر نتيجة؟,سؤال,سؤال,0.7739837518686639,True
+Logistic Regression,After tuning,احفظ الصورة المعالجة الآن,أمر,أمر,0.9762424911510025,True
+Logistic Regression,After tuning,اعرض ملخص النص,أمر,أمر,0.9163278878205027,True
+Logistic Regression,After tuning,يا صباح الورد، سعيد بالتواصل معكم,تحية,تحية,0.9803810948040701,True
+Logistic Regression,After tuning,ليش لا يتم تحديث سجل النتائج؟,سؤال,سؤال,0.9144336153650906,True
+Logistic Regression,After tuning,أعد تشغيل التطبيق من جديد,أمر,أمر,0.9531259259070504,True
+Logistic Regression,After tuning,يا مراحب جميعًا,تحية,تحية,0.9685907487115504,True
+Logistic Regression,After tuning,الله يصبحكم بالخير يا جماعة,تحية,تحية,0.9826411260632507,True
+Logistic Regression,After tuning,كيف أقدر أغير لغة الواجهة؟,سؤال,سؤال,0.9642186164687511,True
+Logistic Regression,After tuning,تحليل المشاعر غير منطقي في أكثر من مثال,شكوى,شكوى,0.9668490494030567,True
+Logistic Regression,After tuning,النتيجة تختلف عند إعادة التحليل بعد آخر تحديث,شكوى,شكوى,0.9541070988667618,True
+Logistic Regression,After tuning,السجل السابق اختفى,شكوى,شكوى,0.793307249832484,True
+Logistic Regression,After tuning,السلام عليكم ورحمة الله جميعًا,تحية,تحية,0.9785237357893098,True
+Logistic Regression,After tuning,الأزرار غير مرتبة على جهازي,شكوى,شكوى,0.9484906445990657,True
+Logistic Regression,After tuning,معالجة النص تستغرق وقتًا طويلًا جدًا,شكوى,شكوى,0.8083124254702511,True
+Logistic Regression,After tuning,الله يمسيكم بالخير، شكرًا لجهودكم,تحية,تحية,0.9796780686833024,True
+Logistic Regression,After tuning,كيف أقدر أستخدم واجهة الأوامر؟,سؤال,سؤال,0.9695024296667271,True
+Logistic Regression,After tuning,احفظ الصورة المعالجة في قاعدة البيانات,أمر,أمر,0.9561787274700967,True
+Logistic Regression,After tuning,أسعد الله مساءكم، سعيد بالتواصل معكم,تحية,تحية,0.9850320288216668,True
+Logistic Regression,After tuning,أهلين، شكرًا لجهودكم,تحية,تحية,0.9813592167907554,True
+Logistic Regression,After tuning,احفظ النص الأصلي مع الوقت والتاريخ,أمر,أمر,0.9213828494178584,True
+Logistic Regression,After tuning,وين ألقى الصور التي رفعتها؟,سؤال,سؤال,0.9950270365132359,True
+Logistic Regression,After tuning,افتح صفحة النتائج ثم حدّث القائمة,أمر,أمر,0.9640221009724743,True
+Logistic Regression,After tuning,حي الله الجميع يا فريق الدعم,تحية,تحية,0.9848715338879191,True
+Logistic Regression,After tuning,أنشئ ملفًا للنتائج,أمر,أمر,0.6818869831217679,True
+Logistic Regression,After tuning,مساء الخير، عندي استفسار بسيط,تحية,تحية,0.9767047366338946,True
+Logistic Regression,After tuning,أضف النص والنتيجة إلى قاعدة البيانات,أمر,أمر,0.8094755206024586,True
+Logistic Regression,After tuning,درجة الثقة منخفضة في أكثر من مثال,شكوى,شكوى,0.9431214876076153,True
+Logistic Regression,After tuning,مرحبًا بكم، سعيد بالتواصل معكم,تحية,تحية,0.9668346124920679,True
+Logistic Regression,After tuning,التصنيف طلع غلط بعد آخر تحديث,شكوى,شكوى,0.9483737413664468,True
+Logistic Regression,After tuning,حياكم الله,تحية,تحية,0.8585903248400459,True
+Logistic Regression,After tuning,الصورة لا تظهر بعد الرفع,شكوى,شكوى,0.8376655241499612,True
+Logistic Regression,After tuning,اعرض سجل العمليات,أمر,أمر,0.8840410121624254,True
+Logistic Regression,After tuning,سجل العملية في جدول السجلات,أمر,أمر,0.8363823607381735,True
+Logistic Regression,After tuning,السجل السابق اختفى رغم ظهور رسالة نجاح,شكوى,شكوى,0.9514467437013824,True
+Logistic Regression,After tuning,احذف الملف السابق,أمر,أمر,0.8233242963290867,True
+Logistic Regression,After tuning,كم حجم قاعدة البيانات الحالي؟,سؤال,سؤال,0.569062636203865,True
+Logistic Regression,After tuning,مساء النور يا شباب,تحية,تحية,0.9833764151066889,True
+Logistic Regression,After tuning,ارفع الملف من المجلد الحالي,أمر,أمر,0.9165584468160272,True
+Logistic Regression,After tuning,كم يستغرق تحليل صورة واحدة؟,سؤال,سؤال,0.8132218834737098,True
+Logistic Regression,After tuning,الكلمات المفتاحية غير مناسبة,شكوى,شكوى,0.7986175573010337,True
+Logistic Regression,After tuning,حدّث السجل الحالي ثم اعرضه,أمر,أمر,0.8676449999835143,True
+Logistic Regression,After tuning,وين ألقى إعدادات النموذج؟,سؤال,سؤال,0.9884288934094005,True
+Logistic Regression,After tuning,أهلين يا شباب,تحية,تحية,0.9672982318892429,True
+Logistic Regression,After tuning,حلل هذه الصورة,أمر,أمر,0.8871872372322236,True
+Logistic Regression,After tuning,فعّل الحفظ التلقائي ثم اعرض الحالة,أمر,أمر,0.976096771274513,True
+Logistic Regression,After tuning,الصفحة تتجمد رغم أن الجهاز سريع,شكوى,شكوى,0.9533763940207716,True
+Logistic Regression,After tuning,هل يمكنني إضافة فئة نية جديدة؟,سؤال,سؤال,0.9987143470994752,True
+Logistic Regression,After tuning,هل يتم حفظ وقت التنبؤ؟,سؤال,سؤال,0.9650232692894744,True
+Logistic Regression,After tuning,اعرض لي ملخص المحتوى,أمر,أمر,0.9084678040984236,True
+Logistic Regression,After tuning,هل أقدر أحلل أكثر من ملف؟,سؤال,سؤال,0.9482979525475993,True
+Logistic Regression,After tuning,حدد مجلد الحفظ,أمر,أمر,0.7075860982296207,True
+Logistic Regression,After tuning,افتح صفحة النتائج بعد التأكد,أمر,أمر,0.9245992042018583,True
+Logistic Regression,After tuning,صفحة الإعدادات لا تحفظ التغييرات على جهازي,شكوى,شكوى,0.9281001085454209,True
+Logistic Regression,After tuning,هل يمكن تشغيل النظام على لينكس؟,سؤال,سؤال,0.9676621415936296,True
+Logistic Regression,After tuning,هل يمكنني استخدام أكثر من مستخدم للنظام؟,سؤال,سؤال,0.9758818955919694,True
+Logistic Regression,After tuning,انقل الملف الآن,أمر,أمر,0.9466102306636013,True
+Logistic Regression,After tuning,ليش ملف CSV لا يفتح بشكل صحيح؟,سؤال,سؤال,0.6703532328714416,True
+Logistic Regression,After tuning,يعطيكم العافية، شكرًا لجهودكم,تحية,تحية,0.982342911565037,True
+Logistic Regression,After tuning,التحليل يتوقف فجأة عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9584950370853071,True
+Logistic Regression,After tuning,الواجهة صعبة الاستخدام في المتصفح,شكوى,شكوى,0.823365534958062,True
+Logistic Regression,After tuning,أضف النتيجة إلى قاعدة البيانات مع درجة الثقة,أمر,أمر,0.9033059700989174,True
+Logistic Regression,After tuning,الملف يختفي بعد اختياره رغم أن الصيغة مدعومة,شكوى,شكوى,0.9706543543496464,True
+Logistic Regression,After tuning,الملخص ناقص,شكوى,شكوى,0.6989332209995669,True
+Logistic Regression,After tuning,احفظ الصورة المعالجة مع الوقت والتاريخ,أمر,أمر,0.9480053357509846,True
+Logistic Regression,After tuning,مساكم الله بالخير يا مهندسين,تحية,تحية,0.9865554299604493,True
+Logistic Regression,After tuning,النظام يصنف التحية كسؤال مع النصوص القصيرة,شكوى,شكوى,0.9754440968902951,True
+Logistic Regression,After tuning,التصنيف طلع غلط رغم أن الجملة واضحة,شكوى,شكوى,0.9720732864262418,True
+Logistic Regression,After tuning,كيف أقدر أربط التطبيق بقاعدة البيانات؟,سؤال,سؤال,0.9948270723364683,True
+Logistic Regression,After tuning,مرحبتين يا مهندسين,تحية,تحية,0.9395692402501692,True
+Logistic Regression,After tuning,استرجع آخر سجل,أمر,أمر,0.8291778003007023,True
+Logistic Regression,After tuning,النتائج القديمة لا تظهر بعد إعادة التشغيل,شكوى,شكوى,0.9591475688257592,True
+Logistic Regression,After tuning,هل يمكن تغيير اسم قاعدة البيانات؟,سؤال,سؤال,0.9711955995762386,True
+Logistic Regression,After tuning,حي الله الجميع يا مهندسين,تحية,تحية,0.9800365207734058,True
+Logistic Regression,After tuning,احذف السجل المحدد,أمر,أمر,0.8361741115284496,True
+Logistic Regression,After tuning,كيف الحال؟,تحية,سؤال,0.979974099989793,False
+Logistic Regression,After tuning,احذف النتيجة,أمر,أمر,0.9336104920309973,True
+Logistic Regression,After tuning,ليش النموذج المحفوظ لا يتم تحميله؟,سؤال,سؤال,0.7629452740780657,True
+Logistic Regression,After tuning,يا مرحبا يا جماعة,تحية,تحية,0.9729418341664904,True
+Logistic Regression,After tuning,مرحبًا,تحية,تحية,0.610741769584212,True
+Logistic Regression,After tuning,كيف أقدر أحلل نصًا طويلًا؟,سؤال,سؤال,0.986313859564842,True
+Logistic Regression,After tuning,يا مساء الورد يا فريق الدعم,تحية,تحية,0.9839626548430601,True
+Logistic Regression,After tuning,متى تظهر نتيجة التحليل؟,سؤال,سؤال,0.816060898999815,True
+Logistic Regression,After tuning,السلام عليكم ورحمة الله، أتمنى أن تكونوا بخير,تحية,تحية,0.9901256873357343,True
+Logistic Regression,After tuning,كم الوقت المطلوب لإعادة تدريب النموذج؟,سؤال,سؤال,0.7285175547125116,True
+Logistic Regression,After tuning,رفع أكثر من ملف لا يكتمل,شكوى,شكوى,0.8682337030172613,True
+Logistic Regression,After tuning,مساء الخير جميعا,تحية,تحية,0.8937307472295586,True
+Logistic Regression,After tuning,هل التطبيق يدعم صور WEBP؟,سؤال,سؤال,0.9639001989702456,True
+Logistic Regression,After tuning,كيف أقدر أختار نوع التحليل؟,سؤال,سؤال,0.9785522863475136,True
+Logistic Regression,After tuning,حيا الله من جانا يا جماعة,تحية,تحية,0.9732926043078789,True
+Logistic Regression,After tuning,مرحبًا يا جماعة,تحية,تحية,0.9350858943363115,True
+Logistic Regression,After tuning,معالجة النص تستغرق وقتًا طويلًا عند تحليل الملفات الكبيرة,شكوى,شكوى,0.9205876055178888,True
+Logistic Regression,After tuning,هل يمكنني رفع ملف يحتوي على نص عربي؟,سؤال,سؤال,0.9830571213563571,True
+Logistic Regression,After tuning,التحليل أخذ وقت طويل,شكوى,شكوى,0.6196793717398057,True
+Logistic Regression,After tuning,اعرض سجل العمليات مع جميع التفاصيل,أمر,أمر,0.9407560850762934,True
+Logistic Regression,After tuning,حي الله الجميع، سعيد بالتواصل معكم,تحية,تحية,0.9834489932335948,True
+Logistic Regression,After tuning,النظام يصنف النص المحايد بشكل خاطئ بعد آخر تحديث,شكوى,شكوى,0.9636396498893917,True
+Logistic Regression,After tuning,ليش التقرير لا يحتوي على كل التفاصيل؟,سؤال,سؤال,0.5467952341880348,True
+Logistic Regression,After tuning,ممكن تساعدني,سؤال,سؤال,0.3296791190378714,True
+Logistic Regression,After tuning,الخدمة ما تستجيب معي,شكوى,شكوى,0.8375257846192736,True
+Logistic Regression,After tuning,أسعد الله مساءكم يا جماعة,تحية,تحية,0.981115228902918,True
+Logistic Regression,After tuning,يا هلا، سعيد بالتواصل معكم,تحية,تحية,0.9833339935942413,True
+Logistic Regression,After tuning,اعرض سجل العمليات الآن,أمر,أمر,0.9624460042964056,True
+Logistic Regression,After tuning,الله يمسيكم بالخير يا جماعة,تحية,تحية,0.9876454145468505,True
+Logistic Regression,After tuning,وين ألقى سجل الاختبارات؟,سؤال,سؤال,0.982451230819482,True
+Logistic Regression,After tuning,النتيجة غير دقيقة رغم أن الجملة واضحة,شكوى,شكوى,0.9793016730431218,True
+Logistic Regression,After tuning,حياكم الله، سعيد بالتواصل معكم,تحية,تحية,0.9589969662255193,True
+Logistic Regression,After tuning,مساء الخير، سعيد بالتواصل معكم,تحية,تحية,0.9669587599741554,True
+Logistic Regression,After tuning,وش المقصود بالتحليل الدفعي؟,سؤال,سؤال,0.9051755303063523,True
+Logistic Regression,After tuning,اعرض النماذج المتاحة حسب التاريخ,أمر,أمر,0.9705995987749894,True
+Logistic Regression,After tuning,قاعدة البيانات لا تستجيب بدون أي تنبيه,شكوى,شكوى,0.941867339475946,True
+Logistic Regression,After tuning,وين ألقى ملف الأخطاء المصنفة؟,سؤال,سؤال,0.990431035285171,True
+Logistic Regression,After tuning,وقت العملية غير محفوظ,شكوى,شكوى,0.7506087598053365,True
+Logistic Regression,After tuning,هل يمكن استخدام التطبيق من الهاتف؟,سؤال,سؤال,0.9596019663169197,True
+Logistic Regression,After tuning,كيف أقدر أرسل النتيجة إلى مستخدم آخر؟,سؤال,سؤال,0.8636411538569781,True
+Logistic Regression,After tuning,مرحبًا بكم، أتمنى أن تكونوا بخير,تحية,تحية,0.9838842829983158,True
+Logistic Regression,After tuning,عطّل تسجيل العمليات من جديد,أمر,أمر,0.8696615950222243,True
+Logistic Regression,After tuning,افحص درجة الثقة الآن,أمر,أمر,0.9275550647234908,True
+Logistic Regression,After tuning,أغلق الملف من المجلد الحالي,أمر,أمر,0.902537228492993,True
+Logistic Regression,After tuning,اعرض ملخص النص في جدول,أمر,أمر,0.9419233454393916,True
+Logistic Regression,After tuning,قاعدة البيانات لا تستجيب,شكوى,شكوى,0.7766137317221861,True
+Logistic Regression,After tuning,مساء النور يا فريق الدعم,تحية,تحية,0.9861505767609218,True
+Logistic Regression,After tuning,يا هلا,تحية,تحية,0.9162924096332212,True
+Logistic Regression,After tuning,أسعد الله مساءكم يا شباب,تحية,تحية,0.9805812267910915,True
+Logistic Regression,After tuning,الملخص ناقص بعد آخر تحديث,شكوى,شكوى,0.9112851767809297,True
+Logistic Regression,After tuning,حدّث السجل الحالي بالقيم الجديدة,أمر,أمر,0.8030997526845629,True
+Logistic Regression,After tuning,اعرض نتائج التحليل الآن,أمر,أمر,0.9816852877096504,True
+Logistic Regression,After tuning,رفع أكثر من ملف لا يكتمل كل مرة,شكوى,شكوى,0.9652251603795076,True
+Logistic Regression,After tuning,النتيجة غير دقيقة في أكثر من مثال,شكوى,شكوى,0.9653954797402206,True
+Logistic Regression,After tuning,فتح التقرير يستغرق وقتًا رغم أن الجهاز سريع,شكوى,شكوى,0.9609891408537734,True
+Logistic Regression,After tuning,أهلًا يا جماعة يا شباب,تحية,تحية,0.9845641639566445,True
+Logistic Regression,After tuning,هل يمكن استعادة الإعدادات الافتراضية؟,سؤال,سؤال,0.9495900708996154,True
+Logistic Regression,After tuning,مرحبًا، أتمنى أن تكونوا بخير,تحية,تحية,0.9597832771210046,True
+Logistic Regression,After tuning,أسعد الله مساءكم، عندي استفسار بسيط,تحية,تحية,0.9898363891570046,True
+Logistic Regression,After tuning,ليش ما ظهرت البيانات,سؤال,سؤال,0.7549544997458456,True
+Logistic Regression,After tuning,الله يمسيكم بالخير يا مهندسين,تحية,تحية,0.986730686495281,True
+Logistic Regression,After tuning,رسالة الخطأ غير واضحة بعد التحديث,شكوى,شكوى,0.9766826719295254,True
+Logistic Regression,After tuning,قارن بين النتيجتين مع إظهار التفاصيل,أمر,أمر,0.9620535558434975,True
+Logistic Regression,After tuning,كيف أقدر أضيف أمثلة تدريب جديدة؟,سؤال,سؤال,0.9777685492891061,True
+Logistic Regression,After tuning,كيف أقدر أستخدم التطبيق بدون تسجيل؟,سؤال,سؤال,0.9519616096189021,True
+Logistic Regression,After tuning,هل يمكن عرض النتائج باللغة العربية؟,سؤال,سؤال,0.9790894063902651,True
+Logistic Regression,After tuning,حدد مجلد الحفظ من المجلد الحالي,أمر,أمر,0.8487598049580852,True
+Logistic Regression,After tuning,الملف الكبير لا يتم تحميله,شكوى,شكوى,0.8406095300107937,True
+Logistic Regression,After tuning,حيا الله من جانا، أتمنى أن تكونوا بخير,تحية,تحية,0.9805116941741848,True
+Logistic Regression,After tuning,النظام يرفض صيغة الملف من أول محاولة,شكوى,شكوى,0.9325952436306478,True
+Logistic Regression,After tuning,ليش بعض الجمل تُصنف خطأ؟,سؤال,سؤال,0.9243285518388662,True
+Logistic Regression,After tuning,عطّل تسجيل العمليات ثم اعرض الحالة,أمر,أمر,0.9133532277122665,True
+Logistic Regression,After tuning,زر الرفع لا يعمل من أول محاولة,شكوى,شكوى,0.9059970379585536,True
+Logistic Regression,After tuning,النسخة الاحتياطية لا تكتمل بعد إعادة التشغيل,شكوى,شكوى,0.9714375282539686,True
+Logistic Regression,After tuning,النص العربي يظهر متقطعًا في المتصفح,شكوى,شكوى,0.9159219721077074,True
+Logistic Regression,After tuning,وش وظيفة ملف EVALUATION.md؟,سؤال,سؤال,0.8918561883122692,True
+Logistic Regression,After tuning,اعرض نتائج التحليل حسب التاريخ,أمر,أمر,0.9736525813944733,True
+Logistic Regression,After tuning,احفظ سجل الأخطاء في قاعدة البيانات,أمر,أمر,0.9618696790592087,True
+Logistic Regression,After tuning,كيف أقدر أفعل حفظ النتائج تلقائيًا؟,سؤال,سؤال,0.9939575991619903,True

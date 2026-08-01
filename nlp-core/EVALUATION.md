@@ -293,3 +293,99 @@ saved as CSV files for future analysis.
 
 Future evaluation should use a fixed test dataset to provide a more
 reliable comparison between model versions.
+
+<!-- INTENT_EVALUATION_START -->
+
+## Intent Classification Evaluation
+
+The models were evaluated using the same held-out test split.
+Hyperparameter tuning was performed only on the training data
+using `GridSearchCV`.
+
+### Results
+
+| Model | Stage | Accuracy | Macro-F1 |
+|---|---|---:|---:|
+| Naive Bayes | Before tuning | 0.9600 | 0.9596 |
+| Logistic Regression | Before tuning | 0.9880 | 0.9880 |
+| Naive Bayes | After tuning | 0.9640 | 0.9638 |
+| Logistic Regression | After tuning | 0.9960 | 0.9960 |
+
+### Selected Model
+
+**Best model:** Logistic Regression
+
+**Best hyperparameters:** `classifier__C` = `10.0`
+
+### Saved Test Files
+
+- All predictions: `tests/intent_test_results_after_expansion.csv`
+- Failed predictions: `tests/intent_misclassified_after_expansion.csv`
+- Test summary: `tests/intent_test_summary_after_expansion.csv`
+
+### Top 10 Features per Intent Class
+
+| Intent class | Top 10 features |
+|---|---|
+| أمر | اعرض, احفظ, الآن, احذف, افتح, استرجع, جديد, حد, ارفع, الملف |
+| تحية | يا, الله, مرحب, جميع, أهلين, مساء, أهل, صباح, الخير, النور |
+| سؤال | هل, ليش, وش, أقدر, كيف أقدر, كم, متى, وين, ألقى, وين ألقى |
+| شكوى | لا, غير, ما, جد, عند, رغم, بعد, النظام, التحديث, ناقص |
+
+<!-- INTENT_EVALUATION_END -->
+
+<!-- SENTIMENT_EVALUATION_START -->
+
+## Sentiment Analysis Evaluation
+
+The baseline and tuned sentiment models were evaluated using
+the same held-out test set. `GridSearchCV` was performed only
+on the training set to prevent test-data leakage.
+
+### Results Before and After Tuning
+
+| Model | Stage | Accuracy | Macro-F1 |
+|---|---|---:|---:|
+| Logistic Regression | Before tuning | 0.9800 | 0.9800 |
+| Logistic Regression | After tuning | 0.9800 | 0.9801 |
+
+### Held-Out Test Summary
+
+| Model | Stage | Tested | Correct | Incorrect | Accuracy |
+|---|---|---:|---:|---:|---:|
+| Logistic Regression | Before tuning | 250 | 245 | 5 | 0.9800 |
+| Logistic Regression | After tuning | 250 | 245 | 5 | 0.9800 |
+
+### Hyperparameter Tuning
+
+**Method:** GridSearchCV
+
+**Scoring metric:** Accuracy
+
+**Best cross-validation accuracy:** 0.9760
+
+**Best hyperparameters:** `classifier__C` = `100.0`
+
+### Saved Test Files
+
+- All predictions: `tests/sentiment_test_results_after_expansion.csv`
+- Failed predictions: `tests/sentiment_misclassified_after_expansion.csv`
+- Test summary: `tests/sentiment_test_summary_after_expansion.csv`
+
+### Top 10 Features per Sentiment Class
+
+| Sentiment class | Top 10 features |
+|---|---|
+| إيجابي | وأعجبتني, جد, وتستحق, وتستحق التجربة, بسرعة, كانت, ممتازة, فعالة, التجربة, مقنعة |
+| سلبي | غير, ولم, مخيبة, سيئة, متعبة, مملة, تعجبني, ولم تعجبني, إلى تحسين, وتحتاج إلى |
+| محايد | في, تم, على, يحتوي, داخل, تم تسجيل, تسجيل, يبدأ, موعد, يوم |
+
+### Generated Files
+
+- `sentiment_model.joblib`
+- `sentiment_cm.png`
+- `tests/sentiment_test_results_after_expansion.csv`
+- `tests/sentiment_misclassified_after_expansion.csv`
+- `tests/sentiment_test_summary_after_expansion.csv`
+
+<!-- SENTIMENT_EVALUATION_END -->

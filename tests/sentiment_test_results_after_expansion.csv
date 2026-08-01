@@ -1,0 +1,501 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Logistic Regression,Before tuning,الأداء كانت غير مستقرة ولم تعجبني,سلبي,سلبي,0.9303950237013197,True
+Logistic Regression,Before tuning,تم حفظ الملف بسهولة وأنا راضٍ عن الأداء,إيجابي,إيجابي,0.5522965862370149,True
+Logistic Regression,Before tuning,يحتوي الصورة على ستة أقسام,محايد,محايد,0.7885083838101358,True
+Logistic Regression,Before tuning,تأخر الطلب كثيرًا وكان التغليف سيئًا,سلبي,إيجابي,0.495404053626733,False
+Logistic Regression,Before tuning,تم اكتشاف اللغة بشكل صحيح وكان كل شيء واضحًا,إيجابي,إيجابي,0.6856875381643371,True
+Logistic Regression,Before tuning,يبدأ المتجر في الساعة التاسعة صباحًا,محايد,محايد,0.898535059741246,True
+Logistic Regression,Before tuning,الدعم الفني مميزة جدًا,إيجابي,إيجابي,0.7820887574201443,True
+Logistic Regression,Before tuning,التقرير ممتعة جدًا,إيجابي,إيجابي,0.7218316211663212,True
+Logistic Regression,Before tuning,الفريق غير واضحة جدًا,سلبي,سلبي,0.8268035509967413,True
+Logistic Regression,Before tuning,تم إغلاق التطبيق في الساعة التاسعة,محايد,محايد,0.9027942569176555,True
+Logistic Regression,Before tuning,المباراة كانت غير مفيدة ولم تعجبني,سلبي,سلبي,0.9401629466894529,True
+Logistic Regression,Before tuning,المشروع كانت مملة ولم تعجبني,سلبي,سلبي,0.8612705718720104,True
+Logistic Regression,Before tuning,تم تحديد مجلد الحفظ باللغة العربية,محايد,محايد,0.6724756239722322,True
+Logistic Regression,Before tuning,أرى أن الفريق ممتعة وتستحق التجربة,إيجابي,إيجابي,0.8527894765426023,True
+Logistic Regression,Before tuning,الفريق منظمة جدًا,إيجابي,إيجابي,0.6650582392610691,True
+Logistic Regression,Before tuning,النتيجة كانت ممتازة وأعجبتني,إيجابي,إيجابي,0.8896938303200447,True
+Logistic Regression,Before tuning,الفندق كانت مملة ولم تعجبني,سلبي,سلبي,0.8505739075074463,True
+Logistic Regression,Before tuning,التحديث غير مريحة جدًا,سلبي,سلبي,0.6898219672933099,True
+Logistic Regression,Before tuning,التقرير غير منظمة جدًا,سلبي,سلبي,0.6318242448684296,True
+Logistic Regression,Before tuning,يتم حفظ النماذج بصيغة joblib,محايد,سلبي,0.36845511024816824,False
+Logistic Regression,Before tuning,تم تسجيل عشرين سطرًا داخل النموذج,محايد,محايد,0.9017985210826165,True
+Logistic Regression,Before tuning,المشروع متعبة جدًا,سلبي,سلبي,0.7603537985022939,True
+Logistic Regression,Before tuning,المشروع كانت واضحة وأعجبتني,إيجابي,إيجابي,0.7263633151068599,True
+Logistic Regression,Before tuning,أرى أن المحاضرة ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9165930432754346,True
+Logistic Regression,Before tuning,الفريق فعالة جدًا,إيجابي,إيجابي,0.7585964749833156,True
+Logistic Regression,Before tuning,تم إرسال الاستجابة من خلال واجهة الأوامر,محايد,محايد,0.7347313189496266,True
+Logistic Regression,Before tuning,تم اكتشاف نوع الملف في الساعة التاسعة,محايد,محايد,0.8784016043762397,True
+Logistic Regression,Before tuning,يبدأ المتجر في الساعة السادسة مساءً,محايد,محايد,0.8817607910207468,True
+Logistic Regression,Before tuning,النظام واضحة جدًا,إيجابي,إيجابي,0.5029544364578344,True
+Logistic Regression,Before tuning,يحتوي الصندوق على اثني عشر سجلًا,محايد,محايد,0.8084459818148455,True
+Logistic Regression,Before tuning,أرى أن الفكرة غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9188646547368058,True
+Logistic Regression,Before tuning,يبدأ المتجر في الساعة السابعة صباحًا,محايد,محايد,0.872297083891674,True
+Logistic Regression,Before tuning,يحتوي الجدول على أربع صور,محايد,محايد,0.8673517266011266,True
+Logistic Regression,Before tuning,موعد المباراة في الساعة الرابعة عصرًا,محايد,محايد,0.8671294137823274,True
+Logistic Regression,Before tuning,أرى أن الفندق بطيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9020398115800622,True
+Logistic Regression,Before tuning,المنتج كانت مربكة ولم تعجبني,سلبي,سلبي,0.8733361862156251,True
+Logistic Regression,Before tuning,التحديث مخيبة جدًا,سلبي,سلبي,0.7010410213104338,True
+Logistic Regression,Before tuning,أرى أن الجهاز مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.8984753888947323,True
+Logistic Regression,Before tuning,أرى أن التجربة فعالة وتستحق التجربة,إيجابي,إيجابي,0.9309241407469779,True
+Logistic Regression,Before tuning,أرى أن الموقع مميزة وتستحق التجربة,إيجابي,إيجابي,0.8918072586971686,True
+Logistic Regression,Before tuning,أرى أن النتيجة ممتعة وتستحق التجربة,إيجابي,إيجابي,0.8949696367175982,True
+Logistic Regression,Before tuning,التصميم معقد وغير مريح للاستخدام,سلبي,إيجابي,0.5206569319296965,False
+Logistic Regression,Before tuning,الدعم الفني كانت معقدة ولم تعجبني,سلبي,سلبي,0.8019645832711442,True
+Logistic Regression,Before tuning,التحليل غير مفيدة جدًا,سلبي,سلبي,0.7172899122777123,True
+Logistic Regression,Before tuning,أرى أن الطلب مزعجة وتحتاج إلى تحسين,سلبي,سلبي,0.9164123576929374,True
+Logistic Regression,Before tuning,يبدأ التدريب في الساعة الثامنة صباحًا,محايد,محايد,0.8910996429889074,True
+Logistic Regression,Before tuning,تمت معالجة الملف بسلاسة وكانت التجربة أفضل من المتوقع,إيجابي,إيجابي,0.5664393318035809,True
+Logistic Regression,Before tuning,فشل تحميل النموذج ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.653967791644637,True
+Logistic Regression,Before tuning,الزيارة كانت غير مستقرة ولم تعجبني,سلبي,سلبي,0.9245627016226304,True
+Logistic Regression,Before tuning,تم تسجيل أربع خطوات داخل الصفحة,محايد,محايد,0.8951101114237283,True
+Logistic Regression,Before tuning,المشروع كانت احترافية وأعجبتني,إيجابي,إيجابي,0.7911940665334353,True
+Logistic Regression,Before tuning,الفريق مزعجة جدًا,سلبي,سلبي,0.7108658094236713,True
+Logistic Regression,Before tuning,النتيجة معقدة جدًا,سلبي,سلبي,0.6213120491121344,True
+Logistic Regression,Before tuning,تم تسجيل خمسين مثالًا داخل المجلد,محايد,محايد,0.8996263647296033,True
+Logistic Regression,Before tuning,تم تغيير اسم الملف في الإصدار الحالي,محايد,محايد,0.7913972962795709,True
+Logistic Regression,Before tuning,المطعم ممتعة جدًا,إيجابي,إيجابي,0.7632903234922555,True
+Logistic Regression,Before tuning,التجربة كانت جميلة وأعجبتني,إيجابي,إيجابي,0.888468758861515,True
+Logistic Regression,Before tuning,الفريق كانت غير مفيدة ولم تعجبني,سلبي,سلبي,0.9492633294008916,True
+Logistic Regression,Before tuning,يحتوي المستند على اثني عشر سجلًا,محايد,محايد,0.8287562588702253,True
+Logistic Regression,Before tuning,تم إدخال النص في الحقل في الملف المحدد,محايد,محايد,0.8862274027003852,True
+Logistic Regression,Before tuning,يبدأ المؤتمر في الأسبوع القادم,محايد,محايد,0.8101953986167462,True
+Logistic Regression,Before tuning,تم تسجيل عشرين سطرًا داخل المنتج,محايد,محايد,0.874954955764589,True
+Logistic Regression,Before tuning,التصميم كانت رديئة ولم تعجبني,سلبي,سلبي,0.8541545314969561,True
+Logistic Regression,Before tuning,عدد الطلاب في الفصل ثلاثون طالبًا,محايد,محايد,0.7618297982592767,True
+Logistic Regression,Before tuning,الرحلة كانت رديئة ولم تعجبني,سلبي,سلبي,0.8783762827011334,True
+Logistic Regression,Before tuning,الورشة كانت رائعة وأعجبتني,إيجابي,إيجابي,0.8221897140152361,True
+Logistic Regression,Before tuning,يبدأ الاجتماع في يوم الأحد,محايد,محايد,0.9002708298539629,True
+Logistic Regression,Before tuning,الطلب مقنعة جدًا,إيجابي,إيجابي,0.7525188412457325,True
+Logistic Regression,Before tuning,يحتوي التقرير على خمس صفحات,محايد,محايد,0.8480442106401443,True
+Logistic Regression,Before tuning,الفيديو مخيبة جدًا,سلبي,سلبي,0.766336057651055,True
+Logistic Regression,Before tuning,يحتوي التطبيق على ستة أقسام,محايد,محايد,0.792156513315226,True
+Logistic Regression,Before tuning,يحتوي الملف على مئة كلمة,محايد,محايد,0.7805025291837001,True
+Logistic Regression,Before tuning,تم إيقاف العملية من خلال واجهة الأوامر,محايد,محايد,0.6960702676093284,True
+Logistic Regression,Before tuning,يحتوي المجلد على ستة أقسام,محايد,محايد,0.8339099508585159,True
+Logistic Regression,Before tuning,تم قراءة الملف خلال خمس دقائق,محايد,محايد,0.817624814085965,True
+Logistic Regression,Before tuning,يبدأ الفصل الدراسي في يوم الخميس,محايد,محايد,0.8543039084303774,True
+Logistic Regression,Before tuning,تم تسجيل ثمانية عناصر داخل التقرير,محايد,محايد,0.8184750347678916,True
+Logistic Regression,Before tuning,أرى أن التحليل مميزة وتستحق التجربة,إيجابي,إيجابي,0.8948275714138317,True
+Logistic Regression,Before tuning,أرى أن المباراة معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.9116800527332923,True
+Logistic Regression,Before tuning,التحديث كانت مزعجة ولم تعجبني,سلبي,سلبي,0.8692647121729159,True
+Logistic Regression,Before tuning,يحتوي السجل على ستة أقسام,محايد,محايد,0.7801379612914913,True
+Logistic Regression,Before tuning,موعد الدورة في الساعة الثانية ظهرًا,محايد,محايد,0.8560492043822591,True
+Logistic Regression,Before tuning,الأداء تحسن بشكل واضح,إيجابي,إيجابي,0.5889372487548942,True
+Logistic Regression,Before tuning,التحديث مميزة جدًا,إيجابي,إيجابي,0.7203039654718408,True
+Logistic Regression,Before tuning,المطعم مخيبة جدًا,سلبي,سلبي,0.6669629502351707,True
+Logistic Regression,Before tuning,تم تشغيل الاختبارات بعد إدخال النص,محايد,محايد,0.7595358583017224,True
+Logistic Regression,Before tuning,أرى أن التطبيق ممتعة وتستحق التجربة,إيجابي,إيجابي,0.8835798549753471,True
+Logistic Regression,Before tuning,أرى أن الرحلة متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.903435680718823,True
+Logistic Regression,Before tuning,المنصة كانت مربكة ولم تعجبني,سلبي,سلبي,0.8314267830758323,True
+Logistic Regression,Before tuning,أرى أن النظام مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.927425377521272,True
+Logistic Regression,Before tuning,الفندق كانت مبتكرة وأعجبتني,إيجابي,إيجابي,0.8303457759669095,True
+Logistic Regression,Before tuning,التقرير ضعيفة جدًا,سلبي,سلبي,0.602951693377949,True
+Logistic Regression,Before tuning,أرى أن المشروع مربكة وتحتاج إلى تحسين,سلبي,سلبي,0.8928753158609906,True
+Logistic Regression,Before tuning,تم إنشاء التقرير باللغة العربية,محايد,محايد,0.76319092689732,True
+Logistic Regression,Before tuning,المنصة مفيدة جدًا,إيجابي,إيجابي,0.6215235236006021,True
+Logistic Regression,Before tuning,ما واجهت أي مشكلة اليوم,إيجابي,سلبي,0.3678797835838623,False
+Logistic Regression,Before tuning,أرى أن التحديث سيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9314995698871862,True
+Logistic Regression,Before tuning,التصميم فعالة جدًا,إيجابي,إيجابي,0.8480524332849521,True
+Logistic Regression,Before tuning,حصلت على دعم سريع وممتاز من الفريق,إيجابي,محايد,0.4542531900616547,False
+Logistic Regression,Before tuning,التطبيق ممتازة جدًا,إيجابي,إيجابي,0.8178877396750605,True
+Logistic Regression,Before tuning,الرحلة مبتكرة جدًا,إيجابي,إيجابي,0.6740188226971999,True
+Logistic Regression,Before tuning,الأداء مميزة جدًا,إيجابي,إيجابي,0.7696969581242152,True
+Logistic Regression,Before tuning,أرى أن الفندق موثوقة وتستحق التجربة,إيجابي,إيجابي,0.9259855379257312,True
+Logistic Regression,Before tuning,يبدأ الورشة في الساعة السابعة صباحًا,محايد,محايد,0.8689847627303638,True
+Logistic Regression,Before tuning,الجهاز مميزة جدًا,إيجابي,إيجابي,0.7289862966787485,True
+Logistic Regression,Before tuning,يحتوي المجلد على ثمانية عناصر,محايد,محايد,0.8202178775015195,True
+Logistic Regression,Before tuning,تم تسجيل عشرين سطرًا داخل الفيديو,محايد,محايد,0.8869173990557474,True
+Logistic Regression,Before tuning,الواجهة معقدة مرة,سلبي,سلبي,0.5914528643787932,True
+Logistic Regression,Before tuning,الواجهة كانت رائعة وأعجبتني,إيجابي,إيجابي,0.806623178965483,True
+Logistic Regression,Before tuning,ظهرت البيانات بشكل مرتب وأعجبني مستوى الجودة,إيجابي,إيجابي,0.586234044038594,True
+Logistic Regression,Before tuning,أرى أن التطبيق غير مريحة وتحتاج إلى تحسين,سلبي,سلبي,0.940428752998207,True
+Logistic Regression,Before tuning,تم تحميل النموذج على جهاز الحاسوب,محايد,محايد,0.7524877049821014,True
+Logistic Regression,Before tuning,بدأ الاجتماع في الساعة التاسعة صباحًا,محايد,محايد,0.888331285636923,True
+Logistic Regression,Before tuning,أرى أن المطعم متقنة وتستحق التجربة,إيجابي,إيجابي,0.9113525004009545,True
+Logistic Regression,Before tuning,أرى أن الموقع غير مريحة وتحتاج إلى تحسين,سلبي,سلبي,0.933616592930195,True
+Logistic Regression,Before tuning,أرى أن التصميم مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.9122221131773666,True
+Logistic Regression,Before tuning,البرنامج فعالة جدًا,إيجابي,إيجابي,0.7594858396699814,True
+Logistic Regression,Before tuning,موعد الفصل الدراسي في يوم الاثنين,محايد,محايد,0.8879140510927892,True
+Logistic Regression,Before tuning,يبدأ التدريب في الأسبوع القادم,محايد,محايد,0.8131147438234811,True
+Logistic Regression,Before tuning,موعد المتجر في يوم الثلاثاء,محايد,محايد,0.880001897032365,True
+Logistic Regression,Before tuning,الكتاب بطيئة جدًا,سلبي,سلبي,0.7125102698122454,True
+Logistic Regression,Before tuning,تم تسجيل خمس صفحات داخل التطبيق,محايد,محايد,0.9018809708458396,True
+Logistic Regression,Before tuning,التحديث رديئة جدًا,سلبي,سلبي,0.6249112750245547,True
+Logistic Regression,Before tuning,يحتوي النموذج على عشر صفحات,محايد,محايد,0.8580333887164965,True
+Logistic Regression,Before tuning,تم تحديد مجلد الحفظ في الساعة التاسعة,محايد,محايد,0.8126776408258166,True
+Logistic Regression,Before tuning,المنتج مخيبة جدًا,سلبي,سلبي,0.7189947745126755,True
+Logistic Regression,Before tuning,الشرح فعالة جدًا,إيجابي,إيجابي,0.7826070577644256,True
+Logistic Regression,Before tuning,أرى أن الأداء رديئة وتحتاج إلى تحسين,سلبي,سلبي,0.9260705207936578,True
+Logistic Regression,Before tuning,تم تسجيل خمس صفحات داخل الطلب,محايد,محايد,0.8974228009457725,True
+Logistic Regression,Before tuning,تم استيراد الملف باللغة الإنجليزية,محايد,محايد,0.7645891680769706,True
+Logistic Regression,Before tuning,الدعم الفني جميلة جدًا,إيجابي,إيجابي,0.7600457350035954,True
+Logistic Regression,Before tuning,ولا شيء اشتغل معي,سلبي,سلبي,0.416277430149741,True
+Logistic Regression,Before tuning,بدأ النظام عملية التحليل في الملف المحدد,محايد,محايد,0.7762831734585343,True
+Logistic Regression,Before tuning,التجربة كانت موثوقة وأعجبتني,إيجابي,إيجابي,0.8917519477812899,True
+Logistic Regression,Before tuning,أرى أن الفريق مريحة وتستحق التجربة,إيجابي,إيجابي,0.8504551893658704,True
+Logistic Regression,Before tuning,تم عرض قائمة النتائج في الملف المحدد,محايد,محايد,0.7983970513454611,True
+Logistic Regression,Before tuning,أصبح الاستخدام أبسط وأعجبني مستوى الجودة,إيجابي,إيجابي,0.5480997927942386,True
+Logistic Regression,Before tuning,يحتوي النموذج على أربع صور,محايد,محايد,0.8447129477972015,True
+Logistic Regression,Before tuning,يحتوي الفيديو على عشر صفحات,محايد,محايد,0.8522839005834641,True
+Logistic Regression,Before tuning,تم تسجيل وقت العملية باستخدام الإعدادات الافتراضية,محايد,محايد,0.8607480983364106,True
+Logistic Regression,Before tuning,الكتاب كانت سهلة وأعجبتني,إيجابي,إيجابي,0.8201426194017063,True
+Logistic Regression,Before tuning,الطلب كانت غير واضحة ولم تعجبني,سلبي,سلبي,0.9347013274229602,True
+Logistic Regression,Before tuning,موعد الورشة في الساعة الثانية ظهرًا,محايد,محايد,0.8566660524507507,True
+Logistic Regression,Before tuning,أرى أن الواجهة دقيقة وتستحق التجربة,إيجابي,إيجابي,0.875882463822671,True
+Logistic Regression,Before tuning,أرى أن المباراة سريعة وتستحق التجربة,إيجابي,إيجابي,0.9054836465184886,True
+Logistic Regression,Before tuning,الخدمة مقنعة جدًا,إيجابي,إيجابي,0.8184231496294577,True
+Logistic Regression,Before tuning,تم تصدير البيانات عبر واجهة REST API,محايد,محايد,0.6928556869814431,True
+Logistic Regression,Before tuning,تم إدخال النص في الحقل عبر واجهة REST API,محايد,محايد,0.8342357841277479,True
+Logistic Regression,Before tuning,البرنامج ضيع وقتي,سلبي,سلبي,0.5420583214721483,True
+Logistic Regression,Before tuning,الرحلة رديئة جدًا,سلبي,سلبي,0.6601286904196092,True
+Logistic Regression,Before tuning,الكتاب كانت مريحة وأعجبتني,إيجابي,إيجابي,0.7819128899128591,True
+Logistic Regression,Before tuning,يبدأ الاختبار في الساعة الثانية ظهرًا,محايد,محايد,0.8692415607562948,True
+Logistic Regression,Before tuning,أرى أن الزيارة جميلة وتستحق التجربة,إيجابي,إيجابي,0.9097627952717576,True
+Logistic Regression,Before tuning,الموقع كانت مقنعة وأعجبتني,إيجابي,إيجابي,0.8663260944349905,True
+Logistic Regression,Before tuning,أرى أن البرنامج غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9254935776169112,True
+Logistic Regression,Before tuning,أرى أن الفندق معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.9045062331826405,True
+Logistic Regression,Before tuning,موعد المؤتمر في الساعة العاشرة صباحًا,محايد,محايد,0.882079502376707,True
+Logistic Regression,Before tuning,تم تسجيل ثلاثة ملفات داخل المجلد,محايد,محايد,0.9021002988128886,True
+Logistic Regression,Before tuning,التغليف فعالة جدًا,إيجابي,إيجابي,0.7599390294654408,True
+Logistic Regression,Before tuning,انتظرت وقت طويل بدون نتيجة,سلبي,سلبي,0.39447065246978297,True
+Logistic Regression,Before tuning,أرى أن الكتاب مريحة وتستحق التجربة,إيجابي,إيجابي,0.8744177585103322,True
+Logistic Regression,Before tuning,أرى أن التجربة ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.8967063280619931,True
+Logistic Regression,Before tuning,الواجهة متعبة جدًا,سلبي,سلبي,0.7696003281989308,True
+Logistic Regression,Before tuning,النتيجة واضحة جدًا,إيجابي,إيجابي,0.589011356775968,True
+Logistic Regression,Before tuning,موعد الطائرة في يوم الأحد,محايد,محايد,0.8912316014261008,True
+Logistic Regression,Before tuning,أرى أن الموقع متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.9120749278552621,True
+Logistic Regression,Before tuning,أرى أن النظام مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.8713112790833027,True
+Logistic Regression,Before tuning,المباراة كانت متعبة ولم تعجبني,سلبي,سلبي,0.8938003087820602,True
+Logistic Regression,Before tuning,الفكرة كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.8212471322547067,True
+Logistic Regression,Before tuning,يبدأ الجلسة في يوم الأربعاء,محايد,محايد,0.8358786774189877,True
+Logistic Regression,Before tuning,الزيارة كانت جميلة وأعجبتني,إيجابي,إيجابي,0.8526644244418145,True
+Logistic Regression,Before tuning,أرى أن الورشة غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9300844398015269,True
+Logistic Regression,Before tuning,أرى أن التطبيق معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.9182715408284905,True
+Logistic Regression,Before tuning,أرى أن الطلب ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9110514922677826,True
+Logistic Regression,Before tuning,الخدمة ممتازة والموظفون متعاونون جدًا,إيجابي,إيجابي,0.6767558074048358,True
+Logistic Regression,Before tuning,أرى أن الفكرة غير واضحة وتحتاج إلى تحسين,سلبي,سلبي,0.9456522931979097,True
+Logistic Regression,Before tuning,كانت التعليمات مربكة ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.5878913758213348,True
+Logistic Regression,Before tuning,التحديث مبتكرة جدًا,إيجابي,إيجابي,0.7587413077826679,True
+Logistic Regression,Before tuning,الفيديو ضعيفة جدًا,سلبي,سلبي,0.6967665944798489,True
+Logistic Regression,Before tuning,أرى أن المطعم ممتعة وتستحق التجربة,إيجابي,إيجابي,0.900980165224456,True
+Logistic Regression,Before tuning,كان الملخص ناقصًا وهذا ضيع وقتي,سلبي,سلبي,0.5960106854081277,True
+Logistic Regression,Before tuning,الدعم الفني كانت احترافية وأعجبتني,إيجابي,إيجابي,0.85186789955716,True
+Logistic Regression,Before tuning,أرى أن المنتج متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.9202708825448035,True
+Logistic Regression,Before tuning,الشرح كانت غير منظمة ولم تعجبني,سلبي,سلبي,0.9063538272585916,True
+Logistic Regression,Before tuning,تم حل المشكلة بسرعة وهذا وفر علي وقتًا كبيرًا,إيجابي,إيجابي,0.5869070844875257,True
+Logistic Regression,Before tuning,أرى أن الفيديو جميلة وتستحق التجربة,إيجابي,إيجابي,0.8630019561065857,True
+Logistic Regression,Before tuning,الخدمة مميزة جدًا,إيجابي,إيجابي,0.7388001715699195,True
+Logistic Regression,Before tuning,المباراة كانت احترافية وأعجبتني,إيجابي,إيجابي,0.8299130435536796,True
+Logistic Regression,Before tuning,يبدأ الفصل الدراسي في الساعة العاشرة صباحًا,محايد,محايد,0.8695043139061386,True
+Logistic Regression,Before tuning,المطعم كانت دقيقة وأعجبتني,إيجابي,إيجابي,0.8763553190729845,True
+Logistic Regression,Before tuning,موعد المكتبة في الساعة التاسعة صباحًا,محايد,محايد,0.8927825846510034,True
+Logistic Regression,Before tuning,الفيديو كانت بطيئة ولم تعجبني,سلبي,سلبي,0.83372581284575,True
+Logistic Regression,Before tuning,تفتح المكتبة خمسة أيام في الأسبوع,محايد,محايد,0.7548822153223147,True
+Logistic Regression,Before tuning,أرى أن المشروع مملة وتحتاج إلى تحسين,سلبي,سلبي,0.9229018256189833,True
+Logistic Regression,Before tuning,أرى أن الفيديو رائعة وتستحق التجربة,إيجابي,إيجابي,0.8653764774990786,True
+Logistic Regression,Before tuning,النتيجة كانت غير واضحة ولم تعجبني,سلبي,سلبي,0.9345553911591864,True
+Logistic Regression,Before tuning,أرى أن الجهاز مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9246933387030217,True
+Logistic Regression,Before tuning,أحببت الفكرة وأرى أنها مبتكرة جدًا,إيجابي,إيجابي,0.6601730456675937,True
+Logistic Regression,Before tuning,تم تنظيم السجل بشكل جيد وأوصي الآخرين بتجربتها,إيجابي,إيجابي,0.591588008704778,True
+Logistic Regression,Before tuning,كانت واجهة الاستخدام صعبة وكانت التجربة أسوأ من المتوقع,سلبي,سلبي,0.5596143658293146,True
+Logistic Regression,Before tuning,يبدأ الفصل الدراسي في الشهر القادم,محايد,محايد,0.7589957369506383,True
+Logistic Regression,Before tuning,أرى أن الكتاب مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9137494280271042,True
+Logistic Regression,Before tuning,كانت المباراة ممتعة وأداء الفريق رائعًا,إيجابي,إيجابي,0.4723678556899189,True
+Logistic Regression,Before tuning,يبدأ التدريب في يوم الاثنين,محايد,محايد,0.9092760844865082,True
+Logistic Regression,Before tuning,أرى أن الطلب احترافية وتستحق التجربة,إيجابي,إيجابي,0.9071049482025763,True
+Logistic Regression,Before tuning,موعد الاختبار في الساعة الحادية عشرة صباحًا,محايد,محايد,0.9027215007946061,True
+Logistic Regression,Before tuning,يحتوي المشروع على خمسين مثالًا,محايد,محايد,0.786093040136113,True
+Logistic Regression,Before tuning,تم تسجيل ثلاثة ملفات داخل التطبيق,محايد,محايد,0.8649202171078639,True
+Logistic Regression,Before tuning,يبدأ الموعد في الأسبوع القادم,محايد,محايد,0.809423979946698,True
+Logistic Regression,Before tuning,أرى أن الطلب موثوقة وتستحق التجربة,إيجابي,إيجابي,0.9115987008621065,True
+Logistic Regression,Before tuning,يبدأ الورشة في الساعة العاشرة صباحًا,محايد,محايد,0.883947779931609,True
+Logistic Regression,Before tuning,التحليل كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.822110200441886,True
+Logistic Regression,Before tuning,أرى أن المباراة احترافية وتستحق التجربة,إيجابي,إيجابي,0.9135991769734184,True
+Logistic Regression,Before tuning,النظام مريحة جدًا,إيجابي,إيجابي,0.6143633050054921,True
+Logistic Regression,Before tuning,تم اكتشاف نوع الملف داخل المجلد الرئيسي,محايد,محايد,0.7879402674370826,True
+Logistic Regression,Before tuning,ظهرت النتيجة بشكل خاطئ وهذا ضيع وقتي,سلبي,سلبي,0.544463260736355,True
+Logistic Regression,Before tuning,يحتوي المستند على سبعة حقول,محايد,محايد,0.8090851365161191,True
+Logistic Regression,Before tuning,يعمل التطبيق على الهواتف والأجهزة اللوحية,محايد,محايد,0.5852656663225595,True
+Logistic Regression,Before tuning,يحتوي السجل على عشر نتائج,محايد,محايد,0.8192744873431532,True
+Logistic Regression,Before tuning,أرى أن الزيارة ممتعة وتستحق التجربة,إيجابي,إيجابي,0.905633075032773,True
+Logistic Regression,Before tuning,أرى أن النتيجة بطيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9213135838638908,True
+Logistic Regression,Before tuning,أرى أن الورشة مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9127733153431471,True
+Logistic Regression,Before tuning,موعد القطار في يوم الأحد,محايد,محايد,0.8518837032783938,True
+Logistic Regression,Before tuning,المنصة كانت مريحة وأعجبتني,إيجابي,إيجابي,0.8092871326126296,True
+Logistic Regression,Before tuning,عمل التطبيق بثبات وهذا أسعدني كثيرًا,إيجابي,إيجابي,0.675959004299891,True
+Logistic Regression,Before tuning,فشل تصدير التقرير ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.6469848629360847,True
+Logistic Regression,Before tuning,تم تحميل النموذج في الملف المحدد,محايد,محايد,0.8539082205510627,True
+Logistic Regression,Before tuning,الفندق دقيقة جدًا,إيجابي,إيجابي,0.7295479854660063,True
+Logistic Regression,Before tuning,التحديث كانت مقنعة وأعجبتني,إيجابي,إيجابي,0.8824741736840852,True
+Logistic Regression,Before tuning,يبدأ الحصة في الشهر القادم,محايد,محايد,0.7710524911516258,True
+Logistic Regression,Before tuning,المحاضرة مخيبة جدًا,سلبي,سلبي,0.7255885208630758,True
+Logistic Regression,Before tuning,تم حفظ الملف بسهولة وسأستخدم الخدمة مرة أخرى,إيجابي,إيجابي,0.45295510758310403,True
+Logistic Regression,Before tuning,التقرير كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.8328414516497085,True
+Logistic Regression,Before tuning,يبدأ الورشة في الساعة الثامنة صباحًا,محايد,محايد,0.894582751958261,True
+Logistic Regression,Before tuning,أرى أن التجربة غير دقيقة وتحتاج إلى تحسين,سلبي,سلبي,0.923699373490226,True
+Logistic Regression,Before tuning,أرى أن المباراة سهلة وتستحق التجربة,إيجابي,إيجابي,0.8919498362562804,True
+Logistic Regression,Before tuning,تم الرد على استفساري بسرعة وسأستخدم الخدمة مرة أخرى,إيجابي,إيجابي,0.5068788252989832,True
+Logistic Regression,Before tuning,أرى أن النتيجة احترافية وتستحق التجربة,إيجابي,إيجابي,0.9087076008325881,True
+Logistic Regression,Before tuning,المشروع مملة جدًا,سلبي,سلبي,0.7560837145131999,True
+Logistic Regression,Before tuning,التجربة بطيئة جدًا,سلبي,سلبي,0.6270064386001294,True
+Logistic Regression,Before tuning,تم حفظ التقرير في المجلد على جهاز الحاسوب,محايد,محايد,0.8150195850737559,True
+Logistic Regression,Before tuning,التحديث كانت مبتكرة وأعجبتني,إيجابي,إيجابي,0.8518251149913066,True
+Logistic Regression,Before tuning,تم تصدير البيانات باستخدام الإعدادات الافتراضية,محايد,محايد,0.7442553347314418,True
+Logistic Regression,Before tuning,التجربة كانت مربكة ولم تعجبني,سلبي,سلبي,0.8500656515617576,True
+Logistic Regression,Before tuning,أرى أن الفندق احترافية وتستحق التجربة,إيجابي,إيجابي,0.922181492542075,True
+Logistic Regression,Before tuning,تم تشغيل الاختبارات في الساعة التاسعة,محايد,محايد,0.8668943812963888,True
+Logistic Regression,Before tuning,أرى أن الزيارة مملة وتحتاج إلى تحسين,سلبي,سلبي,0.9152471557358159,True
+Logistic Regression,Before tuning,كانت التجربة سيئة ولم أستمتع بها,سلبي,سلبي,0.5589959765559163,True
+Logistic Regression,Before tuning,تم تسجيل خمس فئات داخل الاختبار,محايد,محايد,0.9059197338470475,True
+Logistic Regression,Before tuning,أرى أن البرنامج ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9099602246593885,True
+Logistic Regression,After tuning,الأداء كانت غير مستقرة ولم تعجبني,سلبي,سلبي,0.9997519806720205,True
+Logistic Regression,After tuning,تم حفظ الملف بسهولة وأنا راضٍ عن الأداء,إيجابي,إيجابي,0.9632595733228075,True
+Logistic Regression,After tuning,يحتوي الصورة على ستة أقسام,محايد,محايد,0.992130860621044,True
+Logistic Regression,After tuning,تأخر الطلب كثيرًا وكان التغليف سيئًا,سلبي,إيجابي,0.7407485488454777,False
+Logistic Regression,After tuning,تم اكتشاف اللغة بشكل صحيح وكان كل شيء واضحًا,إيجابي,إيجابي,0.9910085625800138,True
+Logistic Regression,After tuning,يبدأ المتجر في الساعة التاسعة صباحًا,محايد,محايد,0.9984286639988571,True
+Logistic Regression,After tuning,الدعم الفني مميزة جدًا,إيجابي,إيجابي,0.9944744755299304,True
+Logistic Regression,After tuning,التقرير ممتعة جدًا,إيجابي,إيجابي,0.9893691612667723,True
+Logistic Regression,After tuning,الفريق غير واضحة جدًا,سلبي,سلبي,0.9966680489988916,True
+Logistic Regression,After tuning,تم إغلاق التطبيق في الساعة التاسعة,محايد,محايد,0.9989555944057029,True
+Logistic Regression,After tuning,المباراة كانت غير مفيدة ولم تعجبني,سلبي,سلبي,0.9998651461686657,True
+Logistic Regression,After tuning,المشروع كانت مملة ولم تعجبني,سلبي,سلبي,0.9977971562626875,True
+Logistic Regression,After tuning,تم تحديد مجلد الحفظ باللغة العربية,محايد,محايد,0.9763396630797986,True
+Logistic Regression,After tuning,أرى أن الفريق ممتعة وتستحق التجربة,إيجابي,إيجابي,0.9950781930509012,True
+Logistic Regression,After tuning,الفريق منظمة جدًا,إيجابي,إيجابي,0.9654872359579861,True
+Logistic Regression,After tuning,النتيجة كانت ممتازة وأعجبتني,إيجابي,إيجابي,0.9984547332819154,True
+Logistic Regression,After tuning,الفندق كانت مملة ولم تعجبني,سلبي,سلبي,0.9965753269501204,True
+Logistic Regression,After tuning,التحديث غير مريحة جدًا,سلبي,سلبي,0.9700133922995202,True
+Logistic Regression,After tuning,التقرير غير منظمة جدًا,سلبي,سلبي,0.9555618613094169,True
+Logistic Regression,After tuning,يتم حفظ النماذج بصيغة joblib,محايد,سلبي,0.5073042487780772,False
+Logistic Regression,After tuning,تم تسجيل عشرين سطرًا داخل النموذج,محايد,محايد,0.998659389142865,True
+Logistic Regression,After tuning,المشروع متعبة جدًا,سلبي,سلبي,0.9951534890135681,True
+Logistic Regression,After tuning,المشروع كانت واضحة وأعجبتني,إيجابي,إيجابي,0.9783655306800894,True
+Logistic Regression,After tuning,أرى أن المحاضرة ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9986501454841668,True
+Logistic Regression,After tuning,الفريق فعالة جدًا,إيجابي,إيجابي,0.9920367513794455,True
+Logistic Regression,After tuning,تم إرسال الاستجابة من خلال واجهة الأوامر,محايد,محايد,0.9898858855979851,True
+Logistic Regression,After tuning,تم اكتشاف نوع الملف في الساعة التاسعة,محايد,محايد,0.9962674381800243,True
+Logistic Regression,After tuning,يبدأ المتجر في الساعة السادسة مساءً,محايد,محايد,0.9974322088468689,True
+Logistic Regression,After tuning,النظام واضحة جدًا,إيجابي,إيجابي,0.8684142306082848,True
+Logistic Regression,After tuning,يحتوي الصندوق على اثني عشر سجلًا,محايد,محايد,0.9935065149782235,True
+Logistic Regression,After tuning,أرى أن الفكرة غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9993518783286633,True
+Logistic Regression,After tuning,يبدأ المتجر في الساعة السابعة صباحًا,محايد,محايد,0.9970008719576829,True
+Logistic Regression,After tuning,يحتوي الجدول على أربع صور,محايد,محايد,0.9978501565170051,True
+Logistic Regression,After tuning,موعد المباراة في الساعة الرابعة عصرًا,محايد,محايد,0.9960792207555654,True
+Logistic Regression,After tuning,أرى أن الفندق بطيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9975087510999433,True
+Logistic Regression,After tuning,المنتج كانت مربكة ولم تعجبني,سلبي,سلبي,0.9976426545480069,True
+Logistic Regression,After tuning,التحديث مخيبة جدًا,سلبي,سلبي,0.9873434659943928,True
+Logistic Regression,After tuning,أرى أن الجهاز مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.9985071643796025,True
+Logistic Regression,After tuning,أرى أن التجربة فعالة وتستحق التجربة,إيجابي,إيجابي,0.9993542648418702,True
+Logistic Regression,After tuning,أرى أن الموقع مميزة وتستحق التجربة,إيجابي,إيجابي,0.9984015447671688,True
+Logistic Regression,After tuning,أرى أن النتيجة ممتعة وتستحق التجربة,إيجابي,إيجابي,0.9982471998604217,True
+Logistic Regression,After tuning,التصميم معقد وغير مريح للاستخدام,سلبي,إيجابي,0.8380173834970729,False
+Logistic Regression,After tuning,الدعم الفني كانت معقدة ولم تعجبني,سلبي,سلبي,0.9857967278522473,True
+Logistic Regression,After tuning,التحليل غير مفيدة جدًا,سلبي,سلبي,0.9802063957832782,True
+Logistic Regression,After tuning,أرى أن الطلب مزعجة وتحتاج إلى تحسين,سلبي,سلبي,0.998253389281011,True
+Logistic Regression,After tuning,يبدأ التدريب في الساعة الثامنة صباحًا,محايد,محايد,0.9984673097658188,True
+Logistic Regression,After tuning,تمت معالجة الملف بسلاسة وكانت التجربة أفضل من المتوقع,إيجابي,إيجابي,0.9476822465019697,True
+Logistic Regression,After tuning,فشل تحميل النموذج ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.9944070463996009,True
+Logistic Regression,After tuning,الزيارة كانت غير مستقرة ولم تعجبني,سلبي,سلبي,0.9996645306834065,True
+Logistic Regression,After tuning,تم تسجيل أربع خطوات داخل الصفحة,محايد,محايد,0.9982570460434413,True
+Logistic Regression,After tuning,المشروع كانت احترافية وأعجبتني,إيجابي,إيجابي,0.9904089298003237,True
+Logistic Regression,After tuning,الفريق مزعجة جدًا,سلبي,سلبي,0.9888801586423377,True
+Logistic Regression,After tuning,النتيجة معقدة جدًا,سلبي,سلبي,0.9686372331334219,True
+Logistic Regression,After tuning,تم تسجيل خمسين مثالًا داخل المجلد,محايد,محايد,0.9985757292521349,True
+Logistic Regression,After tuning,تم تغيير اسم الملف في الإصدار الحالي,محايد,محايد,0.9925754346694053,True
+Logistic Regression,After tuning,المطعم ممتعة جدًا,إيجابي,إيجابي,0.9929078899663908,True
+Logistic Regression,After tuning,التجربة كانت جميلة وأعجبتني,إيجابي,إيجابي,0.9972812208128562,True
+Logistic Regression,After tuning,الفريق كانت غير مفيدة ولم تعجبني,سلبي,سلبي,0.9999071525751292,True
+Logistic Regression,After tuning,يحتوي المستند على اثني عشر سجلًا,محايد,محايد,0.9949989458267032,True
+Logistic Regression,After tuning,تم إدخال النص في الحقل في الملف المحدد,محايد,محايد,0.9987155908748446,True
+Logistic Regression,After tuning,يبدأ المؤتمر في الأسبوع القادم,محايد,محايد,0.9918009246657864,True
+Logistic Regression,After tuning,تم تسجيل عشرين سطرًا داخل المنتج,محايد,محايد,0.996920413883242,True
+Logistic Regression,After tuning,التصميم كانت رديئة ولم تعجبني,سلبي,سلبي,0.995147935527038,True
+Logistic Regression,After tuning,عدد الطلاب في الفصل ثلاثون طالبًا,محايد,محايد,0.987011568518475,True
+Logistic Regression,After tuning,الرحلة كانت رديئة ولم تعجبني,سلبي,سلبي,0.9975183611089045,True
+Logistic Regression,After tuning,الورشة كانت رائعة وأعجبتني,إيجابي,إيجابي,0.9951387958863316,True
+Logistic Regression,After tuning,يبدأ الاجتماع في يوم الأحد,محايد,محايد,0.9985634679391041,True
+Logistic Regression,After tuning,الطلب مقنعة جدًا,إيجابي,إيجابي,0.991726720558557,True
+Logistic Regression,After tuning,يحتوي التقرير على خمس صفحات,محايد,محايد,0.996619131239111,True
+Logistic Regression,After tuning,الفيديو مخيبة جدًا,سلبي,سلبي,0.9946784766338086,True
+Logistic Regression,After tuning,يحتوي التطبيق على ستة أقسام,محايد,محايد,0.9922552856876306,True
+Logistic Regression,After tuning,يحتوي الملف على مئة كلمة,محايد,محايد,0.9920652561328163,True
+Logistic Regression,After tuning,تم إيقاف العملية من خلال واجهة الأوامر,محايد,محايد,0.9817217990924482,True
+Logistic Regression,After tuning,يحتوي المجلد على ستة أقسام,محايد,محايد,0.9970236711759796,True
+Logistic Regression,After tuning,تم قراءة الملف خلال خمس دقائق,محايد,محايد,0.996443935387475,True
+Logistic Regression,After tuning,يبدأ الفصل الدراسي في يوم الخميس,محايد,محايد,0.9974023228590927,True
+Logistic Regression,After tuning,تم تسجيل ثمانية عناصر داخل التقرير,محايد,محايد,0.9912096992846976,True
+Logistic Regression,After tuning,أرى أن التحليل مميزة وتستحق التجربة,إيجابي,إيجابي,0.9982267439779778,True
+Logistic Regression,After tuning,أرى أن المباراة معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.998246445940034,True
+Logistic Regression,After tuning,التحديث كانت مزعجة ولم تعجبني,سلبي,سلبي,0.9968785079719541,True
+Logistic Regression,After tuning,يحتوي السجل على ستة أقسام,محايد,محايد,0.9911716846246473,True
+Logistic Regression,After tuning,موعد الدورة في الساعة الثانية ظهرًا,محايد,محايد,0.9952470908820407,True
+Logistic Regression,After tuning,الأداء تحسن بشكل واضح,إيجابي,إيجابي,0.9198123785066727,True
+Logistic Regression,After tuning,التحديث مميزة جدًا,إيجابي,إيجابي,0.9850956724072725,True
+Logistic Regression,After tuning,المطعم مخيبة جدًا,سلبي,سلبي,0.9815645119168374,True
+Logistic Regression,After tuning,تم تشغيل الاختبارات بعد إدخال النص,محايد,محايد,0.9932052309955146,True
+Logistic Regression,After tuning,أرى أن التطبيق ممتعة وتستحق التجربة,إيجابي,إيجابي,0.9978363907957217,True
+Logistic Regression,After tuning,أرى أن الرحلة متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.9985391865533954,True
+Logistic Regression,After tuning,المنصة كانت مربكة ولم تعجبني,سلبي,سلبي,0.9942568975010474,True
+Logistic Regression,After tuning,أرى أن النظام مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9992460804061883,True
+Logistic Regression,After tuning,الفندق كانت مبتكرة وأعجبتني,إيجابي,إيجابي,0.9959489933557262,True
+Logistic Regression,After tuning,التقرير ضعيفة جدًا,سلبي,سلبي,0.957848624131124,True
+Logistic Regression,After tuning,أرى أن المشروع مربكة وتحتاج إلى تحسين,سلبي,سلبي,0.9977960605038183,True
+Logistic Regression,After tuning,تم إنشاء التقرير باللغة العربية,محايد,محايد,0.9931200779235343,True
+Logistic Regression,After tuning,المنصة مفيدة جدًا,إيجابي,إيجابي,0.9616658890228731,True
+Logistic Regression,After tuning,ما واجهت أي مشكلة اليوم,إيجابي,سلبي,0.690963533083953,False
+Logistic Regression,After tuning,أرى أن التحديث سيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9991353259056636,True
+Logistic Regression,After tuning,التصميم فعالة جدًا,إيجابي,إيجابي,0.9987418812259263,True
+Logistic Regression,After tuning,حصلت على دعم سريع وممتاز من الفريق,إيجابي,سلبي,0.4893506255334904,False
+Logistic Regression,After tuning,التطبيق ممتازة جدًا,إيجابي,إيجابي,0.9969033641254107,True
+Logistic Regression,After tuning,الرحلة مبتكرة جدًا,إيجابي,إيجابي,0.9826180856856646,True
+Logistic Regression,After tuning,الأداء مميزة جدًا,إيجابي,إيجابي,0.9934179972046285,True
+Logistic Regression,After tuning,أرى أن الفندق موثوقة وتستحق التجربة,إيجابي,إيجابي,0.9994226892187421,True
+Logistic Regression,After tuning,يبدأ الورشة في الساعة السابعة صباحًا,محايد,محايد,0.9961258143542757,True
+Logistic Regression,After tuning,الجهاز مميزة جدًا,إيجابي,إيجابي,0.9881163283324149,True
+Logistic Regression,After tuning,يحتوي المجلد على ثمانية عناصر,محايد,محايد,0.995662507156127,True
+Logistic Regression,After tuning,تم تسجيل عشرين سطرًا داخل الفيديو,محايد,محايد,0.9979013728327117,True
+Logistic Regression,After tuning,الواجهة معقدة مرة,سلبي,سلبي,0.9580485876336624,True
+Logistic Regression,After tuning,الواجهة كانت رائعة وأعجبتني,إيجابي,إيجابي,0.9934188629378773,True
+Logistic Regression,After tuning,ظهرت البيانات بشكل مرتب وأعجبني مستوى الجودة,إيجابي,إيجابي,0.9605449344027611,True
+Logistic Regression,After tuning,أرى أن التطبيق غير مريحة وتحتاج إلى تحسين,سلبي,سلبي,0.9997733884618893,True
+Logistic Regression,After tuning,تم تحميل النموذج على جهاز الحاسوب,محايد,محايد,0.9871892778326121,True
+Logistic Regression,After tuning,بدأ الاجتماع في الساعة التاسعة صباحًا,محايد,محايد,0.9985610703660187,True
+Logistic Regression,After tuning,أرى أن المطعم متقنة وتستحق التجربة,إيجابي,إيجابي,0.9988796574905897,True
+Logistic Regression,After tuning,أرى أن الموقع غير مريحة وتحتاج إلى تحسين,سلبي,سلبي,0.9996873848240321,True
+Logistic Regression,After tuning,أرى أن التصميم مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.9991609530707491,True
+Logistic Regression,After tuning,البرنامج فعالة جدًا,إيجابي,إيجابي,0.9908730362135008,True
+Logistic Regression,After tuning,موعد الفصل الدراسي في يوم الاثنين,محايد,محايد,0.9986137719150436,True
+Logistic Regression,After tuning,يبدأ التدريب في الأسبوع القادم,محايد,محايد,0.9926151010412123,True
+Logistic Regression,After tuning,موعد المتجر في يوم الثلاثاء,محايد,محايد,0.9975012401909251,True
+Logistic Regression,After tuning,الكتاب بطيئة جدًا,سلبي,سلبي,0.9914865992360367,True
+Logistic Regression,After tuning,تم تسجيل خمس صفحات داخل التطبيق,محايد,محايد,0.9982274115694555,True
+Logistic Regression,After tuning,التحديث رديئة جدًا,سلبي,سلبي,0.970594280774393,True
+Logistic Regression,After tuning,يحتوي النموذج على عشر صفحات,محايد,محايد,0.9974313401092639,True
+Logistic Regression,After tuning,تم تحديد مجلد الحفظ في الساعة التاسعة,محايد,محايد,0.9934261406063806,True
+Logistic Regression,After tuning,المنتج مخيبة جدًا,سلبي,سلبي,0.9903655974478078,True
+Logistic Regression,After tuning,الشرح فعالة جدًا,إيجابي,إيجابي,0.994681973550877,True
+Logistic Regression,After tuning,أرى أن الأداء رديئة وتحتاج إلى تحسين,سلبي,سلبي,0.9987186293355477,True
+Logistic Regression,After tuning,تم تسجيل خمس صفحات داخل الطلب,محايد,محايد,0.9983727160522158,True
+Logistic Regression,After tuning,تم استيراد الملف باللغة الإنجليزية,محايد,محايد,0.9921552064926695,True
+Logistic Regression,After tuning,الدعم الفني جميلة جدًا,إيجابي,إيجابي,0.9922402763564581,True
+Logistic Regression,After tuning,ولا شيء اشتغل معي,سلبي,سلبي,0.9008029154018589,True
+Logistic Regression,After tuning,بدأ النظام عملية التحليل في الملف المحدد,محايد,محايد,0.9959165547434569,True
+Logistic Regression,After tuning,التجربة كانت موثوقة وأعجبتني,إيجابي,إيجابي,0.9975586987012854,True
+Logistic Regression,After tuning,أرى أن الفريق مريحة وتستحق التجربة,إيجابي,إيجابي,0.9946626561837355,True
+Logistic Regression,After tuning,تم عرض قائمة النتائج في الملف المحدد,محايد,محايد,0.9943784910218741,True
+Logistic Regression,After tuning,أصبح الاستخدام أبسط وأعجبني مستوى الجودة,إيجابي,إيجابي,0.9301158116088049,True
+Logistic Regression,After tuning,يحتوي النموذج على أربع صور,محايد,محايد,0.9968572433033671,True
+Logistic Regression,After tuning,يحتوي الفيديو على عشر صفحات,محايد,محايد,0.997047514307259,True
+Logistic Regression,After tuning,تم تسجيل وقت العملية باستخدام الإعدادات الافتراضية,محايد,محايد,0.9976843303623418,True
+Logistic Regression,After tuning,الكتاب كانت سهلة وأعجبتني,إيجابي,إيجابي,0.9933657803424919,True
+Logistic Regression,After tuning,الطلب كانت غير واضحة ولم تعجبني,سلبي,سلبي,0.9998015881336977,True
+Logistic Regression,After tuning,موعد الورشة في الساعة الثانية ظهرًا,محايد,محايد,0.9949559317711083,True
+Logistic Regression,After tuning,أرى أن الواجهة دقيقة وتستحق التجربة,إيجابي,إيجابي,0.9965033005359792,True
+Logistic Regression,After tuning,أرى أن المباراة سريعة وتستحق التجربة,إيجابي,إيجابي,0.998640330549494,True
+Logistic Regression,After tuning,الخدمة مقنعة جدًا,إيجابي,إيجابي,0.9964969678355786,True
+Logistic Regression,After tuning,تم تصدير البيانات عبر واجهة REST API,محايد,محايد,0.9860850790687146,True
+Logistic Regression,After tuning,تم إدخال النص في الحقل عبر واجهة REST API,محايد,محايد,0.9980966576182236,True
+Logistic Regression,After tuning,البرنامج ضيع وقتي,سلبي,سلبي,0.9408526552137905,True
+Logistic Regression,After tuning,الرحلة رديئة جدًا,سلبي,سلبي,0.980629419983113,True
+Logistic Regression,After tuning,الكتاب كانت مريحة وأعجبتني,إيجابي,إيجابي,0.99224694103599,True
+Logistic Regression,After tuning,يبدأ الاختبار في الساعة الثانية ظهرًا,محايد,محايد,0.9965155043517034,True
+Logistic Regression,After tuning,أرى أن الزيارة جميلة وتستحق التجربة,إيجابي,إيجابي,0.9989594608105282,True
+Logistic Regression,After tuning,الموقع كانت مقنعة وأعجبتني,إيجابي,إيجابي,0.9976041271926656,True
+Logistic Regression,After tuning,أرى أن البرنامج غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9996304039183761,True
+Logistic Regression,After tuning,أرى أن الفندق معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.9973202230966444,True
+Logistic Regression,After tuning,موعد المؤتمر في الساعة العاشرة صباحًا,محايد,محايد,0.9971460937841733,True
+Logistic Regression,After tuning,تم تسجيل ثلاثة ملفات داخل المجلد,محايد,محايد,0.9986724075568123,True
+Logistic Regression,After tuning,التغليف فعالة جدًا,إيجابي,إيجابي,0.9916092378580594,True
+Logistic Regression,After tuning,انتظرت وقت طويل بدون نتيجة,سلبي,سلبي,0.6550261111973017,True
+Logistic Regression,After tuning,أرى أن الكتاب مريحة وتستحق التجربة,إيجابي,إيجابي,0.9971499224541823,True
+Logistic Regression,After tuning,أرى أن التجربة ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9974988332139163,True
+Logistic Regression,After tuning,الواجهة متعبة جدًا,سلبي,سلبي,0.9957721655934717,True
+Logistic Regression,After tuning,النتيجة واضحة جدًا,إيجابي,إيجابي,0.9417318592271399,True
+Logistic Regression,After tuning,موعد الطائرة في يوم الأحد,محايد,محايد,0.9978220260362309,True
+Logistic Regression,After tuning,أرى أن الموقع متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.9984428481714145,True
+Logistic Regression,After tuning,أرى أن النظام مبتكرة وتستحق التجربة,إيجابي,إيجابي,0.9968476476489775,True
+Logistic Regression,After tuning,المباراة كانت متعبة ولم تعجبني,سلبي,سلبي,0.9991192383726248,True
+Logistic Regression,After tuning,الفكرة كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.9909937198739688,True
+Logistic Regression,After tuning,يبدأ الجلسة في يوم الأربعاء,محايد,محايد,0.992966467185516,True
+Logistic Regression,After tuning,الزيارة كانت جميلة وأعجبتني,إيجابي,إيجابي,0.9966673376936537,True
+Logistic Regression,After tuning,أرى أن الورشة غير منظمة وتحتاج إلى تحسين,سلبي,سلبي,0.9997443709052672,True
+Logistic Regression,After tuning,أرى أن التطبيق معقدة وتحتاج إلى تحسين,سلبي,سلبي,0.9987207359961435,True
+Logistic Regression,After tuning,أرى أن الطلب ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9978977158751235,True
+Logistic Regression,After tuning,الخدمة ممتازة والموظفون متعاونون جدًا,إيجابي,إيجابي,0.9719770498221149,True
+Logistic Regression,After tuning,أرى أن الفكرة غير واضحة وتحتاج إلى تحسين,سلبي,سلبي,0.9998064353396812,True
+Logistic Regression,After tuning,كانت التعليمات مربكة ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.9840449677711731,True
+Logistic Regression,After tuning,التحديث مبتكرة جدًا,إيجابي,إيجابي,0.9936609921028885,True
+Logistic Regression,After tuning,الفيديو ضعيفة جدًا,سلبي,سلبي,0.9878920665131977,True
+Logistic Regression,After tuning,أرى أن المطعم ممتعة وتستحق التجربة,إيجابي,إيجابي,0.9985727898584453,True
+Logistic Regression,After tuning,كان الملخص ناقصًا وهذا ضيع وقتي,سلبي,سلبي,0.9852015790058042,True
+Logistic Regression,After tuning,الدعم الفني كانت احترافية وأعجبتني,إيجابي,إيجابي,0.9970451695399349,True
+Logistic Regression,After tuning,أرى أن المنتج متعبة وتحتاج إلى تحسين,سلبي,سلبي,0.9989724027433542,True
+Logistic Regression,After tuning,الشرح كانت غير منظمة ولم تعجبني,سلبي,سلبي,0.9994107139607462,True
+Logistic Regression,After tuning,تم حل المشكلة بسرعة وهذا وفر علي وقتًا كبيرًا,إيجابي,إيجابي,0.9743748314711993,True
+Logistic Regression,After tuning,أرى أن الفيديو جميلة وتستحق التجربة,إيجابي,إيجابي,0.9964517987747555,True
+Logistic Regression,After tuning,الخدمة مميزة جدًا,إيجابي,إيجابي,0.9883111768866151,True
+Logistic Regression,After tuning,المباراة كانت احترافية وأعجبتني,إيجابي,إيجابي,0.99503860134517,True
+Logistic Regression,After tuning,يبدأ الفصل الدراسي في الساعة العاشرة صباحًا,محايد,محايد,0.9978340131136179,True
+Logistic Regression,After tuning,المطعم كانت دقيقة وأعجبتني,إيجابي,إيجابي,0.9976362664693373,True
+Logistic Regression,After tuning,موعد المكتبة في الساعة التاسعة صباحًا,محايد,محايد,0.9982431551768307,True
+Logistic Regression,After tuning,الفيديو كانت بطيئة ولم تعجبني,سلبي,سلبي,0.9945033936524288,True
+Logistic Regression,After tuning,تفتح المكتبة خمسة أيام في الأسبوع,محايد,محايد,0.9869361751738212,True
+Logistic Regression,After tuning,أرى أن المشروع مملة وتحتاج إلى تحسين,سلبي,سلبي,0.9991165517196017,True
+Logistic Regression,After tuning,أرى أن الفيديو رائعة وتستحق التجربة,إيجابي,إيجابي,0.9970153084405531,True
+Logistic Regression,After tuning,النتيجة كانت غير واضحة ولم تعجبني,سلبي,سلبي,0.9998347667973725,True
+Logistic Regression,After tuning,أرى أن الجهاز مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9989966656258928,True
+Logistic Regression,After tuning,أحببت الفكرة وأرى أنها مبتكرة جدًا,إيجابي,إيجابي,0.9779582015217485,True
+Logistic Regression,After tuning,تم تنظيم السجل بشكل جيد وأوصي الآخرين بتجربتها,إيجابي,إيجابي,0.9662981878361916,True
+Logistic Regression,After tuning,كانت واجهة الاستخدام صعبة وكانت التجربة أسوأ من المتوقع,سلبي,سلبي,0.9692173840036196,True
+Logistic Regression,After tuning,يبدأ الفصل الدراسي في الشهر القادم,محايد,محايد,0.9903929593646358,True
+Logistic Regression,After tuning,أرى أن الكتاب مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.9987713699929905,True
+Logistic Regression,After tuning,كانت المباراة ممتعة وأداء الفريق رائعًا,إيجابي,إيجابي,0.5445886289439383,True
+Logistic Regression,After tuning,يبدأ التدريب في يوم الاثنين,محايد,محايد,0.9987784482233351,True
+Logistic Regression,After tuning,أرى أن الطلب احترافية وتستحق التجربة,إيجابي,إيجابي,0.9989926010457351,True
+Logistic Regression,After tuning,موعد الاختبار في الساعة الحادية عشرة صباحًا,محايد,محايد,0.9984744649176396,True
+Logistic Regression,After tuning,يحتوي المشروع على خمسين مثالًا,محايد,محايد,0.9919255846736913,True
+Logistic Regression,After tuning,تم تسجيل ثلاثة ملفات داخل التطبيق,محايد,محايد,0.9956404132346026,True
+Logistic Regression,After tuning,يبدأ الموعد في الأسبوع القادم,محايد,محايد,0.9917831316142912,True
+Logistic Regression,After tuning,أرى أن الطلب موثوقة وتستحق التجربة,إيجابي,إيجابي,0.9990965323829898,True
+Logistic Regression,After tuning,يبدأ الورشة في الساعة العاشرة صباحًا,محايد,محايد,0.9972366695768009,True
+Logistic Regression,After tuning,التحليل كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.9929223677945342,True
+Logistic Regression,After tuning,أرى أن المباراة احترافية وتستحق التجربة,إيجابي,إيجابي,0.9989643173965277,True
+Logistic Regression,After tuning,النظام مريحة جدًا,إيجابي,إيجابي,0.9583196820511295,True
+Logistic Regression,After tuning,تم اكتشاف نوع الملف داخل المجلد الرئيسي,محايد,محايد,0.9871146698694642,True
+Logistic Regression,After tuning,ظهرت النتيجة بشكل خاطئ وهذا ضيع وقتي,سلبي,سلبي,0.9679050209370359,True
+Logistic Regression,After tuning,يحتوي المستند على سبعة حقول,محايد,محايد,0.9933158374568164,True
+Logistic Regression,After tuning,يعمل التطبيق على الهواتف والأجهزة اللوحية,محايد,محايد,0.8498274386326102,True
+Logistic Regression,After tuning,يحتوي السجل على عشر نتائج,محايد,محايد,0.9935236060783035,True
+Logistic Regression,After tuning,أرى أن الزيارة ممتعة وتستحق التجربة,إيجابي,إيجابي,0.9988354063524466,True
+Logistic Regression,After tuning,أرى أن النتيجة بطيئة وتحتاج إلى تحسين,سلبي,سلبي,0.9988603332016197,True
+Logistic Regression,After tuning,أرى أن الورشة مخيبة وتحتاج إلى تحسين,سلبي,سلبي,0.998927372651689,True
+Logistic Regression,After tuning,موعد القطار في يوم الأحد,محايد,محايد,0.9949820895357888,True
+Logistic Regression,After tuning,المنصة كانت مريحة وأعجبتني,إيجابي,إيجابي,0.9951441009515217,True
+Logistic Regression,After tuning,عمل التطبيق بثبات وهذا أسعدني كثيرًا,إيجابي,إيجابي,0.9897378087182876,True
+Logistic Regression,After tuning,فشل تصدير التقرير ولن أستخدم الخدمة مرة أخرى,سلبي,سلبي,0.9931121702794871,True
+Logistic Regression,After tuning,تم تحميل النموذج في الملف المحدد,محايد,محايد,0.9968065526246476,True
+Logistic Regression,After tuning,الفندق دقيقة جدًا,إيجابي,إيجابي,0.9874719740460881,True
+Logistic Regression,After tuning,التحديث كانت مقنعة وأعجبتني,إيجابي,إيجابي,0.9982439216195175,True
+Logistic Regression,After tuning,يبدأ الحصة في الشهر القادم,محايد,محايد,0.9873662535590108,True
+Logistic Regression,After tuning,المحاضرة مخيبة جدًا,سلبي,سلبي,0.9923674925570724,True
+Logistic Regression,After tuning,تم حفظ الملف بسهولة وسأستخدم الخدمة مرة أخرى,إيجابي,إيجابي,0.900981760545897,True
+Logistic Regression,After tuning,التقرير كانت ضعيفة ولم تعجبني,سلبي,سلبي,0.9938860582945285,True
+Logistic Regression,After tuning,يبدأ الورشة في الساعة الثامنة صباحًا,محايد,محايد,0.9985264009201749,True
+Logistic Regression,After tuning,أرى أن التجربة غير دقيقة وتحتاج إلى تحسين,سلبي,سلبي,0.9997203074142957,True
+Logistic Regression,After tuning,أرى أن المباراة سهلة وتستحق التجربة,إيجابي,إيجابي,0.9984549815174325,True
+Logistic Regression,After tuning,تم الرد على استفساري بسرعة وسأستخدم الخدمة مرة أخرى,إيجابي,إيجابي,0.9640574053063866,True
+Logistic Regression,After tuning,أرى أن النتيجة احترافية وتستحق التجربة,إيجابي,إيجابي,0.998797243984867,True
+Logistic Regression,After tuning,المشروع مملة جدًا,سلبي,سلبي,0.995163414963973,True
+Logistic Regression,After tuning,التجربة بطيئة جدًا,سلبي,سلبي,0.9822407225412815,True
+Logistic Regression,After tuning,تم حفظ التقرير في المجلد على جهاز الحاسوب,محايد,محايد,0.9957184474587658,True
+Logistic Regression,After tuning,التحديث كانت مبتكرة وأعجبتني,إيجابي,إيجابي,0.9970301843715447,True
+Logistic Regression,After tuning,تم تصدير البيانات باستخدام الإعدادات الافتراضية,محايد,محايد,0.9898430385071458,True
+Logistic Regression,After tuning,التجربة كانت مربكة ولم تعجبني,سلبي,سلبي,0.9974865574633875,True
+Logistic Regression,After tuning,أرى أن الفندق احترافية وتستحق التجربة,إيجابي,إيجابي,0.9993538294214244,True
+Logistic Regression,After tuning,تم تشغيل الاختبارات في الساعة التاسعة,محايد,محايد,0.9979746715156986,True
+Logistic Regression,After tuning,أرى أن الزيارة مملة وتحتاج إلى تحسين,سلبي,سلبي,0.9985132929225475,True
+Logistic Regression,After tuning,كانت التجربة سيئة ولم أستمتع بها,سلبي,سلبي,0.8421222927276253,True
+Logistic Regression,After tuning,تم تسجيل خمس فئات داخل الاختبار,محايد,محايد,0.9986844013993678,True
+Logistic Regression,After tuning,أرى أن البرنامج ضعيفة وتحتاج إلى تحسين,سلبي,سلبي,0.9981966828851668,True

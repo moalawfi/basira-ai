@@ -100,7 +100,7 @@ Each member should:
 ```txt
 __pycache__/
 *.db
-venv/
+venv/ص
 .env
 ```
 
@@ -260,3 +260,19 @@ Completed initial tasks include:
 - Initial mock functions for intent classification and sentiment analysis.
 - GitHub Issues.
 - Kanban board setup.
+
+---
+## Abdulrahman's Contributions (Week 1-8)
+
+### NLP Extensions
+يحتوي المشروع على أدوات متقدمة لمعالجة اللغات الطبيعية (NLP) تشمل:
+- كشف اللغة بدقة (Language Detection).
+- استخراج الكلمات المفتاحية بـ 3 خوارزميات (TF-IDF, TextRank, Frequency).
+- التلخيص الاستخراجي مع حساب نسبة الضغط.
+- استخراج المواضيع (Topic Modeling) باستخدام LDA.
+
+### Database & Analytics
+تم بناء قاعدة بيانات SQLite محلية لتخزين وإدارة جميع نتائج التحليل، وتتميز بالتالي:
+- **`results` table:** يخزن النصوص والنتائج بصيغة JSON.
+- **`logs` table:** يسجل الأخطاء وحركات النظام.
+- **`analytics_cache` table:** لتسريع استدعاء الإحصائيات المجمعة.

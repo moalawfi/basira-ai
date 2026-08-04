@@ -6,11 +6,15 @@ from sklearn.cluster import KMeans
 from storage.results_store import save_cv_result
 
 try:
-    from face_detector import detect_faces
+    from cv_module.face_detector import detect_faces
     _FACE_DETECTOR_AVAILABLE = True
 except Exception:
-    _FACE_DETECTOR_AVAILABLE = False
-    print("Warning: face_detector.py not found - Face detection disabled in analyze_image.")
+    try:
+        from face_detector import detect_faces
+        _FACE_DETECTOR_AVAILABLE = True
+    except Exception:
+        _FACE_DETECTOR_AVAILABLE = False
+        print("Warning: face_detector.py not found - Face detection disabled in analyze_image.")
 
 def detect_shapes(image_path):
     if not os.path.exists(image_path):
@@ -138,23 +142,16 @@ def analyze_image(image_path, save_to_db=False):
         "num_colors": len(result["colors"]),
     }
 
-    # ==========================================
-    # إضافة المهمة 2: الحفظ الاختياري في قاعدة البيانات
-    # ==========================================
+    # Optional: save result to database
     if save_to_db:
         try:
-            # نستدعي دالة عبدالرحمن لحفظ النتيجة
             db_id = save_cv_result(image_path, result)
-            
-            # نضيف رقم التعريف الخاص بقاعدة البيانات للنتيجة كإثبات نجاح الحفظ
             result["db_id"] = db_id
             print(f"Successfully saved analysis to DB with ID: {db_id}")
-            
         except Exception as e:
-            # إذا حدث خطأ في قاعدة البيانات، لا نوقف البرنامج، بل نرسل تحذير مع النتيجة
+            # Do not crash if DB save fails - attach a warning to the result
             result["db_error"] = f"Failed to save to DB: {str(e)}"
             print(f"Database Error: {e}")
-    # ==========================================
 
     return result
 

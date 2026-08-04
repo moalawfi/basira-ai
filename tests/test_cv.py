@@ -129,3 +129,156 @@ def test_color_count_respected():
     require_image(BLUE_CIRCLE_IMG)
     colors = detect_dominant_colors(BLUE_CIRCLE_IMG, n_colors=3)
     assert len(colors) == 3
+
+
+# -- Integration tests -------------------------------------------------------
+
+import json
+import tempfile
+import sqlite3
+from cv_module.shape_color_detector import analyze_image
+from cv_module.ocr_extractor import extract_text
+from services import image_analysis_pipeline
+
+# 13. Test analyze_image full pipeline returns all expected keys
+def test_analyze_image_full_pipeline():
+    """Test that analyze_image returns a result with all expected keys."""
+    require_image(ONE_FACE_IMG)
+    result = analyze_image(ONE_FACE_IMG, save_to_db=False)
+    assert "image_path" in result
+    assert "faces" in result
+    assert "shapes" in result
+    assert "colors" in result
+    assert "summary" in result
+    summary = result["summary"]
+    assert "num_faces" in summary
+    assert "num_shapes" in summary
+    assert "num_colors" in summary
+
+
+def test_image_pipeline_passes_ocr_text_to_shared_nlp(monkeypatch):
+    """Real CV and NLP plus mocked OCR verify the complete image pipeline."""
+    require_image(SQUARE_IMG)
+    extracted_text = "مرحبا هذا نص مستخرج من الصورة"
+
+    monkeypatch.setattr(
+        image_analysis_pipeline,
+        "extract_text",
+        lambda path: {"success": True, "text": extracted_text, "error": None},
+    )
+
+    calls = []
+    for name in ("classify_intent", "analyze_sentiment", "extract_keywords", "detect_language", "summarize_text"):
+        original = getattr(image_analysis_pipeline.nlp_service, name)
+
+        def track_text(text, _original=original, _name=name):
+            calls.append((_name, text))
+            return _original(text)
+
+        monkeypatch.setattr(image_analysis_pipeline.nlp_service, name, track_text)
+
+    result = image_analysis_pipeline.run_image_analysis_pipeline(SQUARE_IMG)
+
+    assert result["summary"]["num_shapes"] >= 1
+    assert result["ocr"]["text"] == extracted_text
+    assert {name for name, text in calls if text == extracted_text} == {
+        "classify_intent", "analyze_sentiment", "extract_keywords",
+        "detect_language", "summarize_text"
+    }
+    assert set(result["nlp"]) == {"intent", "sentiment", "keywords", "language", "summary"}
+
+
+def test_image_api_runs_shared_ocr_to_nlp_pipeline(monkeypatch):
+    """The image API exposes OCR and NLP results from the shared pipeline."""
+    require_image(SQUARE_IMG)
+    extracted_text = "مرحبا هذا نص الصورة"
+    monkeypatch.setattr(
+        image_analysis_pipeline,
+        "extract_text",
+        lambda path: {"success": True, "text": extracted_text, "error": None},
+    )
+
+    import app as api_app
+
+    response = api_app.app.test_client().post(
+        "/analyze/image",
+        json={"image_path": SQUARE_IMG, "save_to_db": False},
+    )
+
+    assert response.status_code == 200
+    analysis = response.get_json()["analysis"]
+    assert analysis["ocr"]["text"] == extracted_text
+    assert set(analysis["nlp"]) == {"intent", "sentiment", "keywords", "language", "summary"}
+
+
+# 14. Test saving CV result to a temporary database (not the real one)
+def test_cv_save_to_temp_db(monkeypatch, tmp_path):
+    """Test that save_cv_result writes a row to the database."""
+    require_image(SQUARE_IMG)
+
+    # Create a temp DB file
+    temp_db = str(tmp_path / "test_analyzer.db")
+
+    # Monkeypatch DB_PATH in both db_setup and results_store
+    import storage.db_setup as db_setup_mod
+    import storage.results_store as results_store_mod
+    monkeypatch.setattr(db_setup_mod, "DB_PATH", temp_db)
+    monkeypatch.setattr(results_store_mod, "DB_PATH", temp_db)
+
+    # Initialize the temp DB schema
+    db_setup_mod.init_db(temp_db)
+
+    # Save a result
+    from storage.results_store import save_cv_result
+    test_data = {"faces": [], "shapes": [], "colors": []}
+    saved = save_cv_result(SQUARE_IMG, test_data)
+    assert saved is True
+
+    # Verify it was actually written
+    conn = sqlite3.connect(temp_db)
+    cursor = conn.cursor()
+    cursor.execute("SELECT COUNT(*) FROM results WHERE type='cv'")
+    count = cursor.fetchone()[0]
+    conn.close()
+    assert count >= 1
+
+
+# 15. Test OCR fallback when Tesseract is not found (uses monkeypatch)
+def test_ocr_fallback_tesseract_not_found(monkeypatch):
+    """Test that extract_text returns a proper error schema when Tesseract is missing."""
+    require_image(SQUARE_IMG)
+
+    # Create a fake pytesseract module that raises TesseractNotFoundError
+    import types
+    fake_pytesseract = types.ModuleType("pytesseract")
+
+    class FakeTesseractNotFoundError(Exception):
+        pass
+
+    fake_pytesseract.TesseractNotFoundError = FakeTesseractNotFoundError
+
+    def fake_image_to_string(*args, **kwargs):
+        raise FakeTesseractNotFoundError()
+
+    fake_pytesseract.image_to_string = fake_image_to_string
+
+    # Monkeypatch the import inside extract_text
+    import builtins
+    real_import = builtins.__import__
+
+    def patched_import(name, *args, **kwargs):
+        if name == "pytesseract":
+            return fake_pytesseract
+        return real_import(name, *args, **kwargs)
+
+    monkeypatch.setattr(builtins, "__import__", patched_import)
+
+    result = extract_text(SQUARE_IMG)
+
+    # Verify stable schema
+    assert "success" in result
+    assert "text" in result
+    assert "error" in result
+    assert result["success"] is False
+    assert result["text"] == ""
+    assert result["error"] is not None

@@ -15,6 +15,7 @@ SUPPORTED_EXTENSIONS = {'.jpg', '.jpeg', '.png', '.bmp', '.tiff', '.webp'}
 # Import real CV functions
 from cv_module.face_detector import detect_faces, draw_faces, detect_faces_with_eyes
 from cv_module.shape_color_detector import detect_shapes, detect_dominant_colors, analyze_image
+from services.image_analysis_pipeline import run_image_analysis_pipeline
 
 # Safe database import
 try:
@@ -49,6 +50,7 @@ def _validate_image_path(image_path):
 def analyze_image_endpoint():
     """Accepts an image file upload or a JSON image_path, runs analyze_image, returns JSON."""
     image_path = None
+    save_to_db = True
 
     # Case 1: image sent as a file upload (Form-Data)
     if 'image' in request.files:
@@ -62,6 +64,7 @@ def analyze_image_endpoint():
     elif request.is_json:
         data = request.get_json()
         image_path = data.get("image_path")
+        save_to_db = data.get("save_to_db", True)
 
     else:
         return jsonify({"error": "Send an image file or an image_path in JSON"}), 400
@@ -72,12 +75,8 @@ def analyze_image_endpoint():
         return jsonify({"error": err}), 400
 
     try:
-        # Run full CV analysis (faces + shapes + colors)
-        analysis_result = analyze_image(image_path)
-
-        # Save to database
-        db_id = save_cv_result(image_path, analysis_result)
-        analysis_result["db_id"] = db_id
+        # Shared CV -> OCR -> NLP pipeline, including optional database storage.
+        analysis_result = run_image_analysis_pipeline(image_path, save_to_db=save_to_db)
 
         return jsonify({
             "message": "Image analyzed successfully",
@@ -181,40 +180,78 @@ def get_results_endpoint():
         return jsonify({"error": str(e)}), 500
 
 
-# NLP endpoints (mocks - waiting for team integration)
+# NLP endpoints - real functions via shared service layer
+from services.nlp_service import (
+    classify_intent as _classify_intent,
+    analyze_sentiment as _analyze_sentiment,
+    extract_keywords as _extract_keywords,
+    detect_language as _detect_language,
+    summarize_text as _summarize_text,
+    get_analytics as _get_analytics,
+)
+
 
 @app.route('/analyze/intent', methods=['POST'])
 def analyze_intent():
-    data = request.json
-    return jsonify({"intent": "mock_intent", "input": data.get("text", "")}), 200
+    data = request.json or {}
+    text = data.get("text", "")
+    if not text or not text.strip():
+        return jsonify({"error": "text field is required"}), 400
+    result = _classify_intent(text)
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 @app.route('/analyze/sentiment', methods=['POST'])
-def analyze_sentiment():
-    data = request.json
-    return jsonify({"sentiment": "positive", "confidence": 0.95}), 200
+def analyze_sentiment_endpoint():
+    data = request.json or {}
+    text = data.get("text", "")
+    if not text or not text.strip():
+        return jsonify({"error": "text field is required"}), 400
+    result = _analyze_sentiment(text)
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 @app.route('/analyze/keywords', methods=['POST'])
 def analyze_keywords():
-    data = request.json
-    return jsonify({"keywords": ["mock", "keyword", "test"]}), 200
+    data = request.json or {}
+    text = data.get("text", "")
+    if not text or not text.strip():
+        return jsonify({"error": "text field is required"}), 400
+    result = _extract_keywords(text)
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 @app.route('/analyze/language', methods=['POST'])
 def analyze_language():
-    data = request.json
-    return jsonify({"language": "ar", "confidence": 0.99}), 200
+    data = request.json or {}
+    text = data.get("text", "")
+    if not text or not text.strip():
+        return jsonify({"error": "text field is required"}), 400
+    result = _detect_language(text)
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 @app.route('/analyze/summary', methods=['POST'])
 def analyze_summary():
-    data = request.json
-    return jsonify({"summary": "This is a mocked summary of the text."}), 200
+    data = request.json or {}
+    text = data.get("text", "")
+    if not text or not text.strip():
+        return jsonify({"error": "text field is required"}), 400
+    result = _summarize_text(text)
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 @app.route('/stats', methods=['GET'])
 def get_stats():
-    return jsonify({
-        "total_analyses": 100,
-        "cv_analyses": 40,
-        "text_analyses": 60
-    }), 200
+    result = _get_analytics()
+    if not result["success"]:
+        return jsonify({"error": result["error"]}), 503
+    return jsonify(result), 200
 
 
 if __name__ == '__main__':

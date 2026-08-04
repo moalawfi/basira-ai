@@ -1,13 +1,24 @@
-# main.py - Week 6: Improved CLI with real CV, error handling, and progress bar
+# main.py - Week 7: Full integration with real NLP, CV, OCR, and shared service layer
 import os
 import sys
 import time
 import json
 
-# Imports
+# CV imports
 from cv_module.face_detector import detect_faces, draw_faces
 from cv_module.shape_color_detector import detect_shapes, detect_dominant_colors, analyze_image
 from cv_module.ocr_extractor import extract_text
+from services.image_analysis_pipeline import run_image_analysis_pipeline
+
+# NLP imports via shared service layer
+from services.nlp_service import (
+    classify_intent,
+    analyze_sentiment,
+    extract_keywords,
+    detect_language,
+    summarize_text,
+    get_analytics,
+)
 
 # Safe DB import
 try:
@@ -147,7 +158,7 @@ def show_menu():
 # Option handlers
 
 def handle_text_analysis():
-    """Option 1: Basic text analysis (mock)."""
+    """Option 1: Basic text analysis (intent + sentiment)."""
     print_header("Text Analysis (Intent + Sentiment)")
     text = input("  Enter text to analyze: ")
 
@@ -156,14 +167,28 @@ def handle_text_analysis():
         print(f"  {result}")
         return
 
-    progress_bar("Analyzing text")
-    print(f"\n  Intent:    mock_intent")
-    print(f"  Sentiment: positive (0.95)")
-    print(f"\n  (NLP functions are mocks - waiting for team integration)")
+    # Intent
+    progress_bar("Classifying intent")
+    intent_result = classify_intent(result)
+    if intent_result["success"]:
+        r = intent_result["result"]
+        print(f"\n  Intent:     {r['label']}")
+        if r.get("confidence") is not None:
+            print(f"  Confidence: {r['confidence']:.2f}")
+    else:
+        print(f"\n  [Unavailable] Intent: {intent_result['error']}")
+
+    # Sentiment
+    progress_bar("Analyzing sentiment")
+    sent_result = analyze_sentiment(result)
+    if sent_result["success"]:
+        print(f"  Sentiment:  {sent_result['result']['label']}")
+    else:
+        print(f"  [Unavailable] Sentiment: {sent_result['error']}")
 
 
 def handle_extended_text_analysis():
-    """Option 2: Extended text analysis (mock)."""
+    """Option 2: Extended text analysis (keywords + language + summary)."""
     print_header("Extended Text Analysis")
     text = input("  Enter text to analyze: ")
 
@@ -172,19 +197,34 @@ def handle_extended_text_analysis():
         print(f"  {result}")
         return
 
+    # Keywords
     progress_bar("Extracting keywords")
-    print(f"\n  Keywords: ['mock', 'keyword', 'test']")
+    kw_result = extract_keywords(result)
+    if kw_result["success"]:
+        print(f"\n  Keywords: {kw_result['result']['keywords']}")
+    else:
+        print(f"\n  [Unavailable] Keywords: {kw_result['error']}")
 
+    # Language detection
     progress_bar("Detecting language")
-    print(f"  Language: ar (0.99)")
+    lang_result = detect_language(result)
+    if lang_result["success"]:
+        r = lang_result["result"]
+        print(f"  Language: {r['language']} ({r['confidence']})")
+    else:
+        print(f"  [Unavailable] Language: {lang_result['error']}")
 
+    # Summarize
     progress_bar("Summarizing text")
-    print(f"  Summary:  This is a mocked summary of the text.")
-    print(f"\n  (NLP functions are mocks - waiting for team integration)")
+    sum_result = summarize_text(result)
+    if sum_result["success"]:
+        print(f"  Summary:  {sum_result['result']['summary']}")
+    else:
+        print(f"  [Unavailable] Summary: {sum_result['error']}")
 
 
 def handle_image_analysis():
-    """Option 3: Full image analysis using real CV functions -> DB -> display."""
+    """Option 3: Shared CV -> OCR -> NLP image analysis pipeline."""
     print_header("Image Analysis")
     image_path = input("  Enter image path: ")
 
@@ -198,66 +238,35 @@ def handle_image_analysis():
     print(f"\n  Analyzing: {image_path}")
     print_divider()
 
-    # Step 1: Face detection
-    progress_bar("Detecting faces")
-    try:
-        face_result = detect_faces(image_path)
-        display_face_results(face_result)
-    except Exception as e:
-        print(f"  [Error] Face detection failed: {e}")
-        face_result = {"count": 0, "boxes": []}
+    progress_bar("Running CV, OCR, and NLP analysis")
+    combined_result = run_image_analysis_pipeline(image_path, save_to_db=_DB_AVAILABLE)
 
-    # Step 2: Shape detection
-    progress_bar("Detecting shapes")
-    try:
-        shapes = detect_shapes(image_path)
-        display_shape_results(shapes)
-    except Exception as e:
-        print(f"  [Error] Shape detection failed: {e}")
-        shapes = []
+    face_result = combined_result["faces"]
+    shapes = combined_result["shapes"]
+    colors = combined_result["colors"]
+    display_face_results(face_result)
+    display_shape_results(shapes)
+    display_color_results(colors)
 
-    # Step 3: Color detection
-    progress_bar("Extracting dominant colors")
-    try:
-        colors = detect_dominant_colors(image_path, n_colors=3)
-        display_color_results(colors)
-    except Exception as e:
-        print(f"  [Error] Color detection failed: {e}")
-        colors = []
+    ocr_result = combined_result["ocr"]
+    if ocr_result["success"] and ocr_result["text"]:
+        print(f"\n  Extracted text: {ocr_result['text'][:100]}")
+        print("  NLP analysis:")
+        for name, nlp_result in combined_result["nlp"].items():
+            if nlp_result["success"]:
+                print(f"    {name}: {nlp_result['result']}")
+            else:
+                print(f"    {name}: unavailable ({nlp_result['error']})")
+    elif ocr_result["error"]:
+        print(f"\n  [OCR] {ocr_result['error']}")
+    else:
+        print(f"\n  No text found in image.")
 
-    # Step 4: OCR
-    progress_bar("Extracting text (OCR)")
-    try:
-        ocr_result = extract_text(image_path)
-        extracted = ocr_result.get("text", "")
-        if extracted:
-            print(f"\n  Extracted text: {extracted[:100]}")
-        else:
-            print(f"\n  No text found in image.")
-    except Exception as e:
-        print(f"  [Error] OCR failed: {e}")
-
-    # Step 5: Save to DB
     print_divider()
-    combined_result = {
-        "image_path": image_path,
-        "faces": face_result,
-        "shapes": shapes,
-        "colors": colors,
-        "summary": {
-            "num_faces": face_result.get("count", 0),
-            "num_shapes": len(shapes),
-            "num_colors": len(colors),
-        }
-    }
-
-    if _DB_AVAILABLE:
-        progress_bar("Saving to database")
-        try:
-            db_id = save_cv_result(image_path, combined_result)
-            print(f"  Saved to database (ID: {db_id})")
-        except Exception as e:
-            print(f"  [Warning] Database save failed: {e}")
+    if "db_id" in combined_result:
+        print(f"  Saved to database (ID: {combined_result['db_id']})")
+    elif "db_error" in combined_result:
+        print(f"  [Warning] {combined_result['db_error']}")
     else:
         print("  [Warning] Database not available - results not saved.")
 
@@ -298,23 +307,16 @@ def handle_statistics():
     """Option 5: View statistics."""
     print_header("Analytics & Statistics")
 
-    if not _DB_AVAILABLE:
-        print("  [Warning] Database not available.")
-        return
-
     progress_bar("Computing statistics")
 
-    try:
-        all_results = get_results(limit=1000)
-        cv_count = sum(1 for r in all_results if r[1] == 'cv')
-        nlp_count = sum(1 for r in all_results if r[1] == 'nlp')
-        total = len(all_results)
-
-        print(f"\n  Total analyses: {total}")
-        print(f"  CV analyses:    {cv_count}")
-        print(f"  NLP analyses:   {nlp_count}")
-    except Exception as e:
-        print(f"  [Error] Error computing stats: {e}")
+    analytics_result = get_analytics()
+    if analytics_result["success"]:
+        stats = analytics_result["result"]
+        print(f"\n  Analyses by type:")
+        for type_name, count in stats.items():
+            print(f"    {type_name}: {count}")
+    else:
+        print(f"  [Unavailable] Analytics: {analytics_result['error']}")
 
 
 # Main loop

@@ -1,0 +1,3 @@
+﻿model,stage,tested,correct,incorrect,accuracy
+Logistic Regression,Before tuning,250,245,5,0.98
+Logistic Regression,After tuning,250,245,5,0.98

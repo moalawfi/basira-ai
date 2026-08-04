@@ -1,0 +1,11 @@
+﻿model,stage,text,actual,predicted,confidence,correct
+Logistic Regression,Before tuning,تأخر الطلب كثيرًا وكان التغليف سيئًا,سلبي,إيجابي,0.495404053626733,False
+Logistic Regression,Before tuning,يتم حفظ النماذج بصيغة joblib,محايد,سلبي,0.36845511024816824,False
+Logistic Regression,Before tuning,التصميم معقد وغير مريح للاستخدام,سلبي,إيجابي,0.5206569319296965,False
+Logistic Regression,Before tuning,ما واجهت أي مشكلة اليوم,إيجابي,سلبي,0.3678797835838623,False
+Logistic Regression,Before tuning,حصلت على دعم سريع وممتاز من الفريق,إيجابي,محايد,0.4542531900616547,False
+Logistic Regression,After tuning,تأخر الطلب كثيرًا وكان التغليف سيئًا,سلبي,إيجابي,0.7407485488454777,False
+Logistic Regression,After tuning,يتم حفظ النماذج بصيغة joblib,محايد,سلبي,0.5073042487780772,False
+Logistic Regression,After tuning,التصميم معقد وغير مريح للاستخدام,سلبي,إيجابي,0.8380173834970729,False
+Logistic Regression,After tuning,ما واجهت أي مشكلة اليوم,إيجابي,سلبي,0.690963533083953,False
+Logistic Regression,After tuning,حصلت على دعم سريع وممتاز من الفريق,إيجابي,سلبي,0.4893506255334904,False

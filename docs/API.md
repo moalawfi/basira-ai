@@ -1,65 +1,177 @@
-1. تحليل الصور (Computer Vision)
-
-تحليل صورة وتخزين النتيجة
-
-الطريقة (Method): POST
-
-المسار (Endpoint): /analyze/image
-
-المدخلات (Request): Form-Data تحتوي على ملف صورة بمفتاح image.
-
-نموذج الاستجابة (Response Example):
-{  "message": "تم تحليل الصورة وحفظ النتائج بنجاح",  "analysis": {    "faces": [      {        "count": 1,        "bounding_boxes": [[10, 20, 150, 150]]      }    ],    "shapes": [      {        "type": "circle",        "area": 314.15,        "location": [100, 100]      }    ],    "dominant_colors": [      {"color": [255, 0, 0], "percentage": 0.45}    ],    "db_id": 1  }}
+```markdown
+# Content Analyzer API Documentation
 
 
-2. تحليل النصوص (NLP - Mocks)
 
-تحليل النية (Intent Analysis)
+## 1. تحليل الصور (Computer Vision)
 
-الطريقة (Method): POST
 
-المسار (Endpoint): /analyze/intent
 
-المدخلات (Request Body - JSON):
+### تحليل صورة وتخزين النتيجة
+
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/image`
+
+
+
+Request Form-Data تحتوي على ملف صورة بمفتاح `image`، أو JSON يحتوي على `"image_path"`.
+
+
+
+Response
+
+```json
+{
+  "message": "تم تحليل الصورة بنجاح",
+  "analysis": {
+    "image_path": "uploads\\test_image.jpg",
+    "faces": "Not available (face_detector.py not found)",
+    "shapes": [],
+    "colors": [
+      {"color": [255, 0, 0], "percentage": 0.45}
+    ],
+    "summary": {
+      "num_faces": 0,
+      "num_shapes": 0,
+      "num_colors": 1
+    },
+    "db_id": true
+  }
+}
+```
+
+
+
+### استرجاع آخر النتائج من قاعدة البيانات
+
+
+
+Method `GET`
+
+
+
+Endpoint `/results`
+
+
+
+Request لا يوجد.
+
+
+
+Response
+
+```json
+[
+  [1, "cv", "uploads\\test.jpg", "{\"shapes\": [], \"colors\": []}", "2023-10-25 14:30:00"]
+]
+```
+
+
+
+---
+
+
+
+## 2. تحليل النصوص (NLP - Mocks)
+
+
+
+### تحليل النية (Intent Analysis)
+
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/intent`
+
+
+
+Request
+
+```json
 {
   "text": "أريد إلغاء طلبي"
 }
+```
 
-نموذج الاستجابة (Response Example):
+
+
+Response
+
+```json
 {
   "intent": "mock_intent",
   "input": "أريد إلغاء طلبي"
 }
+```
 
-## تحليل المشاعر (Sentiment Analysis)
 
-الطريقة (Method): POST
 
-المسار (Endpoint): /analyze/sentiment
+### تحليل المشاعر (Sentiment Analysis)
 
-المدخلات (Request Body - JSON):
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/sentiment`
+
+
+
+Request
+
+```json
 {
   "text": "الخدمة كانت ممتازة جداً"
 }
+```
 
-نموذج الاستجابة (Response Example):
+
+
+Response
+
+```json
 {
   "sentiment": "positive",
   "confidence": 0.95
 }
+```
 
-## استخراج الكلمات المفتاحية (Keywords Extraction)
 
-الطريقة (Method): POST
 
-المسار (Endpoint): /analyze/keywords
+### استخراج الكلمات المفتاحية (Keywords Extraction)
 
-المدخلات (Request Body - JSON):
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/keywords`
+
+
+
+Request
+
+```json
 {
   "text": "الذكاء الاصطناعي يغير مستقبل التكنولوجيا"
 }
+```
 
-نموذج الاستجابة (Response Example):
+
+
+Response
+
+```json
 {
   "keywords": [
     "mock",
@@ -67,59 +179,105 @@
     "test"
   ]
 }
+```
 
-## تحديد اللغة (Language Detection)
 
-الطريقة (Method): POST
 
-المسار (Endpoint): /analyze/language
+### تحديد اللغة (Language Detection)
 
-المدخلات (Request Body - JSON):
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/language`
+
+
+
+Request
+
+```json
 {
   "text": "Hello world"
 }
+```
 
-نموذج الاستجابة (Response Example):
+
+
+Response
+
+```json
 {
   "language": "ar",
   "confidence": 0.99
 }
+```
 
-## تلخيص النص (Text Summarization)
 
-الطريقة (Method): POST
 
-المسار (Endpoint): /analyze/summary
+### تلخيص النص (Text Summarization)
 
-المدخلات (Request Body - JSON):
+
+
+Method `POST`
+
+
+
+Endpoint `/analyze/summary`
+
+
+
+Request
+
+```json
 {
   "text": "نص طويل جداً يحتوي على العديد من الجمل والتفاصيل..."
 }
+```
 
-نموذج الاستجابة (Response Example):
+
+
+Response
+
+```json
 {
   "summary": "This is a mocked summary of the text."
 }
+```
 
 
-3. الإحصائيات (Analytics)
 
-عرض إحصائيات النظام
+---
 
-الطريقة (Method): GET
 
-المسار (Endpoint): /stats
 
-المدخلات: لا يوجد.
+## 3. الإحصائيات (Analytics)
 
-نموذج الاستجابة (Response Example):
+
+
+### عرض إحصائيات النظام
+
+
+
+Method `GET`
+
+
+
+Endpoint `/stats`
+
+
+
+Request لا يوجد.
+
+
+
+Response
+
+```json
 {
   "total_analyses": 100,
   "cv_analyses": 40,
-  "text_analyses": 60,
-  "most_common_shapes": [
-    "circle",
-    "rectangle"
-  ]
+  "text_analyses": 60
 }
-
+```

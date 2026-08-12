@@ -3,13 +3,18 @@ import cv2
 import numpy as np
 from collections import Counter
 from sklearn.cluster import KMeans
+from storage.results_store import save_cv_result
 
 try:
-    from face_detector import detect_faces
+    from cv_module.face_detector import detect_faces
     _FACE_DETECTOR_AVAILABLE = True
 except Exception:
-    _FACE_DETECTOR_AVAILABLE = False
-    print("Warning: face_detector.py not found - Face detection disabled in analyze_image.")
+    try:
+        from face_detector import detect_faces
+        _FACE_DETECTOR_AVAILABLE = True
+    except Exception:
+        _FACE_DETECTOR_AVAILABLE = False
+        print("Warning: face_detector.py not found - Face detection disabled in analyze_image.")
 
 def detect_shapes(image_path):
     if not os.path.exists(image_path):
@@ -107,7 +112,7 @@ def detect_dominant_colors(image_path, n_colors=3):
     colors.sort(key=lambda c: c["percentage"], reverse=True)
     return colors
 
-def analyze_image(image_path):
+def analyze_image(image_path, save_to_db=False):
     result = {"image_path": image_path, "faces": [], "shapes": [], "colors": []}
 
     if _FACE_DETECTOR_AVAILABLE:
@@ -136,6 +141,18 @@ def analyze_image(image_path):
         "num_shapes": len(result["shapes"]),
         "num_colors": len(result["colors"]),
     }
+
+    # Optional: save result to database
+    if save_to_db:
+        try:
+            db_id = save_cv_result(image_path, result)
+            result["db_id"] = db_id
+            print(f"Successfully saved analysis to DB with ID: {db_id}")
+        except Exception as e:
+            # Do not crash if DB save fails - attach a warning to the result
+            result["db_error"] = f"Failed to save to DB: {str(e)}"
+            print(f"Database Error: {e}")
+
     return result
 
 def draw_and_save_analysis(image_path, output_path, analysis):

@@ -1,6 +1,28 @@
 # content-analyzer-team
 # Smart Content Analyzer - محلل المحتوى الذكي
 
+## NLP Core
+
+The NLP Core provides Arabic intent classification and sentiment analysis using
+trained TF-IDF/scikit-learn pipelines. It validates input language, supports
+single-text and batch analysis, and can optionally save predictions to SQLite.
+
+```python
+import sys
+
+sys.path.insert(0, "nlp-core")
+
+from intent_classifier import classify_intent
+from sentiment_analyzer import analyze_sentiment
+
+print(classify_intent("كيف أرفع صورة؟"))
+print(analyze_sentiment("الخدمة ممتازة جدًا"))
+```
+
+See [`nlp-core/README.md`](nlp-core/README.md) for the complete Python API and
+[`docs/API.md`](docs/API.md) for the `/analyze/intent` and
+`/analyze/sentiment` HTTP contracts.
+
 ## Project Overview
 
 Smart Content Analyzer is an integrated application that accepts **text or image input** from the user and analyzes it using multiple techniques. The project includes a simple REST API, organized SQLite database storage, logging, and automated testing.

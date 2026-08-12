@@ -59,6 +59,9 @@ def load_data():
     """
     Load and validate the sentiment dataset.
 
+    Returns: A ``(texts, labels)`` pair of pandas Series.
+    Raises: ``FileNotFoundError`` if absent; ``ValueError`` if invalid.
+
     Supported CSV column names:
     - Arabic: النص, الفئة
     - English: text, label
@@ -152,8 +155,10 @@ def load_data():
 # ============================================================
 
 def build_model(C=1.0):
-    """
-    Create a TF-IDF + Logistic Regression pipeline.
+    """Create an unfitted TF-IDF/logistic-regression pipeline.
+
+    Args: ``C`` is the positive inverse regularization strength.
+    Returns: A configured scikit-learn ``Pipeline``.
     """
 
     return Pipeline(
@@ -195,6 +200,9 @@ def save_model(model, path):
 
     Returns:
         pathlib.Path of the saved model.
+
+    Raises:
+        OSError: If the destination cannot be written.
     """
 
     destination = Path(path)
@@ -221,6 +229,10 @@ def load_model(path=MODEL_PATH):
 
     The loaded model is cached so it is not read from disk
     repeatedly during the same program execution.
+
+    Args: ``path`` is the joblib file to load.
+    Returns: The cached, deserialized model.
+    Raises: ``FileNotFoundError`` or a joblib deserialization error.
     """
 
     source = Path(path)
@@ -241,8 +253,10 @@ def load_model(path=MODEL_PATH):
 # ============================================================
 
 def evaluate_model(model, X_test, y_test):
-    """
-    Calculate accuracy, Macro-F1, predictions, and confidence.
+    """Evaluate ``model`` against samples ``X_test`` and labels ``y_test``.
+
+    Returns: Accuracy, macro-F1, predictions, and confidence arrays.
+    Raises: Model or data compatibility errors from scikit-learn.
     """
 
     predictions = model.predict(X_test)
@@ -291,8 +305,11 @@ def create_test_results(
     model_name,
     stage,
 ):
-    """
-    Create a DataFrame containing every held-out test prediction.
+    """Create a per-sample prediction table from the supplied sequences.
+
+    Args: Test samples, labels, predictions, confidence, model name, and stage.
+    Returns: A pandas ``DataFrame`` with a ``correct`` column.
+    Raises: ``ValueError`` when sequence lengths differ.
     """
 
     results = pd.DataFrame(
@@ -315,8 +332,10 @@ def create_test_results(
 
 
 def save_test_results(all_test_results):
-    """
-    Save all test predictions and failed predictions under tests/.
+    """Write combined and misclassified result DataFrames under ``tests/``.
+
+    Args: ``all_test_results`` is a list of prediction DataFrames.
+    Returns: ``None``. Raises: Filesystem errors when CSV writing fails.
     """
 
     TESTS_DIR.mkdir(
@@ -373,8 +392,10 @@ def save_test_results(all_test_results):
 # ============================================================
 
 def get_top_features(model, n=10):
-    """
-    Return the top n TF-IDF features for every sentiment class.
+    """Return the top ``n`` TF-IDF features for every sentiment class.
+
+    Returns: A class-to-ranked-features dictionary.
+    Raises: ``ValueError``, ``TypeError``, or ``KeyError`` for invalid input.
     """
 
     if n <= 0:
@@ -435,9 +456,7 @@ def get_top_features(model, n=10):
 # ============================================================
 
 def create_features_table(top_features):
-    """
-    Convert the top-features dictionary into a Markdown table.
-    """
+    """Convert a class-to-features mapping into a Markdown table string."""
 
     rows = [
         "| Sentiment class | Top 10 features |",
@@ -475,8 +494,9 @@ def update_evaluation_file(
     best_cv_accuracy,
     top_features,
 ):
-    """
-    Create or replace the generated Sentiment section.
+    """Write supplied sentiment metrics and features to ``EVALUATION.md``.
+
+    Returns: ``None``. Raises: Filesystem errors if the file cannot be updated.
     """
 
     start_marker = "<!-- SENTIMENT_EVALUATION_START -->"
@@ -597,8 +617,9 @@ This file is generated automatically by the training scripts.
 # ============================================================
 
 def save_confusion_matrix(y_test, predictions):
-    """
-    Create and save the tuned sentiment confusion matrix.
+    """Save a confusion matrix for expected and predicted labels.
+
+    Returns: ``None``. Raises: Plotting or filesystem errors.
     """
 
     class_names = sorted(
@@ -654,6 +675,9 @@ def train_model():
     Train the baseline model, tune it, save held-out results,
     save the confusion matrix, retrain on all data, and persist
     the final model.
+
+    Returns: The selected pipeline, refitted on the complete dataset.
+    Raises: Dataset, cross-validation, training, plotting, or filesystem errors.
     """
 
     print("=" * 60)
@@ -979,8 +1003,9 @@ def train_model():
 # ============================================================
 
 def validate_text(text):
-    """
-    Validate and clean one input text.
+    """Return trimmed ``text``.
+
+    Raises: ``TypeError`` for non-strings; ``ValueError`` for empty text.
     """
 
     if not isinstance(text, str):
@@ -1003,6 +1028,9 @@ def validate_supported_language(text):
     Detect the input language before sentiment analysis.
 
     The current sentiment model is trained on Arabic text only.
+
+    Returns: The language detector result dictionary.
+    Raises: ``ValueError`` when the detected language is not Arabic.
     """
 
     language_result = detect_language_with_confidence(text)
@@ -1032,6 +1060,11 @@ def analyze_sentiment(
 
     The return value remains a string to preserve compatibility
     with the existing tests and project interface.
+
+    Args: ``text`` is non-empty Arabic text; ``save_to_db`` enables storage.
+    Returns: The predicted Arabic sentiment label as a string.
+    Raises: ``TypeError``, ``ValueError``, ``FileNotFoundError``, or
+        ``RuntimeError`` when optional persistence fails.
     """
 
     cleaned_text = validate_text(text)
@@ -1079,8 +1112,11 @@ def analyze_sentiment(
 # ============================================================
 
 def batch_analyze(texts):
-    """
-    Analyze multiple input texts.
+    """Analyze a list of Arabic strings in one model call.
+
+    Returns: A sentiment-label list in input order.
+    Raises: ``TypeError`` for a non-list or invalid item; ``ValueError`` for
+        empty/non-Arabic items; ``FileNotFoundError`` if the model is missing.
     """
 
     if not isinstance(texts, list):

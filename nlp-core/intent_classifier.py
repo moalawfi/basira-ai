@@ -47,7 +47,11 @@ RANDOM_STATE = 42
 # ============================================================
 
 def load_data():
-    """Load and validate intent_data.csv."""
+    """Load and validate intent data.
+
+    Returns: A ``(texts, labels)`` pair of pandas Series.
+    Raises: ``FileNotFoundError`` if absent; ``ValueError`` if invalid.
+    """
     if not DATA_PATH.exists():
         raise FileNotFoundError(f"Dataset was not found:\n{DATA_PATH}")
 
@@ -94,7 +98,11 @@ def load_data():
 # ============================================================
 
 def build_naive_bayes(alpha=1.0):
-    """Create a TF-IDF + Multinomial Naive Bayes pipeline."""
+    """Create an unfitted TF-IDF/Naive Bayes pipeline.
+
+    Args: ``alpha`` is the additive smoothing value.
+    Returns: A configured scikit-learn ``Pipeline``.
+    """
     return Pipeline(
         steps=[
             (
@@ -113,7 +121,11 @@ def build_naive_bayes(alpha=1.0):
 
 
 def build_logistic_regression(C=1.0):
-    """Create a TF-IDF + Logistic Regression pipeline."""
+    """Create an unfitted TF-IDF/logistic-regression pipeline.
+
+    Args: ``C`` is the positive inverse regularization strength.
+    Returns: A configured scikit-learn ``Pipeline``.
+    """
     return Pipeline(
         steps=[
             (
@@ -141,7 +153,11 @@ def build_logistic_regression(C=1.0):
 # ============================================================
 
 def save_model(model, path):
-    """Save a fitted model using joblib."""
+    """Persist ``model`` at ``path`` and clear the loading cache.
+
+    Returns: The destination ``Path``.
+    Raises: Filesystem or joblib serialization errors.
+    """
     destination = Path(path)
     destination.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump(model, destination)
@@ -154,7 +170,11 @@ def save_model(model, path):
 
 @lru_cache(maxsize=4)
 def load_model(path):
-    """Load a saved model using joblib."""
+    """Load and cache the joblib model at ``path``.
+
+    Returns: The deserialized model.
+    Raises: ``FileNotFoundError`` or a joblib deserialization error.
+    """
     source = Path(path)
 
     if not source.exists():
@@ -172,7 +192,11 @@ def load_model(path):
 # ============================================================
 
 def evaluate_model(model, X_test, y_test):
-    """Return accuracy, Macro-F1, predictions, and confidence."""
+    """Evaluate ``model`` against samples ``X_test`` and labels ``y_test``.
+
+    Returns: Accuracy, macro-F1, predictions, and confidence arrays.
+    Raises: Model or data compatibility errors from scikit-learn.
+    """
     predictions = model.predict(X_test)
 
     accuracy = accuracy_score(y_test, predictions)
@@ -200,7 +224,12 @@ def create_test_results(
     model_name,
     stage,
 ):
-    """Create a table containing every test-set prediction."""
+    """Create a per-sample prediction table from the supplied sequences.
+
+    Args: Test samples, labels, predictions, confidence, model name, and stage.
+    Returns: A pandas ``DataFrame`` with a ``correct`` column.
+    Raises: ``ValueError`` when sequence lengths differ.
+    """
     results = pd.DataFrame(
         {
             "model": model_name,
@@ -220,8 +249,10 @@ def create_test_results(
 
 
 def save_test_results(all_test_results):
-    """
-    Save all predictions and failed predictions in tests/.
+    """Write combined and misclassified result DataFrames under ``tests/``.
+
+    Args: ``all_test_results`` is a list of prediction DataFrames.
+    Returns: ``None``. Raises: Filesystem errors when CSV writing fails.
     """
     TESTS_DIR.mkdir(parents=True, exist_ok=True)
 
@@ -274,7 +305,11 @@ def save_test_results(all_test_results):
 # ============================================================
 
 def get_top_features(model, n=10):
-    """Return the top n TF-IDF features for each class."""
+    """Return the top ``n`` TF-IDF features for each class in ``model``.
+
+    Returns: A class-to-ranked-features dictionary.
+    Raises: ``ValueError``, ``TypeError``, or ``KeyError`` for invalid input.
+    """
     if n <= 0:
         raise ValueError("n must be greater than zero.")
 
@@ -330,7 +365,7 @@ def get_top_features(model, n=10):
 
 
 def create_features_table(top_features):
-    """Convert top features to a Markdown table."""
+    """Convert a class-to-features mapping into a Markdown table string."""
     rows = [
         "| Intent class | Top 10 features |",
         "|---|---|",
@@ -357,7 +392,10 @@ def update_evaluation_file(
     best_parameters,
     top_features,
 ):
-    """Create or replace the Intent section in EVALUATION.md."""
+    """Write intent metrics, parameters, and features to ``EVALUATION.md``.
+
+    Returns: ``None``. Raises: Filesystem errors if the file cannot be updated.
+    """
     start_marker = "<!-- INTENT_EVALUATION_START -->"
     end_marker = "<!-- INTENT_EVALUATION_END -->"
 
@@ -466,9 +504,10 @@ using `GridSearchCV`.
 # ============================================================
 
 def train_model():
-    """
-    Train, tune, evaluate, save test results, and save the
-    selected model.
+    """Train, tune, evaluate, and persist the best intent classifier.
+
+    Returns: The best pipeline, refitted on the complete dataset.
+    Raises: Dataset, cross-validation, training, or filesystem errors.
     """
     print("=" * 60)
     print("INTENT CLASSIFIER TRAINING")
@@ -733,7 +772,10 @@ def train_model():
 # ============================================================
 
 def validate_text(text):
-    """Validate and clean one input text."""
+    """Return trimmed ``text``.
+
+    Raises: ``TypeError`` for non-strings; ``ValueError`` for empty text.
+    """
     if not isinstance(text, str):
         raise TypeError("text must be a string")
 
@@ -746,10 +788,9 @@ def validate_text(text):
 
 
 def validate_supported_language(text):
-    """
-    Detect the input language before intent classification.
+    """Detect ``text`` and return its language metadata.
 
-    The current intent model is trained on Arabic text only.
+    Raises: ``ValueError`` when the detected language is not Arabic.
     """
     language_result = detect_language_with_confidence(text)
     language = language_result.get("language", "unknown")
@@ -763,9 +804,12 @@ def validate_supported_language(text):
 
 
 def classify_intent(text, save_to_db=False):
-    """
-    Classify one Arabic text and optionally save the result
-    to SQLite.
+    """Classify Arabic ``text`` and optionally save the result to SQLite.
+
+    Args: ``text`` is non-empty Arabic text; ``save_to_db`` enables storage.
+    Returns: Language metadata, intent label, and confidence in a dictionary.
+    Raises: ``TypeError``, ``ValueError``, ``FileNotFoundError``, or
+        ``RuntimeError`` when optional persistence fails.
     """
     cleaned_text = validate_text(text)
     language_result = validate_supported_language(cleaned_text)

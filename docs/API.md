@@ -1,278 +1,118 @@
-```markdown
 # Content Analyzer API Documentation
 
+## تحليل الصور (Computer Vision)
 
+### `POST /analyze/image`
 
-## 1. تحليل الصور (Computer Vision)
+Send form-data with an image under `image`, or JSON containing `image_path`.
 
-
-
-### تحليل صورة وتخزين النتيجة
-
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/image`
-
-
-
-Request Form-Data تحتوي على ملف صورة بمفتاح `image`، أو JSON يحتوي على `"image_path"`.
-
-
-
-Response
+```json
+{
+  "image_path": "uploads/test_image.jpg"
+}
+```
 
 ```json
 {
   "message": "تم تحليل الصورة بنجاح",
   "analysis": {
-    "image_path": "uploads\\test_image.jpg",
-    "faces": "Not available (face_detector.py not found)",
+    "image_path": "uploads/test_image.jpg",
+    "faces": 0,
     "shapes": [],
-    "colors": [
-      {"color": [255, 0, 0], "percentage": 0.45}
-    ],
-    "summary": {
-      "num_faces": 0,
-      "num_shapes": 0,
-      "num_colors": 1
-    },
+    "colors": [{"color": [255, 0, 0], "percentage": 0.45}],
+    "summary": {"num_faces": 0, "num_shapes": 0, "num_colors": 1},
     "db_id": true
   }
 }
 ```
 
+### `GET /results`
 
-
-### استرجاع آخر النتائج من قاعدة البيانات
-
-
-
-Method `GET`
-
-
-
-Endpoint `/results`
-
-
-
-Request لا يوجد.
-
-
-
-Response
+Returns recent stored results. No request body is required.
 
 ```json
 [
-  [1, "cv", "uploads\\test.jpg", "{\"shapes\": [], \"colors\": []}", "2023-10-25 14:30:00"]
+  [1, "cv", "uploads/test.jpg", "{\"shapes\": [], \"colors\": []}", "2023-10-25 14:30:00"]
 ]
 ```
 
+## تحليل النصوص (NLP)
 
+Text-analysis requests use UTF-8 JSON and `Content-Type: application/json`.
+`text` must be a non-empty Arabic string.
 
----
-
-
-
-## 2. تحليل النصوص (NLP - Mocks)
-
-
-
-### تحليل النية (Intent Analysis)
-
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/intent`
-
-
-
-Request
+### `POST /analyze/intent`
 
 ```json
 {
-  "text": "أريد إلغاء طلبي"
+  "text": "كيف أرفع صورة؟",
+  "save_to_db": false
 }
 ```
 
-
-
-Response
+Successful response (`200 OK`):
 
 ```json
 {
-  "intent": "mock_intent",
-  "input": "أريد إلغاء طلبي"
+  "type": "intent",
+  "language": {"language": "ar", "confidence": 1.0},
+  "result": {"label": "سؤال", "confidence": 0.9417}
 }
 ```
 
-
-
-### تحليل المشاعر (Sentiment Analysis)
-
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/sentiment`
-
-
-
-Request
+### `POST /analyze/sentiment`
 
 ```json
 {
-  "text": "الخدمة كانت ممتازة جداً"
+  "text": "الخدمة ممتازة والموظفون متعاونون جدًا",
+  "save_to_db": false
 }
 ```
 
-
-
-Response
+Successful response (`200 OK`):
 
 ```json
 {
-  "sentiment": "positive",
-  "confidence": 0.95
+  "type": "sentiment",
+  "language": {"language": "ar", "confidence": 1.0},
+  "result": {"label": "إيجابي"}
 }
 ```
 
+`save_to_db` is optional and defaults to `false`. When true, the complete
+result is stored in SQLite before the response is returned.
 
-
-### استخراج الكلمات المفتاحية (Keywords Extraction)
-
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/keywords`
-
-
-
-Request
+Invalid input returns `400 Bad Request`:
 
 ```json
 {
-  "text": "الذكاء الاصطناعي يغير مستقبل التكنولوجيا"
+  "error": {
+    "code": "invalid_text",
+    "message": "text must be a non-empty Arabic string"
+  }
 }
 ```
 
-
-
-Response
+Model-loading or persistence failures return `500 Internal Server Error`:
 
 ```json
 {
-  "keywords": [
-    "mock",
-    "keyword",
-    "test"
-  ]
+  "error": {
+    "code": "analysis_failed",
+    "message": "The text could not be analyzed"
+  }
 }
 ```
 
+### Additional NLP endpoints
 
+- `POST /analyze/keywords` — extracts keywords from a JSON `text` value.
+- `POST /analyze/language` — returns the detected language and confidence.
+- `POST /analyze/summary` — summarizes the supplied JSON `text` value.
 
-### تحديد اللغة (Language Detection)
+## الإحصائيات (Analytics)
 
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/language`
-
-
-
-Request
-
-```json
-{
-  "text": "Hello world"
-}
-```
-
-
-
-Response
-
-```json
-{
-  "language": "ar",
-  "confidence": 0.99
-}
-```
-
-
-
-### تلخيص النص (Text Summarization)
-
-
-
-Method `POST`
-
-
-
-Endpoint `/analyze/summary`
-
-
-
-Request
-
-```json
-{
-  "text": "نص طويل جداً يحتوي على العديد من الجمل والتفاصيل..."
-}
-```
-
-
-
-Response
-
-```json
-{
-  "summary": "This is a mocked summary of the text."
-}
-```
-
-
-
----
-
-
-
-## 3. الإحصائيات (Analytics)
-
-
-
-### عرض إحصائيات النظام
-
-
-
-Method `GET`
-
-
-
-Endpoint `/stats`
-
-
-
-Request لا يوجد.
-
-
-
-Response
+### `GET /stats`
 
 ```json
 {

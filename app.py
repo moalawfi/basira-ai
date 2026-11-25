@@ -1,5 +1,6 @@
 # app.py - Week 6: Real CV Integration
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
+from werkzeug.utils import secure_filename
 import os
 import json
 
@@ -19,7 +20,7 @@ from services.image_analysis_pipeline import run_image_analysis_pipeline
 
 # Safe database import
 try:
-    from storage.results_store import save_cv_result, get_results
+    from storage.results_store import save_cv_result, save_nlp_result, get_results
 except Exception as e:
     print(f"Warning: Database modules not fully ready. Using mocks. Error: {e}")
 
@@ -30,6 +31,14 @@ except Exception as e:
     def get_results(limit=10):
         print(f"[DB MOCK] Fetching {limit} results.")
         return []
+
+    def save_nlp_result(input_text, data):
+        return False
+
+
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 
 # Helper: validate uploaded image
@@ -57,7 +66,7 @@ def analyze_image_endpoint():
         file = request.files['image']
         if file.filename == '':
             return jsonify({"error": "Empty filename"}), 400
-        image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+        image_path = os.path.join(UPLOAD_FOLDER, secure_filename(file.filename))
         file.save(image_path)
 
     # Case 2: image path sent as JSON
@@ -97,7 +106,7 @@ def analyze_faces_endpoint():
         file = request.files['image']
         if file.filename == '':
             return jsonify({"error": "Empty filename"}), 400
-        image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+        image_path = os.path.join(UPLOAD_FOLDER, secure_filename(file.filename))
         file.save(image_path)
     elif request.is_json:
         image_path = request.get_json().get("image_path")
@@ -123,7 +132,7 @@ def analyze_shapes_endpoint():
         file = request.files['image']
         if file.filename == '':
             return jsonify({"error": "Empty filename"}), 400
-        image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+        image_path = os.path.join(UPLOAD_FOLDER, secure_filename(file.filename))
         file.save(image_path)
     elif request.is_json:
         image_path = request.get_json().get("image_path")
@@ -150,7 +159,7 @@ def analyze_colors_endpoint():
         file = request.files['image']
         if file.filename == '':
             return jsonify({"error": "Empty filename"}), 400
-        image_path = os.path.join(UPLOAD_FOLDER, file.filename)
+        image_path = os.path.join(UPLOAD_FOLDER, secure_filename(file.filename))
         file.save(image_path)
         n_colors = int(request.form.get("n_colors", 3))
     elif request.is_json:
@@ -170,12 +179,24 @@ def analyze_colors_endpoint():
 
 
 # 5. Get last results from the database
-@app.route('/results', methods=['GET'])
+@app.route('/results', methods=['GET', 'POST'])
 def get_results_endpoint():
     """Returns the last 10 results from the database."""
     try:
+        if request.method == 'POST':
+            data = request.get_json(silent=True) or {}
+            text = data.get('text', '').strip()
+            result = data.get('result')
+            if not text or not isinstance(result, dict):
+                return jsonify({'error': 'text and result are required'}), 400
+            if not save_nlp_result(text, result):
+                return jsonify({'error': 'Could not save analysis'}), 500
+            return jsonify({'message': 'Analysis saved'}), 201
         results = get_results(limit=10)
-        return jsonify(results), 200
+        return jsonify([{
+            'id': row[0], 'type': row[1], 'input': row[2],
+            'result': json.loads(row[3]) if row[3] else {}, 'timestamp': row[4]
+        } for row in results]), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 

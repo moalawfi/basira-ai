@@ -6,7 +6,7 @@ pandas
 numpy
 joblib
 langdetect
-opencv-python
+opencv-python<5
 matplotlib
 requests
 pytest

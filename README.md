@@ -16,6 +16,10 @@
 
 </div>
 
+<p align="center">
+  <img src="docs/images/dashboard.png" alt="Basira web dashboard" width="100%" />
+</p>
+
 ---
 
 ## ✨ Why this project?

@@ -11,6 +11,10 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-Vision-5C3EE8?logo=opencv&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Storage-003B57?logo=sqlite&logoColor=white)
 ![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)
+![Location](https://img.shields.io/badge/📍-Medina%2C%20Saudi%20Arabia-2E7D32)
+![Summer Training](https://img.shields.io/badge/Summer%20Training-Program-F9A825)
+
+👤 **Author:** [Mohammed Alawfi](https://github.com/moalawfi) &nbsp;·&nbsp; 📍 **Medina, Saudi Arabia** &nbsp;·&nbsp; 🎓 **Summer Training Program**
 
 [Features](#-features) · [Quick start](#-quick-start) · [API](#-rest-api) · [Architecture](#-architecture) · [Team](#-team)
 
@@ -147,7 +151,7 @@ Model evaluation reports live next to the code:
 
 ## 👥 Team
 
-Built as a team project following a real-world Git workflow — feature branches, reviewed pull requests, GitHub Issues and a Kanban board.
+Developed in **Medina, Saudi Arabia** 🇸🇦 as part of our **Summer Training Program**, built as a team project following a real-world Git workflow — feature branches, reviewed pull requests, GitHub Issues and a Kanban board.
 
 | Member | Area |
 |---|---|

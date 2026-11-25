@@ -1,7 +1,7 @@
 <div align="center">
 
-# 🧠 Smart Content Analyzer
-### محلل المحتوى الذكي
+# 👁️ Basira · بصيرة
+### Smart Content Analyzer — محلل المحتوى الذكي
 
 **An Arabic-first AI toolkit that reads text *and* sees images — intent, sentiment, keywords, faces, shapes, colors and OCR, all behind one CLI, one REST API and a modern web dashboard.**
 
@@ -11,6 +11,10 @@
 ![OpenCV](https://img.shields.io/badge/OpenCV-Vision-5C3EE8?logo=opencv&logoColor=white)
 ![SQLite](https://img.shields.io/badge/SQLite-Storage-003B57?logo=sqlite&logoColor=white)
 ![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)
+![Location](https://img.shields.io/badge/📍-Medina%2C%20Saudi%20Arabia-2E7D32)
+![Summer Training](https://img.shields.io/badge/Summer%20Training-Program-F9A825)
+
+👤 **Author:** [Mohammed Alawfi](https://github.com/moalawfi) &nbsp;·&nbsp; 📍 **Medina, Saudi Arabia** &nbsp;·&nbsp; 🎓 **Summer Training Program**
 
 [Features](#-features) · [Quick start](#-quick-start) · [API](#-rest-api) · [Architecture](#-architecture) · [Team](#-team)
 
@@ -24,7 +28,7 @@
 
 ## ✨ Why this project?
 
-Most off-the-shelf analyzers treat Arabic as an afterthought. **Smart Content Analyzer** was built the other way around: Arabic text is a first-class citizen, and the same pipeline also handles English text and images. Drop in a sentence or a photo and get structured, stored, queryable results.
+Most off-the-shelf analyzers treat Arabic as an afterthought. **Basira** (Arabic for *insight*) was built the other way around: Arabic text is a first-class citizen, and the same pipeline also handles English text and images. Drop in a sentence or a photo and get structured, stored, queryable results.
 
 ```text
 "كيف أرفع صورة؟"       ──►  intent: سؤال (question)   ·  language: ar
@@ -51,8 +55,8 @@ group_photo.png        ──►  faces + shapes + dominant colors + OCR text
 ## ⚡ Quick start
 
 ```bash
-git clone https://github.com/moalawfi/content-analyzer-team.git
-cd content-analyzer-team
+git clone https://github.com/moalawfi/basira-ai.git
+cd basira-ai
 
 python -m venv venv
 # Windows: venv\Scripts\activate   ·   macOS/Linux: source venv/bin/activate
@@ -127,7 +131,7 @@ Full request/response contracts: [`docs/API.md`](docs/API.md).
 ```
 
 ```text
-content-analyzer-team/
+basira-ai/
 ├── app.py                 # Flask API + web dashboard
 ├── main.py                # Interactive CLI
 ├── nlp-core/              # Intent & sentiment models, datasets, evaluation
@@ -151,7 +155,7 @@ Model evaluation reports live next to the code:
 
 ## 👥 Team
 
-Built as a team project following a real-world Git workflow — feature branches, reviewed pull requests, GitHub Issues and a Kanban board.
+Developed in **Medina, Saudi Arabia** 🇸🇦 as part of our **Summer Training Program**, built as a team project following a real-world Git workflow — feature branches, reviewed pull requests, GitHub Issues and a Kanban board.
 
 | Member | Area |
 |---|---|

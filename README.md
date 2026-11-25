@@ -1,15 +1,75 @@
-# content-analyzer-team
-# Smart Content Analyzer - محلل المحتوى الذكي
+<div align="center">
 
-## NLP Core
+# 🧠 Smart Content Analyzer
+### محلل المحتوى الذكي
 
-The NLP Core provides Arabic intent classification and sentiment analysis using
-trained TF-IDF/scikit-learn pipelines. It validates input language, supports
-single-text and batch analysis, and can optionally save predictions to SQLite.
+**An Arabic-first AI toolkit that reads text *and* sees images — intent, sentiment, keywords, faces, shapes, colors and OCR, all behind one CLI, one REST API and a modern web dashboard.**
+
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-REST%20API-000000?logo=flask&logoColor=white)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-NLP-F7931E?logo=scikitlearn&logoColor=white)
+![OpenCV](https://img.shields.io/badge/OpenCV-Vision-5C3EE8?logo=opencv&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-Storage-003B57?logo=sqlite&logoColor=white)
+![pytest](https://img.shields.io/badge/tested%20with-pytest-0A9EDC?logo=pytest&logoColor=white)
+
+[Features](#-features) · [Quick start](#-quick-start) · [API](#-rest-api) · [Architecture](#-architecture) · [Team](#-team)
+
+</div>
+
+---
+
+## ✨ Why this project?
+
+Most off-the-shelf analyzers treat Arabic as an afterthought. **Smart Content Analyzer** was built the other way around: Arabic text is a first-class citizen, and the same pipeline also handles English text and images. Drop in a sentence or a photo and get structured, stored, queryable results.
+
+```text
+"كيف أرفع صورة؟"       ──►  intent: سؤال (question)   ·  language: ar
+"الخدمة ممتازة جدًا"   ──►  sentiment + keywords + language
+group_photo.png        ──►  faces + shapes + dominant colors + OCR text
+```
+
+## 🚀 Features
+
+| | Capability | Details |
+|---|---|---|
+| 💬 | **Intent classification** | Arabic intent model — question, command, greeting, complaint (TF-IDF + scikit-learn, tuned with GridSearchCV) |
+| ❤️ | **Sentiment analysis** | Trained on an Arabic sentiment dataset, evaluated with cross-validation & confusion matrix |
+| 🔑 | **Keyword extraction** | TF-IDF-based keyword ranking |
+| 🌐 | **Language detection** | Arabic / English detection |
+| 📝 | **Summarization** | Extractive text summarizer |
+| 🗂️ | **Topic modeling** | Discover themes across documents |
+| 🙂 | **Face detection** | OpenCV face detection with bounding boxes |
+| 🔺 | **Shapes & colors** | Shape recognition + dominant colors via KMeans |
+| 🔤 | **OCR** | Extract text from images (Tesseract) |
+| 🗄️ | **Storage & analytics** | Every result saved to SQLite with logs and an analytics cache |
+| 🖥️ | **Three interfaces** | Interactive CLI, Flask REST API, and a web dashboard |
+
+## ⚡ Quick start
+
+```bash
+git clone https://github.com/moalawfi/content-analyzer-team.git
+cd content-analyzer-team
+
+python -m venv venv
+# Windows: venv\Scripts\activate   ·   macOS/Linux: source venv/bin/activate
+
+pip install -r requirements.txt
+```
+
+> **OCR (optional):** install [Tesseract](https://github.com/tesseract-ocr/tesseract) and `pip install pytesseract`.
+
+### Run it
+
+| Mode | Command | What you get |
+|---|---|---|
+| 🖥️ Web dashboard + API | `python app.py` | Open **http://localhost:5000** |
+| ⌨️ Interactive CLI | `python main.py` | Menu-driven text & image analysis |
+| ✅ Tests | `pytest tests/` | Unit and API tests |
+
+### Use it from Python
 
 ```python
 import sys
-
 sys.path.insert(0, "nlp-core")
 
 from intent_classifier import classify_intent
@@ -19,266 +79,90 @@ print(classify_intent("كيف أرفع صورة؟"))
 print(analyze_sentiment("الخدمة ممتازة جدًا"))
 ```
 
-See [`nlp-core/README.md`](nlp-core/README.md) for the complete Python API and
-[`docs/API.md`](docs/API.md) for the `/analyze/intent` and
-`/analyze/sentiment` HTTP contracts.
+## 🔌 REST API
 
-## Project Overview
-
-Smart Content Analyzer is an integrated application that accepts **text or image input** from the user and analyzes it using multiple techniques. The project includes a simple REST API, organized SQLite database storage, logging, and automated testing.
-
-The goal of this project is to simulate a real-world software development workflow using GitHub branches, Pull Requests, Issues, and a Kanban board.
-
----
-
-## Team Members
-
-| Name | Student ID | Main Role |
-|---|---:|---|
-| Mohammed Abdulrahman Alawfi | 4406223 | NLP Core |
-| Yasser Misfer Althibyani | 4403545 | CV Engine + Interface |
-| Abdulrahman Majed Almutairi | 4401251 | NLP Extensions + Database |
-
----
-
-## Main Features
-
-### Text Analysis
-
-#### NLP Core - Mohammed
-- Multi-class intent classification.
-- Sentiment analysis.
-- Model evaluation and comparison.
-
-#### NLP Extensions - Abdulrahman
-- Keyword extraction.
-- Language detection for Arabic and English.
-- Simple extractive summarization.
-- Topic modeling as a stretch goal.
-
-### Image Analysis - Yasser
-- Face detection.
-- Shape detection.
-- Dominant color detection.
-- OCR as a stretch goal.
-
-### Storage - Abdulrahman
-- SQLite database.
-- Organized tables for results, logs, and analytics.
-- Result saving and retrieval functions.
-
-### Interface - Yasser
-- Advanced CLI.
-- Simple REST API using Flask.
-
-### Testing - All Members
-- Unit tests for the main functions using `pytest`.
-
----
-
-## Git Workflow
+| Method | Endpoint | Purpose |
+|---|---|---|
+| `POST` | `/analyze/intent` | Classify the intent of a text |
+| `POST` | `/analyze/sentiment` | Sentiment of a text |
+| `POST` | `/analyze/keywords` | Extract keywords |
+| `POST` | `/analyze/language` | Detect language |
+| `POST` | `/analyze/summary` | Summarize a text |
+| `POST` | `/analyze/image` | Full image pipeline (faces, shapes, colors, OCR) |
+| `POST` | `/analyze/faces` · `/shapes` · `/colors` | Individual vision tasks |
+| `GET` | `/results` | Latest stored results |
+| `GET` | `/stats` | Usage analytics |
 
 ```bash
-git clone <repository-url>
-git checkout -b <name>-module
-git status
-git add .
-git commit -m "Describe the change"
-git push origin <name>-module
-git pull origin main
+curl -X POST http://localhost:5000/analyze/sentiment \
+     -H "Content-Type: application/json" \
+     -d '{"text": "الخدمة ممتازة جدًا"}'
+
+curl -X POST http://localhost:5000/analyze/image -F "image=@tests/test_images/images/faces/two_faces.jpg"
 ```
 
-### Advanced Git Commands
+Full request/response contracts: [`docs/API.md`](docs/API.md).
 
-```bash
-git log --oneline --graph --all     # Show commit tree and branches
-git diff main                       # Compare current branch with main
-git rebase main                     # Update current branch with latest main changes
-git stash                           # Temporarily save unfinished changes
-git tag v0.1                        # Create a version tag
+## 🏗️ Architecture
+
+```text
+            ┌──────────────┐   ┌──────────────┐   ┌──────────────────┐
+            │  CLI main.py │   │ Flask app.py │   │  Web dashboard   │
+            └──────┬───────┘   └──────┬───────┘   └────────┬─────────┘
+                   └──────────────────┼────────────────────┘
+                                      ▼
+                         services/  (shared service layer)
+               ┌──────────────────────┼───────────────────────┐
+               ▼                      ▼                       ▼
+         nlp-core/             nlp_extensions/            cv_module/
+   intent · sentiment     keywords · language ·     faces · shapes · colors
+                          summary · topics                 · OCR
+               └──────────────────────┼───────────────────────┘
+                                      ▼
+                       storage/  →  SQLite (results · logs · analytics_cache)
 ```
-
-### Main Git Rule
-
-No one should edit the `main` branch directly.
-
-Each member should:
-1. Work on their own branch.
-2. Push changes to GitHub.
-3. Open a Pull Request.
-4. Get at least one review from another team member.
-5. Merge only after review.
-
----
-
-## Week 1 Repository Setup
-
-### Task 0 - Day 1
-
-1. Mohammed creates the GitHub repository named `content-analyzer-team`.
-2. Mohammed adds Yasser and Abdulrahman as collaborators.
-3. The team creates `.gitignore` to exclude:
-
-```txt
-__pycache__/
-*.db
-venv/
-.env
-```
-
-4. The team creates `requirements.txt` with the required libraries:
-
-```txt
-scikit-learn
-nltk
-opencv-python
-flask
-pytest
-```
-
-5. Each member clones the repository and creates a personal branch.
-6. The team creates GitHub Issues for weekly tasks.
-7. The team uses GitHub Projects Kanban board to track progress.
-
----
-
-## Team Responsibilities
-
-| Member | Student ID | Responsibilities |
-|---|---:|---|
-| Mohammed Abdulrahman Alawfi | 4406223 | Intent classification, sentiment analysis, and model evaluation |
-| Abdulrahman Majed Almutairi | 4401251 | Keyword extraction, language detection, summarization, database, and analytics |
-| Yasser Misfer Althibyani | 4403545 | Face detection, shape detection, color detection, CLI, Flask API, and tests |
-
----
-
-## Project Structure
 
 ```text
 content-analyzer-team/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── main.py
-├── app.py
-├── nlp-core/
-│   ├── intent_classifier.py
-│   └── sentiment_analyzer.py
-├── nlp-extensions/
-│   ├── keyword_extractor.py
-│   ├── language_detector.py
-│   ├── summarizer.py
-│   └── topic_modeling.py
-├── cv-module/
-│   ├── face_detector.py
-│   ├── shape_color_detector.py
-│   └── ocr_extractor.py
-├── storage/
-│   ├── db_setup.py
-│   ├── results_store.py
-│   └── analytics.py
-├── interface/
-│   └── cli_interface.py
-├── tests/
-│   ├── test_nlp_core.py
-│   ├── test_nlp_extensions.py
-│   ├── test_cv.py
-│   └── test_storage.py
-└── docs/
-    └── API.md
+├── app.py                 # Flask API + web dashboard
+├── main.py                # Interactive CLI
+├── nlp-core/              # Intent & sentiment models, datasets, evaluation
+├── nlp_extensions/        # Keywords, language, summarizer, topic modeling
+├── cv_module/             # Face, shape/color detection, OCR
+├── services/              # Shared NLP & image pipelines
+├── storage/               # SQLite setup, result store, analytics
+├── templates/ · static/   # Dashboard UI
+├── tests/                 # pytest suites + test images
+└── docs/                  # API, DB schema, limitations
 ```
 
----
+## 📊 Evaluation
 
-## 8-Week Development Plan
+Model evaluation reports live next to the code:
 
-| Week | Mohammed - NLP Core | Abdulrahman - NLP Extensions + DB | Yasser - CV + Interface |
-|---|---|---|---|
-| Week 1 | Setup and NLP Core skeleton | Setup, DB table design, and skeleton | Setup, project structure, and basic CLI |
-| Week 2 | Intent classifier with 4 classes and dataset | Arabic/English language detection | Face detector with bounding boxes |
-| Week 3 | Sentiment analyzer with cross-validation | Keyword extractor using TF-IDF | Shape detector and dominant colors using KMeans |
-| Week 4 | Advanced evaluation using GridSearchCV | Build `db_setup.py` and `results_store.py` | Start Flask API and support database setup |
-| Week 5 | Connect NLP Core to database and add tests | Extractive summarizer and DB integration | Main Flask endpoints and CV tests |
-| Week 6 | Improve dataset and retrain models | `analytics.py` and NLP Extensions tests | Connect CV module to API |
-| Week 7 | Arabic support and comprehensive testing | Topic modeling stretch goal and DB documentation | Full CLI/API integration and tests |
-| Week 8 | Final documentation and demo preparation | Final documentation and presentation | Final testing, documentation, and presentation leadership |
+- [`nlp-core/EVALUATION.md`](nlp-core/EVALUATION.md) — intent & sentiment metrics, confusion matrix
+- [`nlp_extensions/EVALUATION.md`](nlp_extensions/EVALUATION.md) — NLP extensions
+- [`docs/LIMITATIONS.md`](docs/LIMITATIONS.md) — known limitations
+- [`docs/db_schema.md`](docs/db_schema.md) — database schema
 
----
+## 👥 Team
 
-## Final Success Criteria
+Built as a team project following a real-world Git workflow — feature branches, reviewed pull requests, GitHub Issues and a Kanban board.
 
-By Week 8, the project should meet the following requirements:
+| Member | Area |
+|---|---|
+| **Mohammed Alawfi** | NLP Core — intent classification, sentiment analysis, model evaluation |
+| **Yasser Althibyani** | Computer Vision engine, CLI, Flask API, tests |
+| **Abdulrahman Almutairi** | NLP Extensions, database & analytics |
 
-1. Running `python main.py` opens a complete CLI that supports text and image analysis.
-2. Running `python app.py` starts the Flask API on `localhost:5000`.
-3. The API includes endpoints for each analysis type and analytics.
-4. All results are saved in a SQLite database.
-5. The database contains at least three tables:
-   - `results`
-   - `logs`
-   - `analytics_cache`
-6. Running `pytest tests/` passes without errors.
-7. The project includes at least 15 test cases across 4 test files.
-8. `docs/API.md` documents all endpoints with request and response examples.
-9. The main `README.md` explains the project, setup, usage, and team roles.
-10. The Git history includes 35+ commits distributed across team members.
-11. GitHub Issues and Kanban board are used to track progress.
+## 🤝 Contributing
+
+Issues and pull requests are welcome. Please branch from `main`, keep changes focused, and make sure `pytest tests/` passes before opening a PR.
 
 ---
 
-## General Notes
+<div align="center">
 
-- Use GitHub Projects Kanban board to track tasks weekly.
-- Each core function should include a clear docstring explaining inputs, outputs, and exceptions.
-- Hold a weekly 20-30 minute meeting to review the Kanban board.
-- If time becomes limited, prioritize:
-  1. NLP Core
-  2. Basic CV features
-  3. Database
-  4. Basic API
-  5. Stretch features such as OCR, Topic Modeling, and Summarizer
+If you find this project useful, consider giving it a ⭐
 
----
-
-## Installation
-
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Running the Project
-
-### Run CLI
-
-```bash
-python main.py
-```
-
-### Run Flask API
-
-```bash
-python app.py
-```
-
----
-
-## Running Tests
-
-```bash
-pytest tests/
-```
-
----
-
-## Current Status
-
-Week 1 setup is in progress/completed depending on the current branch status.
-
-Completed initial tasks include:
-- Repository setup.
-- NLP Core folder creation.
-- Initial mock functions for intent classification and sentiment analysis.
-- GitHub Issues.
-- Kanban board setup.
+</div>

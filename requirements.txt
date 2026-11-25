@@ -1,0 +1,12 @@
+flask
+werkzeug
+scikit-learn
+nltk
+pandas
+numpy
+joblib
+langdetect
+opencv-python
+matplotlib
+requests
+pytest
